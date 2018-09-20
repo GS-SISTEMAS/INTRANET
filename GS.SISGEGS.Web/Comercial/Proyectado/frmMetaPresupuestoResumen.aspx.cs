@@ -42,7 +42,7 @@ namespace GS.SISGEGS.Web.Comercial.Proyectado
             rpgResumenZona.DataSource = _lstresumen;
             rpgResumenZona.DataBind();
 
-            lblTitulo.Text = "Resumen de Presupuestos Confirmados " + RetornaMes(rmyPre.SelectedDate.Value.Month) + rmyPre.SelectedDate.Value.Year.ToString();
+            lblTitulo.Text = "Resumen de Presupuestos Confirmados " + RetornaMes(rmyPre.SelectedDate.Value.Month) + " " + rmyPre.SelectedDate.Value.Year.ToString();
         }
         private string RetornaMes(int mes)
         {
