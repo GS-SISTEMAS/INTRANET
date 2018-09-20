@@ -17,12 +17,6 @@
                  if (args.get_eventTarget().indexOf("btnExcelZona") >= 0)
                      args.set_enableAjax(false);
         }
-
-        //function requestStart2(sender, args) {
-
-        //         if (args.get_eventTarget().indexOf("btnExcelZona") >= 0)
-        //             args.set_enableAjax(false);
-        //     }
      </script>
 
 </asp:Content>
