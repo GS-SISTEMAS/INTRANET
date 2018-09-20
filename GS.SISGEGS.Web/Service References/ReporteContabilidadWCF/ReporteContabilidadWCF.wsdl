@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReporteContabilidadWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/ReporteContabilidadWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/ReporteContabilidadWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/ReporteContabilidadWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReporteContabilidadWCF_Voucher_FechContaVSFechaAplic_InputMessage">
+    <wsdl:part name="parameters" element="tns:Voucher_FechContaVSFechaAplic" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_Voucher_FechContaVSFechaAplic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Voucher_FechContaVSFechaAplicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DistGtos_ListarFechas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DistGtos_ListarFechas" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DistGtos_ListarFechas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DistGtos_ListarFechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DocVenta_ListarTransGratuitas_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ListarTransGratuitas" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DocVenta_ListarTransGratuitas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ListarTransGratuitasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteCostoProduccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteCostoProduccion" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteCostoProduccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteCostoProduccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteCostoVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteCostoVenta" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteCostoVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteCostoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVenta" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ReporteVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ResumenAfiliadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumenAfiliadas" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_ResumenAfiliadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumenAfiliadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DetalleOperacionFamilia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamilia" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DetalleOperacionFamilia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DetalleOperacionFamiliaAnticuamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamiliaAnticuamiento" />
+  </wsdl:message>
+  <wsdl:message name="IReporteContabilidadWCF_DetalleOperacionFamiliaAnticuamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamiliaAnticuamientoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReporteContabilidadWCF">
+    <wsdl:operation name="Voucher_FechContaVSFechaAplic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/Voucher_FechContaVSFechaAplic" message="tns:IReporteContabilidadWCF_Voucher_FechContaVSFechaAplic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/Voucher_FechContaVSFechaAplicResponse" message="tns:IReporteContabilidadWCF_Voucher_FechContaVSFechaAplic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DistGtos_ListarFechas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DistGtos_ListarFechas" message="tns:IReporteContabilidadWCF_DistGtos_ListarFechas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DistGtos_ListarFechasResponse" message="tns:IReporteContabilidadWCF_DistGtos_ListarFechas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ListarTransGratuitas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DocVenta_ListarTransGratuitas" message="tns:IReporteContabilidadWCF_DocVenta_ListarTransGratuitas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DocVenta_ListarTransGratuitasResponse" message="tns:IReporteContabilidadWCF_DocVenta_ListarTransGratuitas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCostoProduccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoProduccion" message="tns:IReporteContabilidadWCF_ReporteCostoProduccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoProduccionResponse" message="tns:IReporteContabilidadWCF_ReporteCostoProduccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCostoVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoVenta" message="tns:IReporteContabilidadWCF_ReporteCostoVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoVentaResponse" message="tns:IReporteContabilidadWCF_ReporteCostoVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteVenta" message="tns:IReporteContabilidadWCF_ReporteVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ReporteVentaResponse" message="tns:IReporteContabilidadWCF_ReporteVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumenAfiliadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ResumenAfiliadas" message="tns:IReporteContabilidadWCF_ResumenAfiliadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/ResumenAfiliadasResponse" message="tns:IReporteContabilidadWCF_ResumenAfiliadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamilia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamilia" message="tns:IReporteContabilidadWCF_DetalleOperacionFamilia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamiliaResponse" message="tns:IReporteContabilidadWCF_DetalleOperacionFamilia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamiliaAnticuamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamiliaAnticuamiento" message="tns:IReporteContabilidadWCF_DetalleOperacionFamiliaAnticuamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamiliaAnticuamientoResponse" message="tns:IReporteContabilidadWCF_DetalleOperacionFamiliaAnticuamiento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReporteContabilidadWCF" type="tns:IReporteContabilidadWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Voucher_FechContaVSFechaAplic">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/Voucher_FechContaVSFechaAplic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DistGtos_ListarFechas">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/DistGtos_ListarFechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ListarTransGratuitas">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/DocVenta_ListarTransGratuitas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCostoProduccion">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoProduccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteCostoVenta">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/ReporteCostoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVenta">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/ReporteVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumenAfiliadas">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/ResumenAfiliadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamilia">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamilia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamiliaAnticuamiento">
+      <soap:operation soapAction="http://tempuri.org/IReporteContabilidadWCF/DetalleOperacionFamiliaAnticuamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReporteContabilidadWCF">
+    <wsdl:port name="BasicHttpBinding_IReporteContabilidadWCF" binding="tns:BasicHttpBinding_IReporteContabilidadWCF">
+      <soap:address location="http://localhost:49648/ReporteContabilidadWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

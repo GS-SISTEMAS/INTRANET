@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/DocumentoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+  <xs:import schemaLocation="http://localhost:49648/DocumentoWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="Documento_ListarDocVenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento_ListarDocVentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Documento_ListarDocVentaResult" nillable="true" type="q1:ArrayOfVBG00716Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento_ListarDocCompra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento_ListarDocCompraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Documento_ListarDocCompraResult" nillable="true" type="q2:ArrayOfgsDocumento_ListarTipoCompraResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento_ListarEgresosVarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento_ListarEgresosVariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Documento_ListarEgresosVariosResult" nillable="true" type="q3:ArrayOfVBG01122Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ListarDocumentosResult" nillable="true" type="q4:ArrayOfListarDocumentosResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDocumentosFamilia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoFamilia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDocumentosFamiliaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ListarDocumentosFamiliaResult" nillable="true" type="q5:ArrayOfListarDocumentosFamiliaResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarDocumentoFamilia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoFamilia" type="xs:int" />
+        <xs:element minOccurs="0" name="idDocumento" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarDocumentoFamiliaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarDocumentoFamilia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idDocumento" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarDocumentoFamiliaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDetalleAfiliadas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaCorte" type="xs:dateTime" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="operacion" type="q6:char" />
+        <xs:element minOccurs="0" name="id_agendacompara" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idmoneda" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDetalleAfiliadasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ListarDetalleAfiliadasResult" nillable="true" type="q7:ArrayOfDetalleOperacionFamiliaResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDetalleDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaCorte" type="xs:dateTime" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="operacion" type="q8:char" />
+        <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoFamiliaDoc" type="xs:int" />
+        <xs:element minOccurs="0" name="tipoDoc" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarDetalleDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ListarDetalleDocumentosResult" nillable="true" type="q9:ArrayOfDetalleOperacionDocumentoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarFamilias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarFamiliasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ListarFamiliasResult" nillable="true" type="q10:ArrayOfListarFamiliasResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetalleOperacionFamiliaAnticuamientoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaCorte" type="xs:dateTime" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="operacion" type="q11:char" />
+        <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoFamiliaDoc" type="xs:int" />
+        <xs:element minOccurs="0" name="TipoDoc" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetalleOperacionFamiliaAnticuamientoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DetalleOperacionFamiliaAnticuamientoDocumentoResult" nillable="true" type="q12:ArrayOfDetalleOperacionFamiliaAnticuamientoDocumentoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

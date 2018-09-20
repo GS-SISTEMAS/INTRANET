@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/home.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/font-gs.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/toastr.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/kendo/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/kendo/kendo.common-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/kendo/kendo.rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/kendo/kendo.bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://intranet.gruposilvestre.com.pe/resources/css/kendo/kendo.bootstrap.mobile.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/jquery.min.js"></script>
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/jquery.mask.min.js"></script>
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/toastr.min.js"></script>
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/bootstrap.min.js"></script>
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/kendo/kendo.all.min.js"></script>
+    <script src="https://intranet.gruposilvestre.com.pe/resources/scripts/kendo/cultures/kendo.culture.es-PE.min.js"></script>
+    <script>
+        function SeleccionarCotizacion(IdCotizacion) {
+            $("#mconfirmacion").modal("show");
+            $("#mconfirmacion-titulo").html("<div class=\"fa-pull-left\">&nbsp;&nbsp;&nbsp;&nbsp;Confirmar&nbsp;&nbsp;<i class='fa fa-question'></i></div>");
+            $("#mconfirmacion-question").html("<div><center>¿Desea cargar los datos de esta cotización?</center></div>");
+            $("#mconfirmacion-no").html("<i class='fa fa-ban'></i>&nbsp;&nbsp;No");
+            $("#mconfirmacion-si").html("<i class='fa fa-check'></i>&nbsp;&nbsp;Si");
+            $("#mconfirmacion-si").focus();
+
+
+            $("#mconfirmacion-no").unbind("click");
+            $("#mconfirmacion-no").click(function () {
+                $("#mconfirmacion").modal("hide");
+            });
+
+            $("#mconfirmacion-si").unbind("click");
+            $("#mconfirmacion-si").click(function () {
+                $("#mconfirmacion").modal("hide");
+                parent.HideVerCotizacion();
+                parent.setObj(IdCotizacion);
+                return false;
+            });
+        }
+
+        function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        }
+
+        function VerDetalle(IdCotizacion) {
+
+            $("#grid").empty();
+            var params = JSON.stringify({
+                "action": 37,
+                "parametros": [
+                    IdCotizacion,
+                    1
+                ]
+            });
+
+            var dsgrid = new kendo.data.DataSource({
+                transport: {
+                    read: function (options) {
+                        $.ajax({
+                            type: "POST",
+                            url: "https://intranet.gruposilvestre.com.pe/merlinservices/contract/wsMaster.svc/ListarObjectTwenty",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: params,
+                            async: true,
+                            processData: true,
+                            cache: false,
+                            success: function (response) {
+                                options.success(response.Rows);
+                            },
+                            error: function (err) { }
+                        });
+                    }
+                }
+            });
+
+            $("#grid").kendoGrid({
+                dataSource: dsgrid,
+                height: 430,
+                groupable: false,
+                sortable: false,
+                selectable: false,
+                resizable: false,
+                pageable: false,
+                columns: [
+                    {
+                        width: 130,
+                        template:
+                            "    <button class=\"btn btn-success\ type=\"button\" onclick=\"ListarCotizaciones(); return false;\">" +
+                            "        <i class='fa fa-reply'>&nbsp;</i> Regresar" +
+                            "    </button>",
+                        field: " ",
+                    },
+                    {
+                        field: "v01",
+                        title: "<center>Nro</center>",
+                        width: 70,
+                    },
+                    {
+                        field: "v04",
+                        title: "<center>Descripcion</center>",
+                    },
+                    {
+                        field: "v05",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Cantidad</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n0}\", v05)#</div>"
+                    },
+                    {
+                        field: "v06",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Stock</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n0}\", v06)#</div>"
+                    },
+                    {
+                        field: "v08",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Precio</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v08)#</div>"
+                    },
+                    {
+                        field: "v11",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Total</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v11)#</div>"
+                    },
+                    {
+                        field: "v12",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Impuesto</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v12)#</div>"
+                    },
+                ]
+            });
+        }
+
+
+        function ListarCotizaciones() {
+            var obj = getUrlParameter('obj');
+            $("#grid").empty();
+            var params = JSON.stringify({
+                "action": 36,
+                "parametros": [
+                    obj.split("|")[0],
+                    obj.split("|")[1]
+                ]
+            });
+
+            var dsgrid = new kendo.data.DataSource({
+                transport: {
+                    read: function (options) {
+                        $.ajax({
+                            type: "POST",
+                            url: "https://intranet.gruposilvestre.com.pe/merlinservices/contract/wsMaster.svc/ListarObjectTwenty",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: params,
+                            async: true,
+                            processData: true,
+                            cache: false,
+                            success: function (response) {
+                                options.success(response.Rows);
+                            },
+                            error: function (err) { }
+                        });
+                    }
+                }
+            });
+
+            $("#grid").kendoGrid({
+                dataSource: dsgrid,
+                height: 430,
+                groupable: false,
+                sortable: false,
+                selectable: false,
+                resizable: false,
+                pageable: false,
+                columns: [
+                    {
+                        width: 130,
+                        template:
+                            //"    <button class=\"btn btn-success\ type=\"button\" onclick=\"SeleccionarCotizacion(#: v01 #); return false;\">" +
+                            "    <button class=\"btn btn-success\ type=\"button\" onclick=\"SeleccionarCotizacion(#: v19 #); return false;\">" +
+                            "        <i class='fa fa-check'>&nbsp;</i> Seleccionar" +
+                            "    </button>",
+                        field: " ",
+                        locked: true
+                    },
+                    {
+                        width: 100,
+                        template:
+                            "    <button class=\"btn btn-success\ type=\"button\" onclick=\"VerDetalle(#: v19 #); return false;\">" +
+                            "        <i class='fa fa-bars'>&nbsp;</i> Detalle" +
+                            "    </button>",
+                        field: " ",
+                        locked: true
+                    },
+                    {
+                        field: "v01",
+                        title: "<center>Nro</center>",
+                        width: 70,
+                        locked: true
+                    },
+                    {
+                        field: "v02",
+                        title: "<center>RUC</center>",
+                        width: 100,
+                        locked: true
+                    },
+                    {
+                        field: "v03",
+                        title: "<center>Número</center>",
+                        width: 250
+                    },
+                    {
+                        field: "v07",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Neto</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v07)#</div>"
+                    },
+                    {
+                        field: "v13",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>IGV</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v13)#</div>"
+                    },
+                    {
+                        field: "v15",
+                        title: "<center><i class='fa fa-cubes'>&nbsp; </i>Total</center>",
+                        width: 90,
+                        template: "<div align=\"right\">#=kendo.format(\"{0:n2}\", v15)#</div>"
+                    },
+                ]
+            });
+        }
+
+
+
+        $(document).ready(function () {
+            ListarCotizaciones();
+        });
+    </script>
+
+</head>
+<body style="background-image:none;background-color:white">
+
+    <div class="container-fluid ContentBannerBody" style="margin:5px;">
+        <div class="col-xs-12">
+            <div class="col-xs-12" style="padding:5px;">
+                <b><i class="fa fa-bars">&nbsp;</i> Listado de Cotizaciones
+            </div>
+        </div>
+    </div>
+
+    <div id="grid-view" style="margin:5px;">
+        <div id="grid">
+        </div>
+    </div>
+
+    <center>
+        <div class="modal fade" id="mconfirmacion" tabindex="-1" role="dialog" aria-hidden="true" style="z-index:99997;margin-top: 15%;overflow-y: auto;">
+            <div class="modal-dialog" style="width:350px" id="mconfirmacion-dialog">
+                <div class="modal-content">
+                    <div class="modal-header PopupBanner" id="mconfirmacion-titulo">
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12" id="mconfirmacion-question">
+                            </div>
+                            <div class="col-xs-12">
+                                <hr />
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="button" id="mconfirmacion-no" class="btn btn-danger"></button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="button" id="mconfirmacion-si" class="btn btn-success"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

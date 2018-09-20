@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CobranzasWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/CobranzasWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/CobranzasWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/CobranzasWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICobranzasWCF_Reporte_Cancelaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Cancelaciones" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_Cancelaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasClienteResumen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasClienteResumen" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasClienteResumen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasClienteResumenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumen" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenVendedor" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActual" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenDetalleMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenDetalleMes" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenDetalleMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenDetalleMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_v2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActual_v2" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_v2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActual_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_v3_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActual_v3" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CancelacionesResumenActual_v3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResumenActual_v3Response" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_Proyectado_Sectorista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Proyectado_Sectorista" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_Proyectado_Sectorista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Proyectado_SectoristaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Insertar_ProyectadoSectorista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_ProyectadoSectorista" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Insertar_ProyectadoSectorista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_ProyectadoSectoristaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_Gestion_Sectorista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Gestion_Sectorista" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_Gestion_Sectorista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Gestion_SectoristaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Estatus_Deuda_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Estatus_Deuda_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Estatus_Deuda_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Estatus_Deuda_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedor" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedorDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedorDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedorDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedorDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_Fecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedor_Fecha" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_Fecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasVendedor_FechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_GestionCobranza_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GestionCobranza_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_GestionCobranza_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GestionCobranza_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Verificar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_Verificar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Verificar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_VerificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasCobranzasAnual_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasCobranzasAnual" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentasCobranzasAnual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentasCobranzasAnualResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Sectorista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_Sectorista" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Sectorista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_SectoristaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentaCobranzaLegal_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentaCobranzaLegal" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_VentaCobranzaLegal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_VentaCobranzaLegalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_FacturasInafecta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_FacturasInafecta" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_FacturasInafecta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_FacturasInafectaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectarCobranza_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectarCobranza_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectarCobranza_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectarCobranza_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ZonasSectorista_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasSectorista_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ZonasSectorista_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasSectorista_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ZonasSectoristaPermiso_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasSectoristaPermiso_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ZonasSectoristaPermiso_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasSectoristaPermiso_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_PermisosZona_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosZona_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_PermisosZona_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosZona_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_EstadoCuenta_Proyectado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Proyectado" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_EstadoCuenta_Proyectado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ProyectadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_EstadoCuenta_Proyectado_Cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Proyectado_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_EstadoCuenta_Proyectado_Cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Proyectado_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Documentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_Documentos" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_ProyectadoCobranza_Documentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoCobranza_DocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadasCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_Cuadro1" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_Cuadro1Response" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_Cuadro2" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CobranzasProyectadas_Cuadro2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Zonas_Listar_Cobranza_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_Listar_Cobranza" />
+  </wsdl:message>
+  <wsdl:message name="ICobranzasWCF_Zonas_Listar_Cobranza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_Listar_CobranzaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICobranzasWCF">
+    <wsdl:operation name="Reporte_Cancelaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_Cancelaciones" message="tns:ICobranzasWCF_Reporte_Cancelaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResponse" message="tns:ICobranzasWCF_Reporte_Cancelaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasCliente" message="tns:ICobranzasWCF_Reporte_VentasCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasClienteResponse" message="tns:ICobranzasWCF_Reporte_VentasCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasClienteResumen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasClienteResumen" message="tns:ICobranzasWCF_Reporte_VentasClienteResumen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasClienteResumenResponse" message="tns:ICobranzasWCF_Reporte_VentasClienteResumen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumen" message="tns:ICobranzasWCF_Reporte_CancelacionesResumen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenResponse" message="tns:ICobranzasWCF_Reporte_CancelacionesResumen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenVendedor" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenVendedorResponse" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActualResponse" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenDetalleMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenDetalleMes" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenDetalleMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenDetalleMesResponse" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenDetalleMes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual_v2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v2" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_v2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v2Response" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_v2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual_v3">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v3" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_v3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v3Response" message="tns:ICobranzasWCF_Reporte_CancelacionesResumenActual_v3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Proyectado_Sectorista">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_Proyectado_Sectorista" message="tns:ICobranzasWCF_Reporte_Proyectado_Sectorista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_Proyectado_SectoristaResponse" message="tns:ICobranzasWCF_Reporte_Proyectado_Sectorista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ProyectadoSectorista">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Insertar_ProyectadoSectorista" message="tns:ICobranzasWCF_Insertar_ProyectadoSectorista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Insertar_ProyectadoSectoristaResponse" message="tns:ICobranzasWCF_Insertar_ProyectadoSectorista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Gestion_Sectorista">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_Gestion_Sectorista" message="tns:ICobranzasWCF_Reporte_Gestion_Sectorista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_Gestion_SectoristaResponse" message="tns:ICobranzasWCF_Reporte_Gestion_Sectorista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Estatus_Deuda_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Estatus_Deuda_Listar" message="tns:ICobranzasWCF_Estatus_Deuda_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Estatus_Deuda_ListarResponse" message="tns:ICobranzasWCF_Estatus_Deuda_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedor" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedorResponse" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedorDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedorDetalle" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedorDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedorDetalleResponse" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedorDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedor_Fecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedor_Fecha" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_Fecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedor_FechaResponse" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasVendedor_Fecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Registrar" message="tns:ICobranzasWCF_ProyectadoCobranza_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_RegistrarResponse" message="tns:ICobranzasWCF_ProyectadoCobranza_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GestionCobranza_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/GestionCobranza_Registrar" message="tns:ICobranzasWCF_GestionCobranza_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/GestionCobranza_RegistrarResponse" message="tns:ICobranzasWCF_GestionCobranza_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Verificar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Verificar" message="tns:ICobranzasWCF_ProyectadoCobranza_Verificar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_VerificarResponse" message="tns:ICobranzasWCF_ProyectadoCobranza_Verificar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasCobranzasAnual">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasCobranzasAnual" message="tns:ICobranzasWCF_Reporte_VentasCobranzasAnual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentasCobranzasAnualResponse" message="tns:ICobranzasWCF_Reporte_VentasCobranzasAnual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Sectorista">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Sectorista" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Sectorista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_SectoristaResponse" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Sectorista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentaCobranzaLegal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentaCobranzaLegal" message="tns:ICobranzasWCF_Reporte_VentaCobranzaLegal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_VentaCobranzaLegalResponse" message="tns:ICobranzasWCF_Reporte_VentaCobranzaLegal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_FacturasInafecta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_FacturasInafecta" message="tns:ICobranzasWCF_Reporte_FacturasInafecta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_FacturasInafectaResponse" message="tns:ICobranzasWCF_Reporte_FacturasInafecta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectarCobranza_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectarCobranza_Registrar" message="tns:ICobranzasWCF_ProyectarCobranza_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectarCobranza_RegistrarResponse" message="tns:ICobranzasWCF_ProyectarCobranza_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Listar" message="tns:ICobranzasWCF_ProyectadoCobranza_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_ListarResponse" message="tns:ICobranzasWCF_ProyectadoCobranza_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonasSectorista_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ZonasSectorista_Listar" message="tns:ICobranzasWCF_ZonasSectorista_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ZonasSectorista_ListarResponse" message="tns:ICobranzasWCF_ZonasSectorista_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonasSectoristaPermiso_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ZonasSectoristaPermiso_Listar" message="tns:ICobranzasWCF_ZonasSectoristaPermiso_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ZonasSectoristaPermiso_ListarResponse" message="tns:ICobranzasWCF_ZonasSectoristaPermiso_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermisosZona_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/PermisosZona_Registrar" message="tns:ICobranzasWCF_PermisosZona_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/PermisosZona_RegistrarResponse" message="tns:ICobranzasWCF_PermisosZona_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Proyectado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/EstadoCuenta_Proyectado" message="tns:ICobranzasWCF_EstadoCuenta_Proyectado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/EstadoCuenta_ProyectadoResponse" message="tns:ICobranzasWCF_EstadoCuenta_Proyectado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Proyectado_Cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/EstadoCuenta_Proyectado_Cliente" message="tns:ICobranzasWCF_EstadoCuenta_Proyectado_Cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/EstadoCuenta_Proyectado_ClienteResponse" message="tns:ICobranzasWCF_EstadoCuenta_Proyectado_Cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Eliminar" message="tns:ICobranzasWCF_ProyectadoCobranza_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_EliminarResponse" message="tns:ICobranzasWCF_ProyectadoCobranza_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Documentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Documentos" message="tns:ICobranzasWCF_ProyectadoCobranza_Documentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_DocumentosResponse" message="tns:ICobranzasWCF_ProyectadoCobranza_Documentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasCliente" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasClienteResponse" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadasCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Cuadro1">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro1" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro1Response" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Cuadro2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro2" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro2Response" message="tns:ICobranzasWCF_Reporte_CobranzasProyectadas_Cuadro2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar_Cobranza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICobranzasWCF/Zonas_Listar_Cobranza" message="tns:ICobranzasWCF_Zonas_Listar_Cobranza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICobranzasWCF/Zonas_Listar_CobranzaResponse" message="tns:ICobranzasWCF_Zonas_Listar_Cobranza_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICobranzasWCF" type="tns:ICobranzasWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Reporte_Cancelaciones">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_Cancelaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasCliente">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_VentasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasClienteResumen">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_VentasClienteResumen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumen">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenVendedor">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenDetalleMes">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenDetalleMes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual_v2">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CancelacionesResumenActual_v3">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CancelacionesResumenActual_v3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Proyectado_Sectorista">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_Proyectado_Sectorista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_ProyectadoSectorista">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Insertar_ProyectadoSectorista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_Gestion_Sectorista">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_Gestion_Sectorista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estatus_Deuda_Listar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Estatus_Deuda_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedor">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedorDetalle">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedorDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasVendedor_Fecha">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasVendedor_Fecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GestionCobranza_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/GestionCobranza_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Verificar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Verificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentasCobranzasAnual">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_VentasCobranzasAnual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Sectorista">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Sectorista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_VentaCobranzaLegal">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_VentaCobranzaLegal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_FacturasInafecta">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_FacturasInafecta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectarCobranza_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectarCobranza_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Listar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonasSectorista_Listar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ZonasSectorista_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonasSectoristaPermiso_Listar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ZonasSectoristaPermiso_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PermisosZona_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/PermisosZona_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Proyectado">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/EstadoCuenta_Proyectado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Proyectado_Cliente">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/EstadoCuenta_Proyectado_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoCobranza_Documentos">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/ProyectadoCobranza_Documentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadasCliente">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Cuadro1">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reporte_CobranzasProyectadas_Cuadro2">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Reporte_CobranzasProyectadas_Cuadro2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar_Cobranza">
+      <soap:operation soapAction="http://tempuri.org/ICobranzasWCF/Zonas_Listar_Cobranza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CobranzasWCF">
+    <wsdl:port name="BasicHttpBinding_ICobranzasWCF" binding="tns:BasicHttpBinding_ICobranzasWCF">
+      <soap:address location="http://localhost:49648/CobranzasWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

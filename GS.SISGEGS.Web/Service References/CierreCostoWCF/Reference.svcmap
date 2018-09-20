@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7211d02e-bd32-4829-b7fe-5e5fec4145a0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/CierreCostoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CierreCostoWCF.xsd" MetadataType="Schema" ID="f5f1eece-b3ef-4a4a-a587-08bf5357e7db" SourceId="1" SourceUrl="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="CierreCostoWCF.disco" MetadataType="Disco" ID="af37ec0b-f9dd-476b-9a6a-7e4f5a881fd1" SourceId="1" SourceUrl="http://localhost:49648/CierreCostoWCF.svc?disco" />
+    <MetadataFile FileName="CierreCostoWCF1.xsd" MetadataType="Schema" ID="b7417313-fc88-43f1-aae6-d8ff9581de0f" SourceId="1" SourceUrl="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CierreCostoWCF.wsdl" MetadataType="Wsdl" ID="9b4f6ba1-b8e4-423a-972e-46bd091d5882" SourceId="1" SourceUrl="http://localhost:49648/CierreCostoWCF.svc?wsdl" />
+    <MetadataFile FileName="CierreCostoWCF2.xsd" MetadataType="Schema" ID="c7b8da25-ed68-462a-8560-9159754c72e8" SourceId="1" SourceUrl="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

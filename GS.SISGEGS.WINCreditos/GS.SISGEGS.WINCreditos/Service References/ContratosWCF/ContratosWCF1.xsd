@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfReporteGeneralContratosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReporteGeneralContratosResult" nillable="true" type="tns:ReporteGeneralContratosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReporteGeneralContratosResult" nillable="true" type="tns:ArrayOfReporteGeneralContratosResult" />
+  <xs:complexType name="ReporteGeneralContratosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaResponsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contratante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaSuscripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObjetoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idContrato" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteGeneralContratosResult" nillable="true" type="tns:ReporteGeneralContratosResult" />
+  <xs:complexType name="ArrayOfContratosVencer_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContratosVencer_ListarResult" nillable="true" type="tns:ContratosVencer_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContratosVencer_ListarResult" nillable="true" type="tns:ArrayOfContratosVencer_ListarResult" />
+  <xs:complexType name="ContratosVencer_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaResponsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contratante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaSuscripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomArea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObjetoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMateria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContratosVencer_ListarResult" nillable="true" type="tns:ContratosVencer_ListarResult" />
+  <xs:complexType name="ArrayOfAreaResponsable_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaResponsable_ListarResult" nillable="true" type="tns:AreaResponsable_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAreaResponsable_ListarResult" nillable="true" type="tns:ArrayOfAreaResponsable_ListarResult" />
+  <xs:complexType name="AreaResponsable_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdAreaResponsable" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreAreaResponsable" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AreaResponsable_ListarResult" nillable="true" type="tns:AreaResponsable_ListarResult" />
+  <xs:complexType name="ArrayOfProveedorContrato_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProveedorContrato_ListarResult" nillable="true" type="tns:ProveedorContrato_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProveedorContrato_ListarResult" nillable="true" type="tns:ArrayOfProveedorContrato_ListarResult" />
+  <xs:complexType name="ProveedorContrato_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProveedorContrato_ListarResult" nillable="true" type="tns:ProveedorContrato_ListarResult" />
+  <xs:complexType name="Contrato_ObtenerResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contratante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaSuscripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Area" type="xs:int" />
+      <xs:element minOccurs="0" name="Monto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObjetoContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegitro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idAreaResponsable" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idContrato" type="xs:int" />
+      <xs:element minOccurs="0" name="idEstadoContrato" type="xs:int" />
+      <xs:element minOccurs="0" name="idMateriaContrato" type="xs:int" />
+      <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipoContrato" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioModifico" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioRegistro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contrato_ObtenerResult" nillable="true" type="tns:Contrato_ObtenerResult" />
+</xs:schema>

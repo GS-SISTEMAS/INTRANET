@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tci.net.pe/WS_eCica/Reversiones/" elementFormDefault="qualified" targetNamespace="http://tci.net.pe/WS_eCica/Reversiones/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RegistrarResumenReversion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ResumenReversion" type="tns:ene_ResumenReversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ResumenReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_Emisor" type="tns:en_Emisor" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_DatoResumenReversion" type="tns:en_DatoResumenReversion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_Emisor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_RazonSocial" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DatoResumenReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_CabeceraResumenReversion" type="tns:en_CabeceraResumenReversion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_CabeceraResumenReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaComprobante" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaGeneracion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_IdentificadorUnico" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ComprobantesRevertidos" type="tns:ArrayOfEn_ComprobantesRevertidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ComprobantesRevertidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ComprobantesRevertidos" nillable="true" type="tns:en_ComprobantesRevertidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobantesRevertidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoComprobante" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MotivoReversion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarResumenReversionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RegistrarResumenReversionResult" type="tns:ens_Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_Respuesta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRespuestaReversionRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarRespuesta" type="tns:ene_ConsultarRespuestaReversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarRespuestaReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CantidadConsultar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRespuestaReversionRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarRespuestaReversionRetencionResult" type="tns:ens_ConsultarRespuestaReversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConsultarRespuestaReversion">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ResultadoRespuestaReversiones" type="tns:ArrayOfEn_ResultadoConsultaRespuestaReversion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ResultadoConsultaRespuestaReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ResultadoConsultaRespuestaReversion" nillable="true" type="tns:en_ResultadoConsultaRespuestaReversion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ResultadoConsultaRespuestaReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_IdentificadorUnico" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_RespuestaReversiones" type="tns:en_RespuestaReversiones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_RespuestaReversiones">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_TipoRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaRespuesta" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CodigoRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRespuestaReversionPercepcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarRespuesta" type="tns:ene_ConsultarRespuestaReversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarRespuestaReversionPercepcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarRespuestaReversionPercepcionResult" type="tns:ens_ConsultarRespuestaReversion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmarRespuestaReversiones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConfirmarRespuesta" type="tns:ene_ConfirmarRespuestaReversiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConfirmarRespuestaReversiones">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ComprobanteConfirmarReversiones" type="tns:ArrayOfEn_ComprobanteConfirmarReversiones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ComprobanteConfirmarReversiones">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ComprobanteConfirmarReversiones" nillable="true" type="tns:en_ComprobanteConfirmarReversiones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteConfirmarReversiones">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_IdentificadorUnico" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CodigoRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfirmarRespuestaReversionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfirmarRespuestaReversionesResult" type="tns:ens_ConfirmarRespuestaReversiones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConfirmarRespuestaReversiones">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

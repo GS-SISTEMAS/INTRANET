@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/CreditoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+  <xs:element name="Credito_ListarCondicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idAgenda" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Credito_ListarCondicionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Credito_ListarCondicionResult" nillable="true" type="q1:ArrayOfgsCredito_ListarCondicionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLetrasSinCanje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaEmisionDesde" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaEmisionHasta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dias" type="xs:int" />
+        <xs:element minOccurs="0" name="zona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLetrasSinCanjeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="ObtenerLetrasSinCanjeResult" nillable="true" type="q2:ArrayOfUSP_SEL_LetrasSinCanjeV2Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerVerificacionAprobacion2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstdeuda" nillable="true" type="q3:ArrayOfUSP_SEL_Verificacion_DeudaVencidaResult" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstletras" nillable="true" type="q4:ArrayOfUSP_SEL_Verificacion_LetrasxAceptarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerVerificacionAprobacion2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstdeuda" nillable="true" type="q5:ArrayOfUSP_SEL_Verificacion_DeudaVencidaResult" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstletras" nillable="true" type="q6:ArrayOfUSP_SEL_Verificacion_LetrasxAceptarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Enviar_Notificacion_Aprobacion2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NombreAgenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OpPedido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarS" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaS" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarN" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaN" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarI" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaI" type="xs:decimal" />
+        <xs:element minOccurs="0" name="UsuarioAprobacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comentarios" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Enviar_Notificacion_Aprobacion2Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarLog_AprobacionDeudaVencida">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NombreAgenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Op" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarSil" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaSil" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarNeo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaNeo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalLetrasxAceptarIna" type="xs:decimal" />
+        <xs:element minOccurs="0" name="TotalDeudaVencidaIna" type="xs:decimal" />
+        <xs:element minOccurs="0" name="comentarios" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarLog_AprobacionDeudaVencidaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,95 @@
+﻿Declare @TempTable6 table (
+opOrigen int,
+TablaOrigen varchar(50),
+anhoOrigen int,
+mesOrigen int,
+VentaOrigen money,
+TablaDestinoOrigen varchar(50),
+opDestinoOrigen int,
+porcentaje money,
+periodoYearC int,
+periodoMesC int,
+Id_Cliente varchar(20),
+PagadoDolares money,
+cobrado money
+)
+
+insert into @TempTable6
+exec gsReporteVentasxCobranzasDet @ID_Agenda,@ID_Vendedor,@Year,@Mes
+
+
+select
+ClaseCliente,
+periodoYearE,
+periodoMesE,
+sum(venta) as TotalVentaMes,
+sum(cobradoDoc) as totalMes
+from 
+(
+select
+t7.ClaseCliente,
+t7.opOrigen,
+t7.anhoOrigen as periodoYearE,
+t7.mesOrigen as periodoMesE,
+t7.VentaOrigen as venta,
+sum(t7.PagadoDolares) as Cobrado,
+sum(t7.cobrado) as cobradoDoc
+from
+(
+select 
+case when len(T10.EstadoCliente) > 0 then  T10.EstadoCliente
+     when len(T10.EstadoCreditos) > 0 then  T10.EstadoCreditos
+	 else ''
+end as ClaseCliente,
+
+t10.opOrigen,
+t10.TablaOrigen as TablaOrigen,
+t10.anhoOrigen ,
+t10.mesOrigen,
+t10.VentaOrigen,
+t10.TablaDestinoOrigen,
+t10.opDestinoOrigen,
+t10.porcentaje,
+t10.periodoYearC,
+t10.periodoMesC,
+t10.Id_Cliente,
+t10.PagadoDolares,
+t10.cobrado
+from (
+select 
+ (select top 1 p.Propiedad  from  AgendaClasificacion ac
+		inner join AgendaClase cl on cl.ID = ac.ID_Clase
+		inner join AgendaPropiedad p on p.ID_Clase = cl.ID  and p.ID = ac.ID_Propiedad
+		where cl.Clase = 'RelacionCliente' and p.Propiedad = 'AFILIADA'
+		and ac.ID_Agenda = t6.ID_Cliente) as EstadoCliente,
+
+(select top 1 p.Propiedad  from  AgendaClasificacion ac
+		inner join AgendaClase cl on cl.ID = ac.ID_Clase
+		inner join AgendaPropiedad p on p.ID_Clase = cl.ID  and p.ID = ac.ID_Propiedad
+		where cl.Clase = 'CREDITOS' and p.Propiedad = 'LEGAL'
+		and ac.ID_Agenda = t6.ID_Cliente) as EstadoCreditos,
+ * 
+from @TempTable6 t6
+) T10
+
+
+
+) t7
+group by 
+t7.ClaseCliente,
+t7.opOrigen,
+t7.anhoOrigen,
+t7.mesOrigen,
+t7.VentaOrigen
+--order by t7.opOrigen
+
+) CobranzasResumen
+group by
+ClaseCliente,
+periodoYearE,
+periodoMesE
+order by
+ClaseCliente,
+periodoYearE,
+periodoMesE
+asc

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fdf1cae2-74c9-4035-b64d-354827b5a5b8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EgresosWCF.xsd" MetadataType="Schema" ID="4ac0a2af-06c8-4e00-9093-2695a9a6ccb1" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="EgresosWCF1.xsd" MetadataType="Schema" ID="077d83af-e658-4403-9d5a-c36203ad2c4e" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="EgresosWCF2.xsd" MetadataType="Schema" ID="aa0713d1-8fc1-4bb4-9dcc-82a4ef31bad8" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="EgresosWCF.wsdl" MetadataType="Wsdl" ID="523aec31-7ede-46dc-834d-ead205a901a1" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc?wsdl" />
+    <MetadataFile FileName="EgresosWCF.disco" MetadataType="Disco" ID="1a7111ed-cc31-454f-9764-62c353d27ae1" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EgresosWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

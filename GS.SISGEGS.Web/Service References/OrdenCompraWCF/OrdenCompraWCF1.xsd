@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVBG00536XResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00536XResult" nillable="true" type="tns:VBG00536XResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00536XResult" nillable="true" type="tns:ArrayOfVBG00536XResult" />
+  <xs:complexType name="VBG00536XResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Anulable" type="xs:int" />
+      <xs:element minOccurs="0" name="Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEstado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaentrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaorden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id_moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="impuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="neto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="noRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="subtotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00536XResult" nillable="true" type="tns:VBG00536XResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_OCResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_OCResult" nillable="true" type="tns:USP_Sel_OCResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_OCResult" nillable="true" type="tns:ArrayOfUSP_Sel_OCResult" />
+  <xs:complexType name="USP_Sel_OCResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaOrden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Impuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Neto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NoRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TieneParcial" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_OCResult" nillable="true" type="tns:USP_Sel_OCResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_OC_OpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_OC_OpResult" nillable="true" type="tns:USP_Sel_OC_OpResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_OC_OpResult" nillable="true" type="tns:ArrayOfUSP_Sel_OC_OpResult" />
+  <xs:complexType name="USP_Sel_OC_OpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaOrden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Impuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Neto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NoRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_OC_OpResult" nillable="true" type="tns:USP_Sel_OC_OpResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_OC_OpLineaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_OC_OpLineaResult" nillable="true" type="tns:USP_Sel_OC_OpLineaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_OC_OpLineaResult" nillable="true" type="tns:ArrayOfUSP_Sel_OC_OpLineaResult" />
+  <xs:complexType name="USP_Sel_OC_OpLineaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadDisponible" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_UnidadInv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ItemCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kardex" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Precio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_OC_OpLineaResult" nillable="true" type="tns:USP_Sel_OC_OpLineaResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_OC_OpParcialResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_OC_OpParcialResult" nillable="true" type="tns:USP_Sel_OC_OpParcialResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_OC_OpParcialResult" nillable="true" type="tns:ArrayOfUSP_Sel_OC_OpParcialResult" />
+  <xs:complexType name="USP_Sel_OC_OpParcialResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_UnidadInv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ItemCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kardex" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreKardex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Op_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_OC_OpParcialResult" nillable="true" type="tns:USP_Sel_OC_OpParcialResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_ImpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_ImpResult" nillable="true" type="tns:USP_Sel_Genesys_OC_ImpResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_ImpResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_ImpResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_ImpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EsParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaIngresoAlm" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FlgOcProcesada" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_SegImp" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Impuestos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Neto" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_Registro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpParcial_OC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Op_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Subtotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_ImpResult" nillable="true" type="tns:USP_Sel_Genesys_OC_ImpResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_ImpLineaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_ImpLineaResult" nillable="true" type="tns:USP_Sel_Genesys_OC_ImpLineaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_ImpLineaResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_ImpLineaResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_ImpLineaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Amarre" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_UnidadInv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Item_ID" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpParcial_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Op_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_ImpLineaResult" nillable="true" type="tns:USP_Sel_Genesys_OC_ImpLineaResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_Oc_SegImpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_Oc_SegImpResult" nillable="true" type="tns:USP_Sel_Genesys_Oc_SegImpResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_Oc_SegImpResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_Oc_SegImpResult" />
+  <xs:complexType name="USP_Sel_Genesys_Oc_SegImpResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadContenedor" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasAlmacenaje" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasLibresSE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasSobreEstadia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoSobreEstadia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaETA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETD" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETDAprox" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIngresoAlm" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaLiquidacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaSobreEstadia" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Agente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_SegImp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_TipoVia" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_UnidadInv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ItemCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kardex" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LinkDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liquidacion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreAgente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreKardex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreLiquidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreVia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UsuarioLiquidacion" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_Oc_SegImpResult" nillable="true" type="tns:USP_Sel_Genesys_Oc_SegImpResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOCResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_Imp_SeleccionarOCResult" nillable="true" type="tns:USP_Sel_Genesys_OC_Imp_SeleccionarOCResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOCResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOCResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_Imp_SeleccionarOCResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaOrden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_SegImp" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Impuestos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Neto" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Op_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Subtotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_Imp_SeleccionarOCResult" nillable="true" type="tns:USP_Sel_Genesys_OC_Imp_SeleccionarOCResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_EstadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_EstadoResult" nillable="true" type="tns:USP_Sel_Genesys_OC_EstadoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_EstadoResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_EstadoResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_EstadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_EstadoResult" nillable="true" type="tns:USP_Sel_Genesys_OC_EstadoResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_TipoViaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_TipoViaResult" nillable="true" type="tns:USP_Sel_Genesys_OC_TipoViaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_TipoViaResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_TipoViaResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_TipoViaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_TipoVia" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreVia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_TipoViaResult" nillable="true" type="tns:USP_Sel_Genesys_OC_TipoViaResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_Oc_SegImp_IdSegResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_Oc_SegImp_IdSegResult" nillable="true" type="tns:USP_Sel_Genesys_Oc_SegImp_IdSegResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_Oc_SegImp_IdSegResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_Oc_SegImp_IdSegResult" />
+  <xs:complexType name="USP_Sel_Genesys_Oc_SegImp_IdSegResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgenteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CantidadContenedor" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasAlmacenaje" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasLibresSE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaETA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETD" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETDAprox" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIngresoAlm" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaLiquidacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Agente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_SegImp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_TipoVia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LinkDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liquidacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLiquidacion" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_Oc_SegImp_IdSegResult" nillable="true" type="tns:USP_Sel_Genesys_Oc_SegImp_IdSegResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" nillable="true" type="tns:USP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" nillable="true" type="tns:ArrayOfUSP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaOrden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Impuestos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Neto" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_RegistroParcial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroParcial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Op_OC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Subtotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" nillable="true" type="tns:USP_Sel_Genesys_OC_Imp_SeleccionarOC_IdSegResult" />
+  <xs:complexType name="USP_Sel_Genesys_OC_ImpSegEntidadResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadContenedor" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasAlmacenaje" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasLibresSE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaETA" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETD" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaETDAprox" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIngresoAlm" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaLiquidacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Agente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_SegImp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_TipoVia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LinkDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liquidacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDua" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLiquidacion" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Genesys_OC_ImpSegEntidadResult" nillable="true" type="tns:USP_Sel_Genesys_OC_ImpSegEntidadResult" />
+  <xs:complexType name="ArrayOfUSP_SEL_DocumentosSegImportacionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_DocumentosSegImportacionResult" nillable="true" type="tns:USP_SEL_DocumentosSegImportacionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_DocumentosSegImportacionResult" nillable="true" type="tns:ArrayOfUSP_SEL_DocumentosSegImportacionResult" />
+  <xs:complexType name="USP_SEL_DocumentosSegImportacionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_segimp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RutaDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_DocumentosSegImportacionResult" nillable="true" type="tns:USP_SEL_DocumentosSegImportacionResult" />
+</xs:schema>

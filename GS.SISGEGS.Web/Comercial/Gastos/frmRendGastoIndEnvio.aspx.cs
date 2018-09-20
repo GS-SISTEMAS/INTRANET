@@ -1,0 +1,283 @@
+﻿using GS.SISGEGS.DM;
+using GS.SISGEGS.Web.EgresosWCF;
+using GS.SISGEGS.Web.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Telerik.Web.UI;
+using System.Globalization; 
+
+namespace GS.SISGEGS.Web.Comercial.Gastos
+{
+    public partial class frmRendGastoIndEnvio : System.Web.UI.Page
+    {
+
+        
+        protected void grdIndicador_CellDataBound(object sender, Telerik.Web.UI.PivotGridCellDataBoundEventArgs e)
+        {
+            //&month& patterns is added in the DataFormatString, so it could be catched and parsed to month name
+            if (e.Cell is PivotGridColumnHeaderCell)
+            {
+                int month = 0;
+                string strMes = ""; 
+
+                PivotGridColumnHeaderCell cell = e.Cell as PivotGridColumnHeaderCell;
+                strMes = cell.Text.ToString(); 
+
+
+                //if (strMes.Length > 0 && strMes.Length < 3)
+                //{
+                //    string cellValue = strMes;
+                //    if (int.TryParse(cellValue, out month))
+                //    {
+                //        cell.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(int.Parse(cellValue));
+                //    }
+                //}
+            }
+        }
+
+        private void Reporte_Cargar()
+        {
+         
+
+            List<gsIndicadorEnvioResult> lstIndicador;
+            try
+            {
+                EgresosWCFClient objReporte = new EgresosWCFClient();
+
+
+
+
+                lstIndicador = objReporte.IndicadorEnvio(((Usuario_LoginResult)Session["Usuario"]).idEmpresa, ((Usuario_LoginResult)Session["Usuario"]).codigoUsuario).ToList();
+
+                grdIndicador.DataSource = lstIndicador;
+                grdIndicador.DataBind();
+
+                lblMensaje.Text = "Se han encontrado " + lstIndicador.Count.ToString() + " registro.";
+                lblMensaje.CssClass = "mensajeExito";
+
+                ViewState["lstIndicador"] = JsonHelper.JsonSerializer(lstIndicador);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void AddStylesToDataCells(PivotGridBaseModelCell modelDataCell, PivotGridCellExportingArgs e)
+        {
+            if (modelDataCell.Data != null && modelDataCell.Data.GetType() == typeof(decimal))
+            {
+                decimal value = Convert.ToDecimal(modelDataCell.Data);
+                if (value > 100000)
+                {
+                    e.ExportedCell.Style.BackColor = Color.FromArgb(51, 204, 204);
+                    AddBorders(e);
+                }
+                e.ExportedCell.Format = "0.0";
+
+                if (modelDataCell.Field.Caption == "VentaPresupuesto")
+                    e.ExportedCell.Format = "$0.0";
+            }
+
+        }
+
+        private void AddStylesToColumnHeaderCells(PivotGridBaseModelCell modelDataCell, PivotGridCellExportingArgs e)
+        {
+            if (e.ExportedCell.Table.Columns[e.ExportedCell.ColIndex].Width == 0)
+            {
+                e.ExportedCell.Table.Columns[e.ExportedCell.ColIndex].Width = 200D;
+            }
+
+            if (modelDataCell.IsTotalCell)
+            {
+                e.ExportedCell.Style.BackColor = Color.FromArgb(150, 150, 150);
+                e.ExportedCell.Style.Font.Bold = true;
+            }
+            else
+            {
+                e.ExportedCell.Style.BackColor = Color.FromArgb(192, 192, 192);
+            }
+            AddBorders(e);
+        }
+
+        private void AddStylesToRowHeaderCells(PivotGridBaseModelCell modelDataCell, PivotGridCellExportingArgs e)
+        {
+            if (e.ExportedCell.Table.Columns[e.ExportedCell.ColIndex].Width == 0)
+            {
+                e.ExportedCell.Table.Columns[e.ExportedCell.ColIndex].Width = 80D;
+            }
+            if (modelDataCell.IsTotalCell)
+            {
+                e.ExportedCell.Style.BackColor = Color.FromArgb(150, 150, 150);
+                e.ExportedCell.Style.Font.Bold = true;
+            }
+            else
+            {
+                e.ExportedCell.Style.BackColor = Color.FromArgb(192, 192, 192);
+            }
+
+            AddBorders(e);
+        }
+
+        private static void AddBorders(PivotGridCellExportingArgs e)
+        {
+            e.ExportedCell.Style.BorderBottomColor = Color.FromArgb(128, 128, 128);
+            e.ExportedCell.Style.BorderBottomWidth = new Unit(1);
+            e.ExportedCell.Style.BorderBottomStyle = BorderStyle.Solid;
+
+            e.ExportedCell.Style.BorderRightColor = Color.FromArgb(128, 128, 128);
+            e.ExportedCell.Style.BorderRightWidth = new Unit(1);
+            e.ExportedCell.Style.BorderRightStyle = BorderStyle.Solid;
+
+            e.ExportedCell.Style.BorderLeftColor = Color.FromArgb(128, 128, 128);
+            e.ExportedCell.Style.BorderLeftWidth = new Unit(1);
+            e.ExportedCell.Style.BorderLeftStyle = BorderStyle.Solid;
+
+            e.ExportedCell.Style.BorderTopColor = Color.FromArgb(128, 128, 128);
+            e.ExportedCell.Style.BorderTopWidth = new Unit(1);
+            e.ExportedCell.Style.BorderTopStyle = BorderStyle.Solid;
+        }
+
+        private bool IsTotalDataCell(PivotGridBaseModelCell modelDataCell)
+        {
+            return modelDataCell.TableCellType == PivotGridTableCellType.DataCell &&
+               (modelDataCell.CellType == PivotGridDataCellType.ColumnTotalDataCell ||
+                 modelDataCell.CellType == PivotGridDataCellType.RowTotalDataCell ||
+                 modelDataCell.CellType == PivotGridDataCellType.RowAndColumnTotal);
+        }
+
+        private bool IsGrandTotalDataCell(PivotGridBaseModelCell modelDataCell)
+        {
+            return modelDataCell.TableCellType == PivotGridTableCellType.DataCell &&
+                (modelDataCell.CellType == PivotGridDataCellType.ColumnGrandTotalDataCell ||
+                    modelDataCell.CellType == PivotGridDataCellType.ColumnGrandTotalRowTotal ||
+                    modelDataCell.CellType == PivotGridDataCellType.RowGrandTotalColumnTotal ||
+                    modelDataCell.CellType == PivotGridDataCellType.RowGrandTotalDataCell ||
+                    modelDataCell.CellType == PivotGridDataCellType.RowAndColumnGrandTotal);
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/Security/frmCerrar.aspx");
+
+            try
+            {
+                if (!Page.IsPostBack)
+                {
+                    LoginWCF.LoginWCFClient objLoginWCF = new LoginWCF.LoginWCFClient();
+                    objLoginWCF.AuditoriaMenu_Registrar(System.Web.HttpContext.Current.Request.Url.AbsolutePath, Environment.MachineName,
+                        ((Usuario_LoginResult)System.Web.HttpContext.Current.Session["Usuario"]).idUsuario);
+
+                    Reporte_Cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                rwmReporte.RadAlert(ex.Message, 500, 100, "Error al descargar el excel", "");
+            }
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/Security/frmCerrar.aspx");
+
+            try
+            {
+                
+                Reporte_Cargar();
+
+            }
+            catch (Exception ex)
+            {
+                rwmReporte.RadAlert(ex.Message, 500, 100, "Error al descargar el excel", "");
+            }
+        }
+
+        protected void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/Security/frmCerrar.aspx");
+
+            try
+            {
+                grdIndicador.ExportSettings.Excel.Format = (PivotGridExcelFormat)Enum.Parse(typeof(PivotGridExcelFormat), "Xlsx");
+                grdIndicador.ExportSettings.FileName = "ReporteIndicadorPlanilla_" + DateTime.Now.ToString("yyyyMMddHmm");
+                grdIndicador.ExportToExcel();
+            }
+            catch (Exception ex)
+            {
+                rwmReporte.RadAlert(ex.Message, 500, 100, "Error al descargar el excel", "");
+            }
+        }
+
+        protected void grdIndicador_PivotGridCellExporting(object sender, PivotGridCellExportingArgs e)
+        {
+            try
+            {
+                PivotGridBaseModelCell modelDataCell = e.PivotGridModelCell as PivotGridBaseModelCell;
+                if (modelDataCell != null)
+                {
+                    AddStylesToDataCells(modelDataCell, e);
+                }
+
+                if (modelDataCell.TableCellType == PivotGridTableCellType.RowHeaderCell)
+                {
+                    AddStylesToRowHeaderCells(modelDataCell, e);
+                }
+
+                if (modelDataCell.TableCellType == PivotGridTableCellType.ColumnHeaderCell)
+                {
+                    AddStylesToColumnHeaderCells(modelDataCell, e);
+                }
+
+                if (modelDataCell.IsGrandTotalCell)
+                {
+                    e.ExportedCell.Style.BackColor = Color.FromArgb(128, 128, 128);
+                    e.ExportedCell.Style.Font.Bold = true;
+                }
+
+                if (IsTotalDataCell(modelDataCell))
+                {
+                    e.ExportedCell.Style.BackColor = Color.FromArgb(150, 150, 150);
+                    e.ExportedCell.Style.Font.Bold = true;
+                    AddBorders(e);
+                }
+
+                if (IsGrandTotalDataCell(modelDataCell))
+                {
+                    e.ExportedCell.Style.BackColor = Color.FromArgb(128, 128, 128);
+                    e.ExportedCell.Style.Font.Bold = true;
+                    AddBorders(e);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMensaje.Text = ex.Message;
+                lblMensaje.CssClass = "mensajeError";
+            }
+        }
+
+        protected void grdIndicador_NeedDataSource(object sender, PivotGridNeedDataSourceEventArgs e)
+        {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/Security/frmCerrar.aspx");
+
+            try
+            {
+                grdIndicador.DataSource = JsonHelper.JsonDeserialize<List<gsPresupuesto_ZonaResult>>((string)ViewState["lstIndicador"]);
+            }
+            catch (Exception ex)
+            {
+                rwmReporte.RadAlert(ex.Message, 500, 100, "Error al descargar el excel", "");
+            }
+        }
+    }
+}

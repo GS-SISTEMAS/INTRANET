@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAuditoriaMenu_ReporteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuditoriaMenu_ReporteResult" nillable="true" type="tns:AuditoriaMenu_ReporteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuditoriaMenu_ReporteResult" nillable="true" type="tns:ArrayOfAuditoriaMenu_ReporteResult" />
+  <xs:complexType name="AuditoriaMenu_ReporteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pagina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idMenu" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuditoriaMenu_ReporteResult" nillable="true" type="tns:AuditoriaMenu_ReporteResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_ControlFacturasMaximoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_ControlFacturasMaximoResult" nillable="true" type="tns:USP_Sel_ControlFacturasMaximoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_ControlFacturasMaximoResult" nillable="true" type="tns:ArrayOfUSP_Sel_ControlFacturasMaximoResult" />
+  <xs:complexType name="USP_Sel_ControlFacturasMaximoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FacturaGenesys" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaFactura" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaProceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IGV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroFacturaMaximo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroFacturaProveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OCGenesys" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OCMaximo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_ControlFacturasMaximoResult" nillable="true" type="tns:USP_Sel_ControlFacturasMaximoResult" />
+</xs:schema>

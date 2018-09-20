@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/UsuarioWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+  <xs:element name="Usuario_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+        <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Usuario_BuscarResult" nillable="true" type="q1:ArrayOfUsuario_BuscarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarGenesys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_BuscarGenesysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Usuario_BuscarGenesysResult" nillable="true" type="q2:ArrayOfgsUsuario_BuscarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_Registrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+        <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cambioPassword" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cambioPasswordAmbos" type="xs:boolean" />
+        <xs:element minOccurs="0" name="idUsuarioRegistro" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_RegistrarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario_RegistrarResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_Actualizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+        <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cambioPassword" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cambioAmbos" type="xs:boolean" />
+        <xs:element minOccurs="0" name="idUsuarioRegistro" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ActualizarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario_ActualizarResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_CambiarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cambiarAmbos" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_CambiarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarMenusPorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idempresa" type="xs:int" />
+        <xs:element minOccurs="0" name="fechainicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarMenusPorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Usuario_ListarMenusPorUsuarioResult" nillable="true" type="q3:ArrayOfusp_SelCantidadAccesosPorMenuResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarMenusNoAccedidos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idempresa" type="xs:int" />
+        <xs:element minOccurs="0" name="fechainicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechafin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_ListarMenusNoAccedidosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Usuario_ListarMenusNoAccedidosResult" nillable="true" type="q4:ArrayOfusp_Sel_MenusNoAccedidosResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_Listar_Usuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Usuario_Listar_UsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Usuario_Listar_UsuariosResult" nillable="true" type="q5:ArrayOfUSP_Sel_Usuarios_GeneralResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Estado_Usuarios_General">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Estado_General" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Estado_Usuarios_GeneralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualizar_Estado_Usuarios_GeneralResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Estado_Usuarios_Empresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Estado_Silvestre" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Estado_NeoAgrum" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Estado_Inatec" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Estado_Intranet" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Estado_Ticket" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_Estado_Usuarios_EmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Actualizar_Estado_Usuarios_EmpresaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

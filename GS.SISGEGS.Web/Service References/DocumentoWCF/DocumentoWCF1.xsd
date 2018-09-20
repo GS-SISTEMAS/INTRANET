@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVBG00716Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00716Result" nillable="true" type="tns:VBG00716Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00716Result" nillable="true" type="tns:ArrayOfVBG00716Result" />
+  <xs:complexType name="VBG00716Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00716Result" nillable="true" type="tns:VBG00716Result" />
+  <xs:complexType name="ArrayOfgsDocumento_ListarTipoCompraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocumento_ListarTipoCompraResult" nillable="true" type="tns:gsDocumento_ListarTipoCompraResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocumento_ListarTipoCompraResult" nillable="true" type="tns:ArrayOfgsDocumento_ListarTipoCompraResult" />
+  <xs:complexType name="gsDocumento_ListarTipoCompraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocumento_ListarTipoCompraResult" nillable="true" type="tns:gsDocumento_ListarTipoCompraResult" />
+  <xs:complexType name="ArrayOfVBG01122Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG01122Result" nillable="true" type="tns:VBG01122Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG01122Result" nillable="true" type="tns:ArrayOfVBG01122Result" />
+  <xs:complexType name="VBG01122Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG01122Result" nillable="true" type="tns:VBG01122Result" />
+  <xs:complexType name="ArrayOfListarDocumentosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListarDocumentosResult" nillable="true" type="tns:ListarDocumentosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListarDocumentosResult" nillable="true" type="tns:ArrayOfListarDocumentosResult" />
+  <xs:complexType name="ListarDocumentosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_documento" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListarDocumentosResult" nillable="true" type="tns:ListarDocumentosResult" />
+  <xs:complexType name="ArrayOfListarDocumentosFamiliaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListarDocumentosFamiliaResult" nillable="true" type="tns:ListarDocumentosFamiliaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListarDocumentosFamiliaResult" nillable="true" type="tns:ArrayOfListarDocumentosFamiliaResult" />
+  <xs:complexType name="ListarDocumentosFamiliaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_documento" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListarDocumentosFamiliaResult" nillable="true" type="tns:ListarDocumentosFamiliaResult" />
+  <xs:complexType name="ArrayOfDetalleOperacionFamiliaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleOperacionFamiliaResult" nillable="true" type="tns:DetalleOperacionFamiliaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleOperacionFamiliaResult" nillable="true" type="tns:ArrayOfDetalleOperacionFamiliaResult" />
+  <xs:complexType name="DetalleOperacionFamiliaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abonos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Anio" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CadenaDatos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cargos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cumplimiento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdDocumento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IdEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdFamilia" type="xs:int" />
+      <xs:element minOccurs="0" name="MontoAlCorte" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoInicio" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleOperacionFamiliaResult" nillable="true" type="tns:DetalleOperacionFamiliaResult" />
+  <xs:complexType name="ArrayOfDetalleOperacionDocumentoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleOperacionDocumentoResult" nillable="true" type="tns:DetalleOperacionDocumentoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleOperacionDocumentoResult" nillable="true" type="tns:ArrayOfDetalleOperacionDocumentoResult" />
+  <xs:complexType name="DetalleOperacionDocumentoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DifDias" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Glosa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MontoDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroOperacion" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleOperacionDocumentoResult" nillable="true" type="tns:DetalleOperacionDocumentoResult" />
+  <xs:complexType name="ArrayOfListarFamiliasResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListarFamiliasResult" nillable="true" type="tns:ListarFamiliasResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListarFamiliasResult" nillable="true" type="tns:ArrayOfListarFamiliasResult" />
+  <xs:complexType name="ListarFamiliasResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdTipoFamilia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreFamilia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListarFamiliasResult" nillable="true" type="tns:ListarFamiliasResult" />
+  <xs:complexType name="ArrayOfDetalleOperacionFamiliaAnticuamientoDocumentoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleOperacionFamiliaAnticuamientoDocumentoResult" nillable="true" type="tns:DetalleOperacionFamiliaAnticuamientoDocumentoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleOperacionFamiliaAnticuamientoDocumentoResult" nillable="true" type="tns:ArrayOfDetalleOperacionFamiliaAnticuamientoDocumentoResult" />
+  <xs:complexType name="DetalleOperacionFamiliaAnticuamientoDocumentoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DifDias" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Glosa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MontoDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroOperacion" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleOperacionFamiliaAnticuamientoDocumentoResult" nillable="true" type="tns:DetalleOperacionFamiliaAnticuamientoDocumentoResult" />
+</xs:schema>

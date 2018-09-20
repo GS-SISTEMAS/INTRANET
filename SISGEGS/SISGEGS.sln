@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.DM", "GS.SISGEGS.DM\GS.SISGEGS.DM.csproj", "{10A35074-9231-4513-BB44-77E0B7A7B117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.BL", "GS.SISGEGS.BL\GS.SISGEGS.BL.csproj", "{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.WCF", "GS.SISGEGS.WCF\GS.SISGEGS.WCF.csproj", "{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.Web", "GS.SISGEGS.Web\GS.SISGEGS.Web.csproj", "{3250B3AC-1449-48A9-936F-868A9421F44D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB} = {00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.UT", "GS.SISGEGS.UT\GS.SISGEGS.UT.csproj", "{522E3CBB-92D5-4D31-BBD7-FA4720930508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS.SISGEGS.BE", "GS.SISGEGS.BE\GS.SISGEGS.BE.csproj", "{75FE5952-0135-49F6-B143-E44B67AD1C44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A35074-9231-4513-BB44-77E0B7A7B117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A35074-9231-4513-BB44-77E0B7A7B117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A35074-9231-4513-BB44-77E0B7A7B117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A35074-9231-4513-BB44-77E0B7A7B117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ECAAD2-2480-44D1-92D0-D69AFD48B9EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3250B3AC-1449-48A9-936F-868A9421F44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3250B3AC-1449-48A9-936F-868A9421F44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3250B3AC-1449-48A9-936F-868A9421F44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3250B3AC-1449-48A9-936F-868A9421F44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522E3CBB-92D5-4D31-BBD7-FA4720930508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522E3CBB-92D5-4D31-BBD7-FA4720930508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522E3CBB-92D5-4D31-BBD7-FA4720930508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522E3CBB-92D5-4D31-BBD7-FA4720930508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FE5952-0135-49F6-B143-E44B67AD1C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FE5952-0135-49F6-B143-E44B67AD1C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FE5952-0135-49F6-B143-E44B67AD1C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FE5952-0135-49F6-B143-E44B67AD1C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.10.1.26:8080/tfs/gruposilvestre
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GS.SISGEGS.BE\\GS.SISGEGS.BE.csproj
+		SccProjectName1 = GS.SISGEGS.BE
+		SccLocalPath1 = GS.SISGEGS.BE
+		SccProjectUniqueName2 = GS.SISGEGS.BL\\GS.SISGEGS.BL.csproj
+		SccProjectName2 = GS.SISGEGS.BL
+		SccLocalPath2 = GS.SISGEGS.BL
+		SccProjectUniqueName3 = GS.SISGEGS.DM\\GS.SISGEGS.DM.csproj
+		SccProjectName3 = GS.SISGEGS.DM
+		SccLocalPath3 = GS.SISGEGS.DM
+		SccProjectUniqueName4 = GS.SISGEGS.UT\\GS.SISGEGS.UT.csproj
+		SccProjectName4 = GS.SISGEGS.UT
+		SccLocalPath4 = GS.SISGEGS.UT
+		SccProjectUniqueName5 = GS.SISGEGS.WCF\\GS.SISGEGS.WCF.csproj
+		SccProjectName5 = GS.SISGEGS.WCF
+		SccLocalPath5 = GS.SISGEGS.WCF
+		SccProjectUniqueName6 = GS.SISGEGS.Web\\GS.SISGEGS.Web.csproj
+		SccProjectName6 = GS.SISGEGS.Web
+		SccLocalPath6 = GS.SISGEGS.Web
+	EndGlobalSection
+EndGlobal

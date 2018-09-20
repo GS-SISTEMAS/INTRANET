@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfgsCredito_ListarCondicionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsCredito_ListarCondicionResult" nillable="true" type="tns:gsCredito_ListarCondicionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsCredito_ListarCondicionResult" nillable="true" type="tns:ArrayOfgsCredito_ListarCondicionResult" />
+  <xs:complexType name="gsCredito_ListarCondicionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiasCredito" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_CondicionCredito" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_Pago" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsCredito_ListarCondicionResult" nillable="true" type="tns:gsCredito_ListarCondicionResult" />
+  <xs:complexType name="ArrayOfUSP_SEL_LetrasSinCanjeV2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_LetrasSinCanjeV2Result" nillable="true" type="tns:USP_SEL_LetrasSinCanjeV2Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_LetrasSinCanjeV2Result" nillable="true" type="tns:ArrayOfUSP_SEL_LetrasSinCanjeV2Result" />
+  <xs:complexType name="USP_SEL_LetrasSinCanjeV2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aceptante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cancelado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Dc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiasTranscurridos" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmisionFactura" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEmisionLetra" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaLimite" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Financiado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Glosa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Aceptante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Aval" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Banco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CtaCte" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Financiamiento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Letra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe_USD" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LugarGiro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreVendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreZona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroCta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroCuota" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroDocFactura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroLetra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroRenovacion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Oficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpBanco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Renovacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Renovado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RucAceptante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Saldo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoPlazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPlazoVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vcmto" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_LetrasSinCanjeV2Result" nillable="true" type="tns:USP_SEL_LetrasSinCanjeV2Result" />
+  <xs:complexType name="ArrayOfUSP_SEL_Verificacion_DeudaVencidaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_Verificacion_DeudaVencidaResult" nillable="true" type="tns:USP_SEL_Verificacion_DeudaVencidaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_Verificacion_DeudaVencidaResult" nillable="true" type="tns:ArrayOfUSP_SEL_Verificacion_DeudaVencidaResult" />
+  <xs:complexType name="USP_SEL_Verificacion_DeudaVencidaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeudaVencida" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_Verificacion_DeudaVencidaResult" nillable="true" type="tns:USP_SEL_Verificacion_DeudaVencidaResult" />
+  <xs:complexType name="ArrayOfUSP_SEL_Verificacion_LetrasxAceptarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_Verificacion_LetrasxAceptarResult" nillable="true" type="tns:USP_SEL_Verificacion_LetrasxAceptarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_Verificacion_LetrasxAceptarResult" nillable="true" type="tns:ArrayOfUSP_SEL_Verificacion_LetrasxAceptarResult" />
+  <xs:complexType name="USP_SEL_Verificacion_LetrasxAceptarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deuda_mayor30Dias" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmisionFactura" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEmisionLetra" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Letra" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_USD" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroLetra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_Verificacion_LetrasxAceptarResult" nillable="true" type="tns:USP_SEL_Verificacion_LetrasxAceptarResult" />
+</xs:schema>

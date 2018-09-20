@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mstPrincipal.master.cs" Inherits="GS.SISGEGS.Web.Security.mstPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link href="https://intranet.gruposilvestre.com.pe/IntranetGS/Styles/style.css" type="text/css" rel="stylesheet"/>
+	<link href="https://intranet.gruposilvestre.com.pe/IntranetGS/Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="https://intranet.gruposilvestre.com.pe/resources/css/toastr.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/jquery.js" type="text/javascript"></script>
+	<script src="https://intranet.gruposilvestre.com.pe/resources/scripts/common/toastr.min.js" type="text/javascript"></script>
+	<script src="https://intranet.gruposilvestre.com.pe/resources/scripts/kendo/kendo.all.min.js" type="text/javascript"></script>
+	<script src="https://intranet.gruposilvestre.com.pe/resources/scripts/kendo/cultures/kendo.culture.es-PE.min.js" type="text/javascript"></script>	
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <script>
+        $(document).ready(function(){
+            var altura = $(document).height();
+            $('#contenedor').css("height", altura + "px");
+        });
+
+        $(window).resize(function () {
+            var altura = $(document).height();
+            $('#contenedor').css("height", altura + "px");
+        });
+    </script>    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <script type="text/javascript">
+    </script>
+        <div id="contenedor">
+            <telerik:RadAjaxPanel ID="pnlPrincipal" runat="server" Width="100%" Height="100%">
+                <telerik:RadPageLayout ID="RadPageLayout1" runat="server" Width="100%" Height="100%">
+                    <Rows>
+                        <telerik:LayoutRow Style="background-color: #356F0B; color: white; font-weight: bold; border-style: solid; border-width: 1px 1px 0px 1px; border-color: #183801; vertical-align:central" Height="3%">
+                            <Columns>
+                                <telerik:LayoutColumn Span="3">
+                                    <asp:Label ID="lblNombre" runat="server"></asp:Label>
+                                </telerik:LayoutColumn>
+                                <telerik:LayoutColumn Span="3">
+                                    <asp:Label ID="lblPerfil" runat="server"></asp:Label>
+                                </telerik:LayoutColumn>
+                                <telerik:LayoutColumn Span="5">
+                                </telerik:LayoutColumn>
+                                <%--<telerik:LayoutColumn Span="1">
+                                    <asp:Image ID="imgLogo" runat="server" />
+                                </telerik:LayoutColumn>--%>
+                            </Columns>
+                        </telerik:LayoutRow>
+                        <telerik:LayoutRow Height="3%">
+                            <Content>
+                                <telerik:RadMenu ID="rmMenuPrincipal" runat="server"></telerik:RadMenu>
+                            </Content>
+                        </telerik:LayoutRow>
+                        <telerik:LayoutRow Height="89%">
+                            <Columns>
+                                <telerik:LayoutColumn Span="12" Height="100%">
+                                    <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+                                </telerik:LayoutColumn>
+                            </Columns>
+                        </telerik:LayoutRow>
+                        <telerik:LayoutRow Height="3%" style="background-color:#E0E0E0;">
+                            <Columns>
+                                <telerik:LayoutColumn Span="12">
+                                    <asp:ContentPlaceHolder ID="mensaje" runat="server"></asp:ContentPlaceHolder>
+                                </telerik:LayoutColumn>
+                            </Columns>
+                        </telerik:LayoutRow>
+                    </Rows>
+                </telerik:RadPageLayout>
+            </telerik:RadAjaxPanel>
+        </div>
+    </form>
+</body>
+</html>

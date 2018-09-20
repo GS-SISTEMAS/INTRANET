@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2839dd55-9028-4c80-bf41-e1a96f12d97a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VarianteWCF3.xsd" MetadataType="Schema" ID="91a89bb7-21ad-49ba-a7da-01d2399d62f2" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="VarianteWCF31.xsd" MetadataType="Schema" ID="8dd53c3c-fdc0-4582-a44b-db67422f3dad" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="VarianteWCF1.wsdl" MetadataType="Wsdl" ID="e759c76a-6440-4b3f-982a-2d3dc81fb2e5" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc?wsdl" />
+    <MetadataFile FileName="VarianteWCF1.disco" MetadataType="Disco" ID="2414fc02-c508-4cd9-b680-59a167b77773" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc?disco" />
+    <MetadataFile FileName="VarianteWCF32.xsd" MetadataType="Schema" ID="0528803d-2408-403e-9322-fb4d1044aec8" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/VarianteWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CierreCostoWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/CierreCostoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_DocVenta_ControlCosto_MarcaProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ControlCosto_MarcaProducto" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_DocVenta_ControlCosto_MarcaProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ControlCosto_MarcaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_ComboBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_ComboBox" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_CierreCosto_ComboBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CierreCosto_ComboBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_Produccion_Listar_PlanProd_InputMessage">
+    <wsdl:part name="parameters" element="tns:Produccion_Listar_PlanProd" />
+  </wsdl:message>
+  <wsdl:message name="ICierreCostoWCF_Produccion_Listar_PlanProd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Produccion_Listar_PlanProdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICierreCostoWCF">
+    <wsdl:operation name="CierreCosto_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_Registrar" message="tns:ICierreCostoWCF_CierreCosto_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_RegistrarResponse" message="tns:ICierreCostoWCF_CierreCosto_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CierreCosto_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_Listar" message="tns:ICierreCostoWCF_CierreCosto_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_ListarResponse" message="tns:ICierreCostoWCF_CierreCosto_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ControlCosto_MarcaProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICierreCostoWCF/DocVenta_ControlCosto_MarcaProducto" message="tns:ICierreCostoWCF_DocVenta_ControlCosto_MarcaProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICierreCostoWCF/DocVenta_ControlCosto_MarcaProductoResponse" message="tns:ICierreCostoWCF_DocVenta_ControlCosto_MarcaProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CierreCosto_ComboBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_ComboBox" message="tns:ICierreCostoWCF_CierreCosto_ComboBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICierreCostoWCF/CierreCosto_ComboBoxResponse" message="tns:ICierreCostoWCF_CierreCosto_ComboBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Produccion_Listar_PlanProd">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICierreCostoWCF/Produccion_Listar_PlanProd" message="tns:ICierreCostoWCF_Produccion_Listar_PlanProd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICierreCostoWCF/Produccion_Listar_PlanProdResponse" message="tns:ICierreCostoWCF_Produccion_Listar_PlanProd_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICierreCostoWCF" type="tns:ICierreCostoWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CierreCosto_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ICierreCostoWCF/CierreCosto_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CierreCosto_Listar">
+      <soap:operation soapAction="http://tempuri.org/ICierreCostoWCF/CierreCosto_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ControlCosto_MarcaProducto">
+      <soap:operation soapAction="http://tempuri.org/ICierreCostoWCF/DocVenta_ControlCosto_MarcaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CierreCosto_ComboBox">
+      <soap:operation soapAction="http://tempuri.org/ICierreCostoWCF/CierreCosto_ComboBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Produccion_Listar_PlanProd">
+      <soap:operation soapAction="http://tempuri.org/ICierreCostoWCF/Produccion_Listar_PlanProd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CierreCostoWCF">
+    <wsdl:port name="BasicHttpBinding_ICierreCostoWCF" binding="tns:BasicHttpBinding_ICierreCostoWCF">
+      <soap:address location="http://localhost:49648/CierreCostoWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

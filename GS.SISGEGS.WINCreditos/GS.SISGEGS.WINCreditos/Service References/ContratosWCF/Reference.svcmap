@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="142fd49a-88b1-44ab-aca2-567c6e3ee32b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ContratosWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContratosWCF.xsd" MetadataType="Schema" ID="03b9c349-2257-4530-b77e-6b892f58ca27" SourceId="1" SourceUrl="http://localhost:49648/ContratosWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ContratosWCF.disco" MetadataType="Disco" ID="151444b1-ce33-4bf8-a2d8-b4a20a853d89" SourceId="1" SourceUrl="http://localhost:49648/ContratosWCF.svc?disco" />
+    <MetadataFile FileName="ContratosWCF1.xsd" MetadataType="Schema" ID="99969aad-5679-4bb0-af2a-01bfc935a0ee" SourceId="1" SourceUrl="http://localhost:49648/ContratosWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ContratosWCF2.xsd" MetadataType="Schema" ID="215e1b50-d233-4052-a119-68c33df21c0d" SourceId="1" SourceUrl="http://localhost:49648/ContratosWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ContratosWCF.wsdl" MetadataType="Wsdl" ID="6aa65c2a-5b6d-4766-b7a4-c48ea13e92e3" SourceId="1" SourceUrl="http://localhost:49648/ContratosWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

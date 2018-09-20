@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVBG04694Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04694Result" nillable="true" type="tns:VBG04694Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04694Result" nillable="true" type="tns:ArrayOfVBG04694Result" />
+  <xs:complexType name="VBG04694Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_FHEnvioDocumento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cliente_eMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocSunat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DocVtaRef_DocSunat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DocVtaRef_Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocVtaRef_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoraAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Host_FHEnvioDocumento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Host_RutaEnvioDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MarcadorGeneral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonedaSigno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MotivoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NDI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreArchivoXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ok_Cliente" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_Host" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_PDFGenerado" type="xs:int" />
+      <xs:element minOccurs="0" name="Ok_SunatEnvio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_SunatRpta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_XML" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_XMLFirmado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OpOrigen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Proceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenciaDocumentoFecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ReferenciaDocumentoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenciaDocumentoNumero" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReferenciaDocumentoSerie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenciaDocumentoTipo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RespuestaTCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatEnvio_FHEnvioDocumento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SunatEnvio_NroIntento" type="xs:int" />
+      <xs:element minOccurs="0" name="SunatEnvio_TipoServicioWeb" type="xs:int" />
+      <xs:element minOccurs="0" name="SunatRpta_CodigoRespuestaEnvio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_DescripcionRespuestaEnvio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_FHGeneracionDocumentoRespuesta" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SunatRpta_FHRecepcionDocumentoProcesado" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SunatRpta_IdentificadorDocumentoEnviado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_IdentificadorDocumentoProcesado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_NombreArchivoXML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_NroTicket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SunatRpta_NumeroIdentificadorProcesoRecepcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TDI" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UsuarioAcceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vencimiento" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04694Result" nillable="true" type="tns:VBG04694Result" />
+  <xs:complexType name="ArrayOfVBG04708_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04708_CABECERAResult" nillable="true" type="tns:VBG04708_CABECERAResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04708_CABECERAResult" nillable="true" type="tns:ArrayOfVBG04708_CABECERAResult" />
+  <xs:complexType name="VBG04708_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_CalleDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_CalleNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_CalleNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_CodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NumeroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_TipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Ubigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Urbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosGlobal_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosXLinea_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalCodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUbigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUrbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Forma_Pago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Forma_Pago" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteTotalVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroCuentaBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_BaseImponible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_MontoTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumeroOV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumatoriaOtrosCargos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TREFI" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDocRefGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Venta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionEstructuraDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionUBL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04708_CABECERAResult" nillable="true" type="tns:VBG04708_CABECERAResult" />
+  <xs:complexType name="ArrayOfVBG04708_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04708_DETALLEResult" nillable="true" type="tns:VBG04708_DETALLEResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04708_DETALLEResult" nillable="true" type="tns:ArrayOfVBG04708_DETALLEResult" />
+  <xs:complexType name="VBG04708_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Determinante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kardex" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_CodigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_DctoValor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_PrecioVentaUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_TipoPrecio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_UnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta_G" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneImpuesto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04708_DETALLEResult" nillable="true" type="tns:VBG04708_DETALLEResult" />
+  <xs:complexType name="ArrayOfVBG04709_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04709_CABECERAResult" nillable="true" type="tns:VBG04709_CABECERAResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04709_CABECERAResult" nillable="true" type="tns:ArrayOfVBG04709_CABECERAResult" />
+  <xs:complexType name="VBG04709_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_CodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NumeroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_TipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Ubigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Urbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosGlobal_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosXLinea_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalCodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUbigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUrbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_TipoNC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteTotalVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreTipoNC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Numero1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_BaseImponible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_MontoTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumatoriaOtrosCargos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sustento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionEstructuraDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionUBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="id_tipoOperacion" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04709_CABECERAResult" nillable="true" type="tns:VBG04709_CABECERAResult" />
+  <xs:complexType name="ArrayOfVBG04709_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04709_DETALLEResult" nillable="true" type="tns:VBG04709_DETALLEResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04709_DETALLEResult" nillable="true" type="tns:ArrayOfVBG04709_DETALLEResult" />
+  <xs:complexType name="VBG04709_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Linea_Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_CodigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_DctoValor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_PrecioVentaUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_TipoPrecio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_UnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneImpuesto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04709_DETALLEResult" nillable="true" type="tns:VBG04709_DETALLEResult" />
+  <xs:complexType name="ArrayOfVBG04710_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04710_CABECERAResult" nillable="true" type="tns:VBG04710_CABECERAResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04710_CABECERAResult" nillable="true" type="tns:ArrayOfVBG04710_CABECERAResult" />
+  <xs:complexType name="VBG04710_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_CodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NumeroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_TipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Ubigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Urbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosGlobal_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosXLinea_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalCodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUbigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUrbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Forma_Pago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Forma_Pago" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_TipoND" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteTotalVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_BaseImponible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_MontoTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumatoriaOtrosCargos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sustento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TREFI" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Venta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionEstructuraDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionUBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_tipoOperacion" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04710_CABECERAResult" nillable="true" type="tns:VBG04710_CABECERAResult" />
+  <xs:complexType name="ArrayOfVBG04710_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04710_DETALLEResult" nillable="true" type="tns:VBG04710_DETALLEResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04710_DETALLEResult" nillable="true" type="tns:ArrayOfVBG04710_DETALLEResult" />
+  <xs:complexType name="VBG04710_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Linea_Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_CodigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_DctoValor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_PrecioVentaUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_TipoPrecio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_UnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneImpuesto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04710_DETALLEResult" nillable="true" type="tns:VBG04710_DETALLEResult" />
+  <xs:complexType name="ArrayOfVBG04711_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04711_CABECERAResult" nillable="true" type="tns:VBG04711_CABECERAResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04711_CABECERAResult" nillable="true" type="tns:ArrayOfVBG04711_CABECERAResult" />
+  <xs:complexType name="VBG04711_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_CodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NumeroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_TipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Ubigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Urbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosGlobal_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescuentosXLinea_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalCodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUbigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUrbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Forma_Pago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Forma_Pago" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteTotalVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leyenda_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ODR_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_BaseImponible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percepcion_MontoTotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieNumeroOV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumIGV_NombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumISC_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_CodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumOT_NombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumatoriaOtrosCargos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TREFI" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDocRefGuia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Venta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalDescuentos_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaExonerada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGratuita_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaGravada_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Importe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaInafecta_Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionEstructuraDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionUBL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04711_CABECERAResult" nillable="true" type="tns:VBG04711_CABECERAResult" />
+  <xs:complexType name="ArrayOfVBG04711_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG04711_DETALLEResult" nillable="true" type="tns:VBG04711_DETALLEResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG04711_DETALLEResult" nillable="true" type="tns:ArrayOfVBG04711_DETALLEResult" />
+  <xs:complexType name="VBG04711_DETALLEResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Determinante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_CodigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_DctoValor" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Linea_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVNombreTributoCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_IGVTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoInternacional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCCodigoTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCImporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCNombreTributo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ISCTipoAfectacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_PrecioVentaUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_TipoPrecio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_UnidadMedida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorUnitario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Linea_ValorVenta_G" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneImpuesto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG04711_DETALLEResult" nillable="true" type="tns:VBG04711_DETALLEResult" />
+  <xs:complexType name="ArrayOfgsComboDocElectronicoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsComboDocElectronicoResult" nillable="true" type="tns:gsComboDocElectronicoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsComboDocElectronicoResult" nillable="true" type="tns:ArrayOfgsComboDocElectronicoResult" />
+  <xs:complexType name="gsComboDocElectronicoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocSunat" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsComboDocElectronicoResult" nillable="true" type="tns:gsComboDocElectronicoResult" />
+  <xs:complexType name="ArrayOfVBG00946_ElectronicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00946_ElectronicaResult" nillable="true" type="tns:VBG00946_ElectronicaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00946_ElectronicaResult" nillable="true" type="tns:ArrayOfVBG00946_ElectronicaResult" />
+  <xs:complexType name="VBG00946_ElectronicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroComprobante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ok_Cliente" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_SunatEnvio" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok_XML" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PorcentajeRetencion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespuestaTCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sunat_Rpta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPago" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRetencion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transaccion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00946_ElectronicaResult" nillable="true" type="tns:VBG00946_ElectronicaResult" />
+  <xs:complexType name="ArrayOfVBG00946_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00946_CABECERAResult" nillable="true" type="tns:VBG00946_CABECERAResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00946_CABECERAResult" nillable="true" type="tns:ArrayOfVBG00946_CABECERAResult" />
+  <xs:complexType name="VBG00946_CABECERAResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente_CodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Distrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_NumeroDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Pais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_TipoDocIdentidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Ubigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente_Urbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocCabecera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDetalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocSunatDetalle" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DomicilioFiscalCodePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDepartamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalDistrito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalPais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalProvincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUbigeo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomicilioFiscalUrbanizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaDetalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaTC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmaDigital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_SerieNumero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guia_TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteDOC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePago" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePagoTC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteTC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importeretencion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteretencionTC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Leyenda_Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonedaRetencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonedaTC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroCabecera" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroDetalle" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpCompra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieCabecera" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDetalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tasa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRetencion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionEstructuraDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionUBL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_DocCabecera" type="xs:decimal" />
+      <xs:element minOccurs="0" name="id_DocDetalle" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="id_doc" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00946_CABECERAResult" nillable="true" type="tns:VBG00946_CABECERAResult" />
+  <xs:complexType name="ArrayOfVBG02714_DetraccionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG02714_DetraccionResult" nillable="true" type="tns:VBG02714_DetraccionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG02714_DetraccionResult" nillable="true" type="tns:ArrayOfVBG02714_DetraccionResult" />
+  <xs:complexType name="VBG02714_DetraccionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_ItemDetraccion" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteMinimoAfecto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Porcentaje" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vigencia" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG02714_DetraccionResult" nillable="true" type="tns:VBG02714_DetraccionResult" />
+</xs:schema>

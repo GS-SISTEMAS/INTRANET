@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0e4ec049-b550-4f30-a3e1-a609c6dee0ae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/OrdenVentaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrdenVentaWCF.wsdl" MetadataType="Wsdl" ID="bb1505a0-bd2b-4468-a37b-b56ffb5213d5" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?wsdl" />
+    <MetadataFile FileName="OrdenVentaWCF.xsd" MetadataType="Schema" ID="b95265c5-d49b-4aa0-818f-f19b1995095e" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="OrdenVentaWCF1.xsd" MetadataType="Schema" ID="93549240-cc5b-44ae-822a-eed5b16b1d9f" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="OrdenVentaWCF2.xsd" MetadataType="Schema" ID="85053498-e173-41d7-878b-30ee5384ebf7" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenVentaWCF.disco" MetadataType="Disco" ID="d489e8f0-4574-405a-b996-45e941d7d2a4" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?disco" />
+    <MetadataFile FileName="OrdenVentaWCF4.xsd" MetadataType="Schema" ID="99b4053c-7dff-411b-b33b-23d173f18568" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?xsd=xsd4" />
+    <MetadataFile FileName="OrdenVentaWCF3.xsd" MetadataType="Schema" ID="f30a4063-9491-4761-9c95-3bcc3634fc62" SourceId="1" SourceUrl="http://localhost:49648/OrdenVentaWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfgsDocVenta_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocVenta_ListarResult" nillable="true" type="tns:gsDocVenta_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocVenta_ListarResult" nillable="true" type="tns:ArrayOfgsDocVenta_ListarResult" />
+  <xs:complexType name="gsDocVenta_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CondicionCredito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasCredito" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Financiado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FormaPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Impuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Neto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NotasDespacho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pagado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Peso_Kg" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherFechaHora" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocVenta_ListarResult" nillable="true" type="tns:gsDocVenta_ListarResult" />
+  <xs:complexType name="ArrayOfgsDevolucionMotivo_ComboBoxResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDevolucionMotivo_ComboBoxResult" nillable="true" type="tns:gsDevolucionMotivo_ComboBoxResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDevolucionMotivo_ComboBoxResult" nillable="true" type="tns:ArrayOfgsDevolucionMotivo_ComboBoxResult" />
+  <xs:complexType name="gsDevolucionMotivo_ComboBoxResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idDevolucionMotivo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreDevolucionMotivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionMotivo_ComboBoxResult" nillable="true" type="tns:gsDevolucionMotivo_ComboBoxResult" />
+  <xs:complexType name="ArrayOfgsDocVenta_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocVenta_BuscarDetalleResult" nillable="true" type="tns:gsDocVenta_BuscarDetalleResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocVenta_BuscarDetalleResult" nillable="true" type="tns:ArrayOfgsDocVenta_BuscarDetalleResult" />
+  <xs:complexType name="gsDocVenta_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantLote" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="GuiaReferencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Amarre" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocVenta_BuscarDetalleResult" nillable="true" type="tns:gsDocVenta_BuscarDetalleResult" />
+  <xs:complexType name="gsDocVenta_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CondicionCredito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dcto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasCredito" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Financiado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FormaPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Impuestos" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Neto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NotasDespacho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pagado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Peso_Kg" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TC" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherFechaHora" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZonaVendedor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocVenta_BuscarResult" nillable="true" type="tns:gsDocVenta_BuscarResult" />
+  <xs:complexType name="ArrayOfgsAgendaAnexo_ListarAlmacenDevolucionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgendaAnexo_ListarAlmacenDevolucionResult" nillable="true" type="tns:gsAgendaAnexo_ListarAlmacenDevolucionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgendaAnexo_ListarAlmacenDevolucionResult" nillable="true" type="tns:ArrayOfgsAgendaAnexo_ListarAlmacenDevolucionResult" />
+  <xs:complexType name="gsAgendaAnexo_ListarAlmacenDevolucionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlmacenAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AlmacenAnexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgendaAnexo_ListarAlmacenDevolucionResult" nillable="true" type="tns:gsAgendaAnexo_ListarAlmacenDevolucionResult" />
+  <xs:complexType name="gsDevolucionSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodUsuarioAprobacion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioModifico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioRegistro" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Almacen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Transportista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="aprobacion1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="eliminado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAprobacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEnvio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEnvioDev" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="flete" type="xs:decimal" />
+      <xs:element minOccurs="0" name="gsDevolucionSolicitudDetalle" nillable="true" type="tns:ArrayOfgsDevolucionSolicitudDetalle" />
+      <xs:element minOccurs="0" name="guiaCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="guiaTransportista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idDevolucionMotivo" type="xs:int" />
+      <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionSolicitud" nillable="true" type="tns:gsDevolucionSolicitud" />
+  <xs:complexType name="ArrayOfgsDevolucionSolicitudDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDevolucionSolicitudDetalle" nillable="true" type="tns:gsDevolucionSolicitudDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDevolucionSolicitudDetalle" nillable="true" type="tns:ArrayOfgsDevolucionSolicitudDetalle" />
+  <xs:complexType name="gsDevolucionSolicitudDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodUsuarioModifico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioRegistro" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Amarre" type="xs:decimal" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gsDevolucionSolicitud" nillable="true" type="tns:gsDevolucionSolicitud" />
+      <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="precioUnitario" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionSolicitudDetalle" nillable="true" type="tns:gsDevolucionSolicitudDetalle" />
+  <xs:complexType name="ArrayOfgsDevolucionSolicitud_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDevolucionSolicitud_ListarResult" nillable="true" type="tns:gsDevolucionSolicitud_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDevolucionSolicitud_ListarResult" nillable="true" type="tns:ArrayOfgsDevolucionSolicitud_ListarResult" />
+  <xs:complexType name="gsDevolucionSolicitud_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocVenReferencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GuiadoDev" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID_Almacen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NomUsuarioRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotaCredito" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aprobacion1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaDocVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEnvio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSolicitud" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionSolicitud_ListarResult" nillable="true" type="tns:gsDevolucionSolicitud_ListarResult" />
+  <xs:complexType name="ArrayOfgsDevolucionSolicitudDetalle_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDevolucionSolicitudDetalle_BuscarResult" nillable="true" type="tns:gsDevolucionSolicitudDetalle_BuscarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDevolucionSolicitudDetalle_BuscarResult" nillable="true" type="tns:ArrayOfgsDevolucionSolicitudDetalle_BuscarResult" />
+  <xs:complexType name="gsDevolucionSolicitudDetalle_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodUsuarioModifico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioRegistro" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Amarre" type="xs:decimal" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="precioUnitario" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionSolicitudDetalle_BuscarResult" nillable="true" type="tns:gsDevolucionSolicitudDetalle_BuscarResult" />
+  <xs:complexType name="gsDevolucionSolicitud_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodUsuarioAprobacion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioModifico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodUsuarioRegistro" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Almacen" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Transportista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transportista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aprobacion1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="eliminado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAprobacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEnvio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaEnvioDev" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="guiaCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="guiaTransportista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idDevolucionMotivo" type="xs:int" />
+      <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDevolucionSolicitud_BuscarResult" nillable="true" type="tns:gsDevolucionSolicitud_BuscarResult" />
+</xs:schema>

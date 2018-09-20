@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SolDevolucionWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISolDevolucionWCF_DocVenta_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DocVenta_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionMotivo_ComboBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionMotivo_ComboBox" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionMotivo_ComboBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionMotivo_ComboBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DocVenta_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DocVenta_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_AgendaAnexo_ListarAlmacenDevolucion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacenDevolucion" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_AgendaAnexo_ListarAlmacenDevolucion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacenDevolucionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Aprobar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_Aprobar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Aprobar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_AprobarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="ISolDevolucionWCF_DevolucionSolicitud_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevolucionSolicitud_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISolDevolucionWCF">
+    <wsdl:operation name="DocVenta_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DocVenta_Listar" message="tns:ISolDevolucionWCF_DocVenta_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DocVenta_ListarResponse" message="tns:ISolDevolucionWCF_DocVenta_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionMotivo_ComboBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionMotivo_ComboBox" message="tns:ISolDevolucionWCF_DevolucionMotivo_ComboBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionMotivo_ComboBoxResponse" message="tns:ISolDevolucionWCF_DevolucionMotivo_ComboBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DocVenta_Buscar" message="tns:ISolDevolucionWCF_DocVenta_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DocVenta_BuscarResponse" message="tns:ISolDevolucionWCF_DocVenta_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacenDevolucion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/AgendaAnexo_ListarAlmacenDevolucion" message="tns:ISolDevolucionWCF_AgendaAnexo_ListarAlmacenDevolucion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/AgendaAnexo_ListarAlmacenDevolucionResponse" message="tns:ISolDevolucionWCF_AgendaAnexo_ListarAlmacenDevolucion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Registrar" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_RegistrarResponse" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Listar" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_ListarResponse" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Buscar" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_BuscarResponse" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Aprobar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Aprobar" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Aprobar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_AprobarResponse" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Aprobar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Eliminar" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_EliminarResponse" message="tns:ISolDevolucionWCF_DevolucionSolicitud_Eliminar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISolDevolucionWCF" type="tns:ISolDevolucionWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocVenta_Listar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DocVenta_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionMotivo_ComboBox">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionMotivo_ComboBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_Buscar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DocVenta_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacenDevolucion">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/AgendaAnexo_ListarAlmacenDevolucion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Listar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Buscar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Aprobar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Aprobar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevolucionSolicitud_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/ISolDevolucionWCF/DevolucionSolicitud_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SolDevolucionWCF">
+    <wsdl:port name="BasicHttpBinding_ISolDevolucionWCF" binding="tns:BasicHttpBinding_ISolDevolucionWCF">
+      <soap:address location="http://localhost:49648/SolDevolucionWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

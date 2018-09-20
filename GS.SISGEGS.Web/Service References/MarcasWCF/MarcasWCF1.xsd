@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfTitularMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TitularMarca_ListarResult" nillable="true" type="tns:TitularMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTitularMarca_ListarResult" nillable="true" type="tns:ArrayOfTitularMarca_ListarResult" />
+  <xs:complexType name="TitularMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTitular" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreTitular" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TitularMarca_ListarResult" nillable="true" type="tns:TitularMarca_ListarResult" />
+  <xs:complexType name="ArrayOfRegistroMarca_Listar_v2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistroMarca_Listar_v2Result" nillable="true" type="tns:RegistroMarca_Listar_v2Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistroMarca_Listar_v2Result" nillable="true" type="tns:ArrayOfRegistroMarca_Listar_v2Result" />
+  <xs:complexType name="RegistroMarca_Listar_v2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Semaforo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dias" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idRegistroMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTitular" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistroMarca_Listar_v2Result" nillable="true" type="tns:RegistroMarca_Listar_v2Result" />
+  <xs:complexType name="ArrayOfTipoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoMarca_ListarResult" nillable="true" type="tns:TipoMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoMarca_ListarResult" nillable="true" type="tns:ArrayOfTipoMarca_ListarResult" />
+  <xs:complexType name="TipoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbrevTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoMarca_ListarResult" nillable="true" type="tns:TipoMarca_ListarResult" />
+  <xs:complexType name="ArrayOfPais_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pais_ListarResult" nillable="true" type="tns:Pais_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPais_ListarResult" nillable="true" type="tns:ArrayOfPais_ListarResult" />
+  <xs:complexType name="Pais_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPais" type="xs:int" />
+      <xs:element minOccurs="0" name="nombrePais" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pais_ListarResult" nillable="true" type="tns:Pais_ListarResult" />
+  <xs:complexType name="ArrayOfMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Marca_ListarResult" nillable="true" type="tns:Marca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarca_ListarResult" nillable="true" type="tns:ArrayOfMarca_ListarResult" />
+  <xs:complexType name="Marca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaModifico" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioModifico" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioRegistro" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMarca" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Marca_ListarResult" nillable="true" type="tns:Marca_ListarResult" />
+  <xs:complexType name="ArrayOfResponsablesRegistros_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponsablesRegistros_ListarResult" nillable="true" type="tns:ResponsablesRegistros_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponsablesRegistros_ListarResult" nillable="true" type="tns:ArrayOfResponsablesRegistros_ListarResult" />
+  <xs:complexType name="ResponsablesRegistros_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_Area" type="xs:int" />
+      <xs:element minOccurs="0" name="Responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correoResponsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idResponsable" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponsablesRegistros_ListarResult" nillable="true" type="tns:ResponsablesRegistros_ListarResult" />
+  <xs:complexType name="ArrayOfRegistroMarca_NotificacionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistroMarca_NotificacionResult" nillable="true" type="tns:RegistroMarca_NotificacionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistroMarca_NotificacionResult" nillable="true" type="tns:ArrayOfRegistroMarca_NotificacionResult" />
+  <xs:complexType name="RegistroMarca_NotificacionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbrevTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiasPorVencer" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Semaforo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idRegistroMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTitular" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistroMarca_NotificacionResult" nillable="true" type="tns:RegistroMarca_NotificacionResult" />
+  <xs:complexType name="ArrayOfEstadoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadoMarca_ListarResult" nillable="true" type="tns:EstadoMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstadoMarca_ListarResult" nillable="true" type="tns:ArrayOfEstadoMarca_ListarResult" />
+  <xs:complexType name="EstadoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEstadoMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoMarca_ListarResult" nillable="true" type="tns:EstadoMarca_ListarResult" />
+  <xs:complexType name="RegistroMarca_ObtenerResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MARCA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idEstadoMarca" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idPais" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idRegistroMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idTitular" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistroMarca_ObtenerResult" nillable="true" type="tns:RegistroMarca_ObtenerResult" />
+  <xs:complexType name="ArrayOfRegistroMarcaHistorico_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegistroMarcaHistorico_ListarResult" nillable="true" type="tns:RegistroMarcaHistorico_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegistroMarcaHistorico_ListarResult" nillable="true" type="tns:ArrayOfRegistroMarcaHistorico_ListarResult" />
+  <xs:complexType name="RegistroMarcaHistorico_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioHist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dias" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaHistorico" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idRegistroMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioHistorico" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTitular" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistroMarcaHistorico_ListarResult" nillable="true" type="tns:RegistroMarcaHistorico_ListarResult" />
+  <xs:complexType name="ArrayOfDocumentosMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentosMarca_ListarResult" nillable="true" type="tns:DocumentosMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentosMarca_ListarResult" nillable="true" type="tns:ArrayOfDocumentosMarca_ListarResult" />
+  <xs:complexType name="DocumentosMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRegistro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="idRegistroMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreTipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rutaDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentosMarca_ListarResult" nillable="true" type="tns:DocumentosMarca_ListarResult" />
+  <xs:complexType name="ArrayOfTipoDocumentoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoDocumentoMarca_ListarResult" nillable="true" type="tns:TipoDocumentoMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoDocumentoMarca_ListarResult" nillable="true" type="tns:ArrayOfTipoDocumentoMarca_ListarResult" />
+  <xs:complexType name="TipoDocumentoMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTipoDocumentoMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreTipoDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDocumentoMarca_ListarResult" nillable="true" type="tns:TipoDocumentoMarca_ListarResult" />
+  <xs:complexType name="ArrayOfClaseMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaseMarca_ListarResult" nillable="true" type="tns:ClaseMarca_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaseMarca_ListarResult" nillable="true" type="tns:ArrayOfClaseMarca_ListarResult" />
+  <xs:complexType name="ClaseMarca_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idClase" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaseMarca_ListarResult" nillable="true" type="tns:ClaseMarca_ListarResult" />
+</xs:schema>

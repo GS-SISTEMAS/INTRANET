@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 22.125" name="dmGenesys">
+  <DataContextMoniker Name="/dmGenesysDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3402c743-e200-493a-9b74-1c1e3f581c07" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dmGenesysDataContext/AgendaRel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8362d8e-40bd-4b2e-bd17-07fef5e47fbb" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a094ed7-b4db-4ffc-9cca-64a2d86da836" absoluteBounds="0.5, 2.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsUsuarioPedido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77335cb8-bb97-482c-9489-a1e62512f337" absoluteBounds="0.515, 3.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" absoluteBounds="3.5, 0.5, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/dmGenesysDataContext/Agenda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6596cd73-241d-47ff-986d-422b279cae2a" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 7.941446940104167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.5 : 1.28929768880208); (2.5 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_AgendaRel" />
+      <nodes>
+        <classShapeMoniker Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" />
+        <classShapeMoniker Id="3402c743-e200-493a-9b74-1c1e3f581c07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.20923076923077 : 9.00144694010417); (4.20923076923077 : 9.25144694010417); (4.80461538461539 : 9.25144694010417); (4.80461538461539 : 9.00144694010417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" />
+        <classShapeMoniker Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="19b05a21-ce9e-441c-8a3a-9c78fc88b140" absoluteBounds="6.25, 0.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/dmGenesysDataContext/TCambio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7b9dbba-8406-4852-87ff-d0f2064af5e0" absoluteBounds="6.265, 0.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ca0b9db-62f1-470e-ade9-23b8f956bf9c" absoluteBounds="6.25, 3.625, 2, 18.308819986979167">
+      <DataClassMoniker Name="/dmGenesysDataContext/OV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a667e67-b664-4742-b473-8e136808e17b" absoluteBounds="6.265, 4.085, 1.9700000000000002, 17.748819986979164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.31322347005208); (6.25 : 6.31322347005208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_OV" />
+      <nodes>
+        <classShapeMoniker Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" />
+        <classShapeMoniker Id="6ca0b9db-62f1-470e-ade9-23b8f956bf9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.90661173502604); (6.25 : 4.90661173502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_OV1" />
+      <nodes>
+        <classShapeMoniker Id="12058f41-0f4b-4e1b-b63f-88069ab1e460" />
+        <classShapeMoniker Id="6ca0b9db-62f1-470e-ade9-23b8f956bf9c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentoWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/DocumentoWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/DocumentoWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/DocumentoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarDocVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocVenta" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarDocVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarDocCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocCompra" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarDocCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarEgresosVarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarEgresosVarios" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_Documento_ListarEgresosVarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarEgresosVariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDocumentosFamilia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentosFamilia" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDocumentosFamilia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDocumentosFamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_RegistrarDocumentoFamilia_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDocumentoFamilia" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_RegistrarDocumentoFamilia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarDocumentoFamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_EliminarDocumentoFamilia_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoFamilia" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_EliminarDocumentoFamilia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoFamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDetalleAfiliadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleAfiliadas" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDetalleAfiliadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleAfiliadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDetalleDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarDetalleDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarFamilias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarFamilias" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_ListarFamilias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarFamiliasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_DetalleOperacionFamiliaAnticuamientoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamiliaAnticuamientoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentoWCF_DetalleOperacionFamiliaAnticuamientoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetalleOperacionFamiliaAnticuamientoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentoWCF">
+    <wsdl:operation name="Documento_ListarDocVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarDocVenta" message="tns:IDocumentoWCF_Documento_ListarDocVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarDocVentaResponse" message="tns:IDocumentoWCF_Documento_ListarDocVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarDocCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarDocCompra" message="tns:IDocumentoWCF_Documento_ListarDocCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarDocCompraResponse" message="tns:IDocumentoWCF_Documento_ListarDocCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarEgresosVarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarEgresosVarios" message="tns:IDocumentoWCF_Documento_ListarEgresosVarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/Documento_ListarEgresosVariosResponse" message="tns:IDocumentoWCF_Documento_ListarEgresosVarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDocumentos" message="tns:IDocumentoWCF_ListarDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDocumentosResponse" message="tns:IDocumentoWCF_ListarDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentosFamilia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDocumentosFamilia" message="tns:IDocumentoWCF_ListarDocumentosFamilia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDocumentosFamiliaResponse" message="tns:IDocumentoWCF_ListarDocumentosFamilia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDocumentoFamilia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/RegistrarDocumentoFamilia" message="tns:IDocumentoWCF_RegistrarDocumentoFamilia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/RegistrarDocumentoFamiliaResponse" message="tns:IDocumentoWCF_RegistrarDocumentoFamilia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumentoFamilia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/EliminarDocumentoFamilia" message="tns:IDocumentoWCF_EliminarDocumentoFamilia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/EliminarDocumentoFamiliaResponse" message="tns:IDocumentoWCF_EliminarDocumentoFamilia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleAfiliadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDetalleAfiliadas" message="tns:IDocumentoWCF_ListarDetalleAfiliadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDetalleAfiliadasResponse" message="tns:IDocumentoWCF_ListarDetalleAfiliadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDetalleDocumentos" message="tns:IDocumentoWCF_ListarDetalleDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarDetalleDocumentosResponse" message="tns:IDocumentoWCF_ListarDetalleDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarFamilias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarFamilias" message="tns:IDocumentoWCF_ListarFamilias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/ListarFamiliasResponse" message="tns:IDocumentoWCF_ListarFamilias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamiliaAnticuamientoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentoWCF/DetalleOperacionFamiliaAnticuamientoDocumento" message="tns:IDocumentoWCF_DetalleOperacionFamiliaAnticuamientoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentoWCF/DetalleOperacionFamiliaAnticuamientoDocumentoResponse" message="tns:IDocumentoWCF_DetalleOperacionFamiliaAnticuamientoDocumento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocumentoWCF" type="tns:IDocumentoWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Documento_ListarDocVenta">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/Documento_ListarDocVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarDocCompra">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/Documento_ListarDocCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarEgresosVarios">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/Documento_ListarEgresosVarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/ListarDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDocumentosFamilia">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/ListarDocumentosFamilia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarDocumentoFamilia">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/RegistrarDocumentoFamilia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumentoFamilia">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/EliminarDocumentoFamilia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleAfiliadas">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/ListarDetalleAfiliadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/ListarDetalleDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarFamilias">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/ListarFamilias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOperacionFamiliaAnticuamientoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentoWCF/DetalleOperacionFamiliaAnticuamientoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentoWCF">
+    <wsdl:port name="BasicHttpBinding_IDocumentoWCF" binding="tns:BasicHttpBinding_IDocumentoWCF">
+      <soap:address location="http://localhost:49648/DocumentoWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61e9b75e-0631-4b5d-9fbc-967764c471ce" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/LoginWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoginWCF.xsd" MetadataType="Schema" ID="9197a802-8fed-4a61-9866-8ef28584e279" SourceId="1" SourceUrl="http://localhost:49648/LoginWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="LoginWCF.disco" MetadataType="Disco" ID="5c564883-8de9-485a-9993-9d121cf34ce3" SourceId="1" SourceUrl="http://localhost:49648/LoginWCF.svc?disco" />
+    <MetadataFile FileName="LoginWCF1.xsd" MetadataType="Schema" ID="4f202cc0-a163-415b-9aa0-28d95f73e182" SourceId="1" SourceUrl="http://localhost:49648/LoginWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="LoginWCF.wsdl" MetadataType="Wsdl" ID="6181e5ae-5194-4853-9695-caccc57afb73" SourceId="1" SourceUrl="http://localhost:49648/LoginWCF.svc?wsdl" />
+    <MetadataFile FileName="LoginWCF2.xsd" MetadataType="Schema" ID="2eb94d69-ef9d-48cb-82a7-a5a6002ad02d" SourceId="1" SourceUrl="http://localhost:49648/LoginWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

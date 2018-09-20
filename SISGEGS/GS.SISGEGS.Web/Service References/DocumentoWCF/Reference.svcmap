@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3eb99907-d9ba-40b0-9756-d10710c74b52" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentoWCF.disco" MetadataType="Disco" ID="95aa31e3-3ab6-4168-be04-68919c7b9f49" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc?disco" />
+    <MetadataFile FileName="DocumentoWCF.xsd" MetadataType="Schema" ID="cce65f5e-2f2b-4362-b428-d8180a00c2b9" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocumentoWCF.wsdl" MetadataType="Wsdl" ID="9eedca44-8f67-4301-9cc7-6acda6435c61" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc?wsdl" />
+    <MetadataFile FileName="DocumentoWCF1.xsd" MetadataType="Schema" ID="197b4c6a-c775-4a19-9be1-1d4bb90d783c" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentoWCF2.xsd" MetadataType="Schema" ID="52e94e93-2e26-4941-acd0-534a432581ed" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/DocumentoWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

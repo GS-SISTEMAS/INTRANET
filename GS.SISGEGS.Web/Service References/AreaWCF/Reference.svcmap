@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e85bfdc0-7aea-4318-ba5f-a819f597f654" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/AreaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AreaWCF.disco" MetadataType="Disco" ID="db281166-91f9-4605-960b-9debd7b0b021" SourceId="1" SourceUrl="http://localhost:49648/AreaWCF.svc?disco" />
+    <MetadataFile FileName="AreaWCF.xsd" MetadataType="Schema" ID="5c1bced7-e7f8-4efc-9c43-bd6a283d9246" SourceId="1" SourceUrl="http://localhost:49648/AreaWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="AreaWCF.wsdl" MetadataType="Wsdl" ID="8a7c0d0e-0ffd-4c99-ade7-25f9470c67f2" SourceId="1" SourceUrl="http://localhost:49648/AreaWCF.svc?wsdl" />
+    <MetadataFile FileName="AreaWCF1.xsd" MetadataType="Schema" ID="38acbc0f-1db1-4247-a600-2486890125f7" SourceId="1" SourceUrl="http://localhost:49648/AreaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="AreaWCF2.xsd" MetadataType="Schema" ID="e6c3f5de-a00b-4445-a343-56ba27a56ea2" SourceId="1" SourceUrl="http://localhost:49648/AreaWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

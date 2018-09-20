@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8036530e-9a46-4c18-994e-6aa237ba1eec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/UnidadWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UnidadWCF.wsdl" MetadataType="Wsdl" ID="7463865a-6c04-4bb6-9de9-28e65d0a6ef7" SourceId="1" SourceUrl="http://localhost:49648/UnidadWCF.svc?wsdl" />
+    <MetadataFile FileName="UnidadWCF.xsd" MetadataType="Schema" ID="d192dceb-8f97-407b-94c8-23f9f813baaa" SourceId="1" SourceUrl="http://localhost:49648/UnidadWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="UnidadWCF.disco" MetadataType="Disco" ID="8005512b-e576-455f-bf9b-b6ca04caf6f4" SourceId="1" SourceUrl="http://localhost:49648/UnidadWCF.svc?disco" />
+    <MetadataFile FileName="UnidadWCF1.xsd" MetadataType="Schema" ID="9a0335b1-c071-43a0-b51f-2ec1b98d3d74" SourceId="1" SourceUrl="http://localhost:49648/UnidadWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="UnidadWCF2.xsd" MetadataType="Schema" ID="e9410e87-91a7-4a85-9de6-cea7ebef1399" SourceId="1" SourceUrl="http://localhost:49648/UnidadWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

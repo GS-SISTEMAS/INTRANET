@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="REC2" Class="dmGenesysDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.1.8;Initial Catalog=REC2;Persist Security Info=True;User ID=sa" SettingsObjectName="GS.SISGEGS.DM.Properties.Settings" SettingsPropertyName="REC2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AgendaRel" Member="AgendaRel">
+    <Type Name="AgendaRel">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Res" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaHoraActualizacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Agenda_AgendaRel" Member="Agenda" ThisKey="ID_Agenda" OtherKey="ID_Agenda" Type="Agenda" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gsUsuarioPedido" Member="gsUsuarioPedido">
+    <Type Name="gsUsuarioPedido">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idUsuarioRegistro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioModifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaModifico" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Agenda" Member="Agenda">
+    <Type Name="Agenda">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaNombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaNombreCorto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="RazonSocial" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nombre2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoPaterno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ApellidoMaterno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NroDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WebPage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_MonedaVta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaCpra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BloqueoLineaCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TipoVendedor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Zona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrincipalContribuyente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgenteRetenedorIGV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AfectoPercepcionIGV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Lista" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Censo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaHoraActualizacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CodigoBanco" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoSunat" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UsuarioAcceso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsuarioAccesoFecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_TipoActividad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_FamiliaAgenda" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="BD" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BD_NomUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HabilitarCambioHerenciaOper" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HabilitarNoControlLineaCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Agenda_AgendaRel" Member="AgendaRel" ThisKey="ID_Agenda" OtherKey="ID_Agenda" Type="AgendaRel" />
+      <Association Name="Agenda_Agenda" Member="Agenda2" ThisKey="ID_Agenda" OtherKey="ID_Vendedor" Type="Agenda" />
+      <Association Name="Agenda_OV" Member="OV" ThisKey="ID_Agenda" OtherKey="ID_Agenda" Type="OV" />
+      <Association Name="Agenda_OV1" Member="OV1" ThisKey="ID_Agenda" OtherKey="ID_Vendedor" Type="OV" />
+      <Association Name="Agenda_Agenda" Member="Agenda1" ThisKey="ID_Vendedor" OtherKey="ID_Agenda" Type="Agenda" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCambio" Member="TCambio">
+    <Type Name="TCambio">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Compra" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Venta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Operativo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FechaHoraActualizacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UsuarioAcceso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsuarioAccesoFecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BD" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BD_NomUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OV" Member="OV">
+    <Type Name="OV">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaAnexoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaDireccion2" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NoRegistro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaOrden" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaDespacho" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEmision" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_Envio" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Neto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dcto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Prioridad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntregaParcial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ModoPago" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NotasDespacho" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NroOrdenCliente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Aprobacion1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobacion2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobacion1Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprobacion2Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprobacion1CodUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Aprobacion2CodUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Documento" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAcceso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsuarioAccesoFecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_CondicionCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Op_PartePesca" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_Almacen" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_TiendaDestino" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaHoraActualizacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Transferido" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID_TipoDespacho" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_TipoPedido" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_DocumentoVenta" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion1_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion1_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion2_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion2_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion3_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion3_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Lunes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Martes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Miercoles" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Jueves" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Viernes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Sabado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaAtencion_Domingo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NotaAtencion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DireccionOrigenAgenda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DireccionOrigenSucursal" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionOrigenReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionOrigenDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionDestinoAgenda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DireccionDestinoSucursal" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionDestinoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionDestinoDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_Transportista" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Chofer" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Sede" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ReferenciaAgenda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Marcador" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MarcadorCodUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarcadorFechaHora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_CCosto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_UGestion" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_UProyecto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_TipoOperacion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Percepcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionTipoBS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionPorcentaje" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionImporte" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionIMA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionVigencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Agenda_OV" Member="Agenda" ThisKey="ID_Agenda" OtherKey="ID_Agenda" Type="Agenda" IsForeignKey="true" />
+      <Association Name="Agenda_OV1" Member="Agenda1" ThisKey="ID_Vendedor" OtherKey="ID_Agenda" Type="Agenda" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.gsAgenda_ListarCliente" Method="gsAgenda_ListarCliente">
+    <Parameter Name="_Descripcion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsAgenda_ListarClienteResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCorto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="CodigoNombre" Type="System.String" DbType="VarChar(221) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsAgenda_ListarVendedor" Method="gsAgenda_ListarVendedor">
+    <Parameter Name="_Descripcion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsAgenda_ListarVendedorResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCorto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="CodigoNombre" Type="System.String" DbType="VarChar(221) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsAgenda_ListarContacto" Method="gsAgenda_ListarContacto">
+    <Parameter Name="_descripcion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="_estado" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsAgenda_ListarContactoResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCorto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsAgenda_ListarProveedor" Method="gsAgenda_ListarProveedor">
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="gsAgenda_ListarProveedorResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaVenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoVendedor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Bloqueado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsAgenda_ListarTransportista" Method="gsAgenda_ListarTransportista">
+    <Parameter Name="_descripcion" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="gsAgenda_ListarTransportistaResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreCorto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsCredito_ListarCondicion" Method="gsCredito_ListarCondicion">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsCredito_ListarCondicionResult">
+      <Column Name="ID_CondicionCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsDocumento_ListarTipoCompra" Method="gsDocumento_ListarTipoCompra">
+    <Parameter Name="_Descripcion" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="gsDocumento_ListarTipoCompraResult">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsEgresosVarios_ListarCajaChica" Method="gsEgresosVarios_ListarCajaChica">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaDesde" Parameter="fechaDesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaHasta" Parameter="fechaHasta" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsEgresosVarios_ListarCajaChicaResult">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Sede" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sede" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Documento" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Serie" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Transaccion" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Vcmto" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Agenda" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Anexo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Concepto" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TipoTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CCosto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_CCosto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UGestion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadGestion" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UProyecto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadProyecto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Proyecto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ok1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAprobacion1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAprobacion1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ok2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAprobacion2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAprobacion2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_Doc" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAcceso" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAcceso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HoraAcceso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaAño" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaTrimestre" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaMes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaSemana" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaDia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsEgresosVarios_BuscarCabecera" Method="gsEgresosVarios_BuscarCabecera">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Bloqueado" Parameter="bloqueado" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="MensajeBloqueo" Parameter="mensajeBloqueo" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <ElementType Name="gsEgresosVarios_BuscarCabeceraResult">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaNombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NroDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Concepto" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Documento" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CCosto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_UnidadGestion" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_UnidadProyecto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="TipoTc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Vcmto" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Serie" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_Sede" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsImpuesto_BuscarPorPedido" Method="gsImpuesto_BuscarPorPedido">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsImpuesto_BuscarPorPedidoResult">
+      <Column Name="ID_Impuesto" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="BaseImponible" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="EsPorcentaje" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviacion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsItem_ListarTipoGastoCC" Method="gsItem_ListarTipoGastoCC">
+    <ElementType Name="gsItem_ListarTipoGastoCCResult">
+      <Column Name="ID_Item" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsImpuesto_ListarPorItem" Method="gsImpuesto_ListarPorItem">
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="gsImpuesto_ListarPorItemResult">
+      <Column Name="ID_Item" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Impuesto" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviacion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Cuenta" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="EsPorcentaje" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Valor" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsItem_Buscar" Method="gsItem_Buscar">
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Cliente" Parameter="iD_Cliente" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_TipoEnlaceContable" Parameter="iD_TipoEnlaceContable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_DireccionOrigen" Parameter="iD_DireccionOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_DireccionDestino" Parameter="iD_DireccionDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsItem_BuscarResult">
+      <Column Name="Item_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(253)" CanBeNull="true" />
+      <Column Name="DctoMax" Type="System.Decimal" DbType="Decimal(2,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioInicial" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadPresentacion" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadInv" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FactorUnidadInv" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadControl" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Decimal(2,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreMoneda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Observacion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Descuento" Type="System.Decimal" DbType="Decimal(1,1) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Amarre" Type="System.Decimal" DbType="Decimal(1,1) NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsItem_ListarGastos" Method="gsItem_ListarGastos">
+    <Parameter Name="_Descripcion" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="gsItem_ListarGastosResult">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsPedido_BuscarCabecera" Method="gsPedido_BuscarCabecera">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Bloqueado" Parameter="bloqueado" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="MensajeBloqueo" Parameter="mensajeBloqueo" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <ElementType Name="gsPedido_BuscarCabeceraResult">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NoRegistro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaOrden" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaDespacho" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEmision" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaVencimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_Envio" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaAnexoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Vendedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Neto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dcto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Prioridad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntregaParcial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaDireccion2" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ModoPago" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NotasDespacho" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ID_CondicionCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NroOrdenCliente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Aprobacion1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobacion2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ID_AgendaOrigen" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DireccionOrigenSucursal" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionOrigenReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionOrigenDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_AgendaDestino" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DireccionDestinoSucursal" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionDestinoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DireccionDestinoDireccion" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_TipoDespacho" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_TipoPedido" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_DocumentoVenta" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Almacen" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_Transportista" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Chofer" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Vehiculo3" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HoraAtencionOpcion1_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion1_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion2_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion2_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion3_Desde" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="HoraAtencionOpcion3_Hasta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Sede" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ReferenciaAgenda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Contacto" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Transporte" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsPedido_BuscarDetalle" Method="gsPedido_BuscarDetalle">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsPedido_BuscarDetalleResult">
+      <Column Name="ID_Amarre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TablaOrigen" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Linea" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_Item" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(253)" CanBeNull="true" />
+      <Column Name="UnidadPresentacion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadMaxima" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="UsaImpuestoPrincipal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioConImpuesto" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioMinimo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DctoValor" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dcto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DctoMax" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreMoneda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Transaccion" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="ID_ItemAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ItemAnexo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TieneAnexos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CtrlCCosto" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CCosto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CCosto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadGestion" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UnidadGestion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadProyecto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UnidadProyecto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Item_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadInv" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FactorUnidadInv" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadUnidadInv" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadDoc" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FactorUnidadDoc" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CantidadUnidadDoc" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Grupo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Costo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsPedido_RegistrarCabecera" Method="gsPedido_RegistrarCabecera">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NoRegistro" Parameter="noRegistro" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaOrden" Parameter="fechaOrden" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaDespacho" Parameter="fechaDespacho" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaEntrega" Parameter="fechaEntrega" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVigencia" Parameter="fechaVigencia" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVencimiento" Parameter="fechaVencimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_Envio" Parameter="iD_Envio" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaAnexoReferencia" Parameter="iD_AgendaAnexoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Vendedor" Parameter="iD_Vendedor" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Moneda" Parameter="iD_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Neto" Parameter="neto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Dcto" Parameter="dcto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="SubTotal" Parameter="subTotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Impuestos" Parameter="impuestos" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Total" Parameter="total" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Prioridad" Parameter="prioridad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EntregaParcial" Parameter="entregaParcial" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Id_Pago" Parameter="id_Pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_AgendaAnexo" Parameter="iD_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TEA" Parameter="tEA" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_AgendaDireccion1" Parameter="iD_AgendaDireccion1" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaDireccion2" Parameter="iD_AgendaDireccion2" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ModoPago" Parameter="modoPago" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="NotasDespacho" Parameter="notasDespacho" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ID_CondicionCredito" Parameter="iD_CondicionCredito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NroOrdenCliente" Parameter="nroOrdenCliente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_NaturalezaGastoIngreso" Parameter="iD_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_AgendaOrigen" Parameter="iD_AgendaOrigen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_SucursalOrigen" Parameter="iD_SucursalOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_ReferenciaOrigen" Parameter="iD_ReferenciaOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_DireccionOrigen" Parameter="iD_DireccionOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaDestino" Parameter="iD_AgendaDestino" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_SucursalDestino" Parameter="iD_SucursalDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_ReferenciaDestino" Parameter="iD_ReferenciaDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_DireccionDestino" Parameter="iD_DireccionDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_TipoDespacho" Parameter="iD_TipoDespacho" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_TipoPedido" Parameter="iD_TipoPedido" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_DocumentoVenta" Parameter="iD_DocumentoVenta" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Almacen" Parameter="iD_Almacen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Transportista" Parameter="iD_Transportista" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Chofer" Parameter="iD_Chofer" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo1" Parameter="iD_Vehiculo1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo2" Parameter="iD_Vehiculo2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo3" Parameter="iD_Vehiculo3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="HoraAtencionOpcion1_Desde" Parameter="horaAtencionOpcion1_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion1_Hasta" Parameter="horaAtencionOpcion1_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion2_Desde" Parameter="horaAtencionOpcion2_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion2_Hasta" Parameter="horaAtencionOpcion2_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion3_Desde" Parameter="horaAtencionOpcion3_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion3_Hasta" Parameter="horaAtencionOpcion3_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_Sede" Parameter="iD_Sede" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_Contacto" Parameter="iD_Contacto" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsUsuario_Autenticar" Method="gsUsuario_Autenticar">
+    <Parameter Name="_loginUsuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="_contrasena" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="gsUsuario_AutenticarResult">
+      <Column Name="CodUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EsActivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NomUsuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00036" Method="VBG00036">
+    <Parameter Name="ID_Impresora" Parameter="iD_Impresora" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ImpresoraNombre" Parameter="impresoraNombre" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="SerieLetra" Parameter="serieLetra" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="SerieNumero" Parameter="serieNumero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="LenDeLetrasEnSerie" Parameter="lenDeLetrasEnSerie" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LenDeNumerosEnSerie" Parameter="lenDeNumerosEnSerie" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LenDeNumero" Parameter="lenDeNumero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00038" Method="VBG00038">
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="VBG00038Result">
+      <Column Name="ID_Impresora" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ImpresoraNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Documento" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentoNombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SerieLetra" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SerieNumero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="LenDeLetrasEnSerie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LenDeNumerosEnSerie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LenDeNumero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ArchivoRpt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00040" Method="VBG00040">
+    <Parameter Name="Origen" Parameter="origen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Serie" Parameter="serie" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00037" Method="VBG00037">
+    <Parameter Name="ID_Impresora" Parameter="iD_Impresora" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ImpresoraNombre" Parameter="impresoraNombre" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="DocumentoNombre" Parameter="documentoNombre" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Parameter Name="SerieLetra" Parameter="serieLetra" Type="System.String" DbType="VarChar(10)" Direction="InOut" />
+    <Parameter Name="SerieNumero" Parameter="serieNumero" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="LenDeLetrasEnSerie" Parameter="lenDeLetrasEnSerie" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="LenDeNumerosEnSerie" Parameter="lenDeNumerosEnSerie" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="LenDeNumero" Parameter="lenDeNumero" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ArchivoRpt" Parameter="archivoRpt" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00045" Method="VBG00045">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(20)" Direction="InOut" />
+    <Parameter Name="Total" Parameter="total" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="Ok" Parameter="ok" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="Copia" Parameter="copia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG00045Result">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BDNombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BDDireccion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BDTelefonos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BDFaxes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BDRuc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreAgenda" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="NombreAgendaAnexo" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="DireccionTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DireccionNro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DireccionDpto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Departamento" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion2" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion2Tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion2Nro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion2Dpto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Departamento2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NroRegistro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaOrden" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaDespacho" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Envio" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EnvioNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Vendedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="MonedaNombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MonedaSigno" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Neto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dcto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="LineaCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UtilizadoCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LimCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ModoPago" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="NotasDespacho" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="NroOrdenCliente" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prioridad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntregaParcial" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PagoNombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Item_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Item" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ID_ItemAnexo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="AnexoNombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Unidad" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DctoPorcentaje" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DctoValor" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteSinDcto" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ImporteDcto" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IGV" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ISC" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Reserva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ObservacionesLinea" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Indice1" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Indice2" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Amarre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Especificaciones" Type="System.String" DbType="VarChar(8000) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NroParte" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Copia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Transaccion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NomUsuarioAprob1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NomUsuarioAprob2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaHoraAprob1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaHoraAprob2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprobacion1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobacion2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Almacen" Type="System.String" DbType="VarChar(261) NOT NULL" CanBeNull="false" />
+      <Column Name="Ubicacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionA" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionB" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionC" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionD" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Peso_Kg" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Volumen_M3" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Percepcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionTipoBS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionTipoBSNombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PercepcionPorcentaje" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionImporte" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionIMA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PercepcionVigencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00162" Method="VBG00162">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TipoPersona" Parameter="tipoPersona" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoDocumento" Parameter="tipoDocumento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NroDocumento" Parameter="nroDocumento" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="RazonSocial" Parameter="razonSocial" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Nombre2" Parameter="nombre2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="AgendaNombreCorto" Parameter="agendaNombreCorto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ApellidoPaterno" Parameter="apellidoPaterno" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ApellidoMaterno" Parameter="apellidoMaterno" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="RUC" Parameter="rUC" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="WebPage" Parameter="webPage" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ID_MonedaVta" Parameter="iD_MonedaVta" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_MonedaCpra" Parameter="iD_MonedaCpra" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TEA" Parameter="tEA" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="DiasCredito" Parameter="diasCredito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BloqueoLineaCredito" Parameter="bloqueoLineaCredito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_Vendedor" Parameter="iD_Vendedor" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TipoVendedor" Parameter="tipoVendedor" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="AgenteRetenedorIGV" Parameter="agenteRetenedorIGV" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AgentePercepcion" Parameter="agentePercepcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PrincipalContribuyente" Parameter="principalContribuyente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_Zona" Parameter="iD_Zona" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Lista" Parameter="iD_Lista" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="FechaNacimiento" Parameter="fechaNacimiento" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00167" Method="VBG00167">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="RelacionComercial" Parameter="relacionComercial" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG00167Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Glosa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00187" Method="VBG00187">
+    <ElementType Name="VBG00187Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="CotizacionCompra" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CotizacionVenta" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CotizacionEspecial" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00209" Method="VBG00209">
+    <Parameter Name="TablaOrigen" Parameter="tablaOrigen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Op" Parameter="op" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="VBG00209Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TablaOrigen" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Op" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDireccion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(171) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoCalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Departamento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Distrito" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito" Type="System.String" DbType="VarChar(353) NOT NULL" CanBeNull="false" />
+      <Column Name="SucursalAlmacen" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="SucursalAlmacenReferencia" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00321" Method="VBG00321">
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Ficha" Parameter="ficha" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="NroParte" Parameter="nroParte" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Categoria" Parameter="categoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_AlmacenAnexo" Parameter="iD_AlmacenAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G1" Parameter="g1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G2" Parameter="g2" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G3" Parameter="g3" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G4" Parameter="g4" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G5" Parameter="g5" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G6" Parameter="g6" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G7" Parameter="g7" Type="System.Int32" DbType="Int" />
+    <Parameter Name="G8" Parameter="g8" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG00321Result">
+      <Column Name="Ficha" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Item" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NroParte" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(253)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(640)" CanBeNull="true" />
+      <Column Name="UnidadPrincipal" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadPresentacion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FactorConversion" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00417" Method="VBG00417">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_AgendaAnexo" Parameter="iD_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Concepto" Parameter="concepto" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ID_Moneda" Parameter="iD_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Importe" Parameter="importe" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_CCosto" Parameter="iD_CCosto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="TipoTC" Parameter="tipoTC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVencimiento" Parameter="fechaVencimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Serie" Parameter="serie" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="TEA" Parameter="tEA" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_NaturalezaGastoIngreso" Parameter="iD_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_Sede" Parameter="iD_Sede" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00419" Method="VBG00419">
+    <Parameter Name="ID_Amarre" Parameter="iD_Amarre" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00516" Method="VBG00516">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00521" Method="VBG00521">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Moneda" Parameter="iD_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AgendaNombre" Parameter="agendaNombre" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Parameter Name="MonedaNombre" Parameter="monedaNombre" Type="System.String" DbType="VarChar(20)" Direction="InOut" />
+    <Parameter Name="LimCreditoMonedaVta" Parameter="limCreditoMonedaVta" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="LimCreditoMonedaSol" Parameter="limCreditoMonedaSol" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="SaldoCtaCteMonedaSol" Parameter="saldoCtaCteMonedaSol" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="CreditoDisponibleMonedaSol" Parameter="creditoDisponibleMonedaSol" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="EvaluarLimCredito" Parameter="evaluarLimCredito" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Parameter Name="ValorNoLC" Parameter="valorNoLC" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00522" Method="VBG00522">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NoRegistro" Parameter="noRegistro" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaOrden" Parameter="fechaOrden" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaDespacho" Parameter="fechaDespacho" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaEntrega" Parameter="fechaEntrega" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVigencia" Parameter="fechaVigencia" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaVencimiento" Parameter="fechaVencimiento" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_Envio" Parameter="iD_Envio" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaAnexoReferencia" Parameter="iD_AgendaAnexoReferencia" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Vendedor" Parameter="iD_Vendedor" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Moneda" Parameter="iD_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Neto" Parameter="neto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Dcto" Parameter="dcto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="SubTotal" Parameter="subTotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Impuestos" Parameter="impuestos" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Total" Parameter="total" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Prioridad" Parameter="prioridad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EntregaParcial" Parameter="entregaParcial" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Id_Pago" Parameter="id_Pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_AgendaAnexo" Parameter="iD_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TEA" Parameter="tEA" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_AgendaDireccion1" Parameter="iD_AgendaDireccion1" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaDireccion2" Parameter="iD_AgendaDireccion2" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ModoPago" Parameter="modoPago" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="NotasDespacho" Parameter="notasDespacho" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ID_CondicionCredito" Parameter="iD_CondicionCredito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NroOrdenCliente" Parameter="nroOrdenCliente" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_NaturalezaGastoIngreso" Parameter="iD_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_AgendaOrigen" Parameter="iD_AgendaOrigen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_SucursalOrigen" Parameter="iD_SucursalOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_ReferenciaOrigen" Parameter="iD_ReferenciaOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_DireccionOrigen" Parameter="iD_DireccionOrigen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_AgendaDestino" Parameter="iD_AgendaDestino" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_SucursalDestino" Parameter="iD_SucursalDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_ReferenciaDestino" Parameter="iD_ReferenciaDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_DireccionDestino" Parameter="iD_DireccionDestino" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_TipoDespacho" Parameter="iD_TipoDespacho" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_TipoPedido" Parameter="iD_TipoPedido" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_DocumentoVenta" Parameter="iD_DocumentoVenta" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Almacen" Parameter="iD_Almacen" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Transportista" Parameter="iD_Transportista" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Chofer" Parameter="iD_Chofer" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo1" Parameter="iD_Vehiculo1" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo2" Parameter="iD_Vehiculo2" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Vehiculo3" Parameter="iD_Vehiculo3" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="HoraAtencionOpcion1_Desde" Parameter="horaAtencionOpcion1_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion1_Hasta" Parameter="horaAtencionOpcion1_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion2_Desde" Parameter="horaAtencionOpcion2_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion2_Hasta" Parameter="horaAtencionOpcion2_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion3_Desde" Parameter="horaAtencionOpcion3_Desde" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="HoraAtencionOpcion3_Hasta" Parameter="horaAtencionOpcion3_Hasta" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_Sede" Parameter="iD_Sede" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_Contacto" Parameter="iD_Contacto" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00523" Method="VBG00523">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00526" Method="VBG00526">
+    <Parameter Name="ID_Amarre" Parameter="iD_Amarre" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00524" Method="VBG00524">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Impuesto" Parameter="iD_Impuesto" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="BaseImponible" Parameter="baseImponible" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Importe" Parameter="importe" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00525" Method="VBG00525">
+    <Parameter Name="ID_Amarre" Parameter="iD_Amarre" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TablaOrigen" Parameter="tablaOrigen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Linea" Parameter="linea" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_ItemPedido" Parameter="iD_ItemPedido" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Item_ID" Parameter="item_ID" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Dcto" Parameter="dcto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="DctoValor" Parameter="dctoValor" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Importe" Parameter="importe" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_ItemAnexo" Parameter="iD_ItemAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_CCosto" Parameter="iD_CCosto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadInv" Parameter="iD_UnidadInv" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="FactorUnidadInv" Parameter="factorUnidadInv" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="CantidadUnidadInv" Parameter="cantidadUnidadInv" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_UnidadDoc" Parameter="iD_UnidadDoc" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CantidadUnidadDoc" Parameter="cantidadUnidadDoc" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00698" Method="VBG00698">
+    <ElementType Name="VBG00698Result">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00700" Method="VBG00700">
+    <ElementType Name="VBG00700Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00716" Method="VBG00716">
+    <ElementType Name="VBG00716Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00746" Method="VBG00746">
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG00746Result">
+      <Column Name="ID_Almacen" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Almacen" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AlmacenAnexo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="AlmacenAnexo" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00786" Method="VBG00786">
+    <Parameter Name="ID_CentroCostos" Parameter="iD_CentroCostos" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="CentroCostos" Parameter="centroCostos" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_Cuenta" Parameter="iD_Cuenta" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <ElementType Name="VBG00786Result">
+      <Column Name="ID_CentroCostos" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCostos" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Imputable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00832" Method="VBG00832">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG00878" Method="VBG00878">
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="VBG00878Result">
+      <Column Name="ID_UnidadDestino" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Factor" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00890" Method="VBG00890">
+    <ElementType Name="VBG00890Result">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00939" Method="VBG00939">
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Kardex" Parameter="kardex" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Ubicacion" Parameter="ubicacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_Almacen" Parameter="iD_Almacen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_AlmacenAnexo" Parameter="iD_AlmacenAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Estado" Parameter="iD_Estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Clase1" Parameter="clase1" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Clase2" Parameter="clase2" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Clase3" Parameter="clase3" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Clase4" Parameter="clase4" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Propiedad1" Parameter="propiedad1" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Propiedad2" Parameter="propiedad2" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Propiedad3" Parameter="propiedad3" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Propiedad4" Parameter="propiedad4" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="VBG00939Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Kardex" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(841) NOT NULL" CanBeNull="false" />
+      <Column Name="Unidad" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Local" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="No_Local" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Almacen" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="No_Almacen" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="StockMinimo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockMaximo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Reposicion" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockComprometido" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockProgramadoDespacho" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockBultos" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadControl" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StockControl" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Ubicacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionA" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionB" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionC" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UbicacionD" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CtrlLote" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CtrlSerie" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Clase1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Clase2" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Clase3" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Clase4" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StockTransferidoXRecibir" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockPedidoXDespachar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockFacturaXDespachar" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockDisponible" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="StockProduccionXRecibir" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockProduccionXConsumir" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockRequeridoXAtender" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockOCXRecibir" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StockCompraXRecibir" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv01_Codigo" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv01_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv02_Codigo" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv02_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv03_Codigo" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv03_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv04_Codigo" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="FamiliaKardexNiv04_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01076" Method="VBG01076">
+    <Parameter Name="TablaOrigen" Parameter="tablaOrigen" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Clave" Parameter="clave" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG01122" Method="VBG01122">
+    <Parameter Name="ID_TipoDoc" Parameter="iD_TipoDoc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG01122Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01134" Method="VBG01134">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="RelacionComercial" Parameter="relacionComercial" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="NomRelCom" Parameter="nomRelCom" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Parameter Name="ExisteAgenda" Parameter="existeAgenda" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <ElementType Name="VBG01134Result">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaVenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoVendedor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Bloqueado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01321" Method="VBG01321">
+    <Parameter Name="ID" Parameter="iD" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="RelacionComercial" Parameter="relacionComercial" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Parameter Name="Res" Parameter="res" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG02629" Method="VBG02629">
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG02629Result">
+      <Column Name="CodGrupo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NomGrupo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG02665" Method="VBG02665">
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="UnidadGestion" Parameter="unidadGestion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_Cuenta" Parameter="iD_Cuenta" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_CentroCostos" Parameter="iD_CentroCostos" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <ElementType Name="VBG02665Result">
+      <Column Name="ID_UnidadGestion" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadGestion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Imputable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG02668" Method="VBG02668">
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="UnidadProyecto" Parameter="unidadProyecto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_Cuenta" Parameter="iD_Cuenta" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_CentroCostos" Parameter="iD_CentroCostos" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <ElementType Name="VBG02668Result">
+      <Column Name="ID_UnidadProyecto" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadProyecto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Imputable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG02689" Method="VBG02689">
+    <ElementType Name="VBG02689Result">
+      <Column Name="ID_Sede" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG02699" Method="VBG02699">
+    <Parameter Name="ID_AgendaAnexo" Parameter="iD_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="VBG02699Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG03096" Method="VBG03096">
+    <Parameter Name="ID_NaturalezaGastoIngreso" Parameter="iD_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="VBG03096Result">
+      <Column Name="ID_NaturalezaGastoIngreso" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCostos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Imputable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG03629" Method="VBG03629">
+    <ElementType Name="VBG03629Result">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG03630" Method="VBG03630">
+    <ElementType Name="VBG03630Result">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG03678" Method="VBG03678">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="VBG03678Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG03679" Method="VBG03679">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Sucursal" Parameter="iD_Sucursal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Referencia" Parameter="iD_Referencia" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="VBG03679Result">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(552)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG04091" Method="VBG04091">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsGuiaVenta_ListarXPedido" Method="gsGuiaVenta_ListarXPedido">
+    <Parameter Name="_idPedido" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsGuiaVenta_ListarXPedidoResult">
+      <Column Name="OpPedido" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaGuia" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Kardex" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CantGuia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Destino" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Transporte" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Amarre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="OpGuia" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="NroGuia" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="NroFactura" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="OpFact" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FechaPedido" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFactura" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteOrden" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteFact" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="NetoFact" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CantPedido" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CantFact" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="NroPedido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalFact" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsItem_ListarStock" Method="gsItem_ListarStock">
+    <Parameter Name="Tipo" Parameter="tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Kardex" Parameter="kardex" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Ubicacion" Parameter="ubicacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_Almacen" Parameter="iD_Almacen" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_AlmacenAnexo" Parameter="iD_AlmacenAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Estado" Parameter="iD_Estado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CodUsuario" Parameter="codUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="gsItem_ListarStockResult">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Kardex" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(841) NOT NULL" CanBeNull="false" />
+      <Column Name="Unidad" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Local" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="No_Local" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Almacen" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="No_Almacen" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Reposicion" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadControl" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="StockControl" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Ubicacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CtrlLote" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CtrlSerie" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StockDisponible" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FamiliaKardexNiv02_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsAgenda_BuscarLimiteCredito" Method="gsAgenda_BuscarLimiteCredito">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="gsAgenda_BuscarLimiteCreditoResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TotalCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Garantias" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalRiesgo" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LineaCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreditoDisponible" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PorcentajeConsumoLineaCredito" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsItem_ListarPrecioCliente" Method="gsItem_ListarPrecioCliente">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="gsItem_ListarPrecioClienteResult">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Cliente" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Cliente" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Kardex" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(251)" CanBeNull="true" />
+      <Column Name="Unidad" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioBase" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioEspecial" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DctoImporte" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VigenciaDesde" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VigenciaTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FamiliaKardexNiv02_Nombre" Type="System.String" DbType="VarChar(65) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01312" Method="VBG01312">
+    <Parameter Name="ID" Parameter="iD" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Cliente" Parameter="iD_Cliente" Type="System.String" DbType="VarChar(20)" Direction="InOut" />
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" Direction="InOut" />
+    <Parameter Name="Vigencia" Parameter="vigencia" Type="System.DateTime" DbType="DateTime" Direction="InOut" />
+    <Parameter Name="VigenciaTermino" Parameter="vigenciaTermino" Type="System.DateTime" DbType="DateTime" Direction="InOut" />
+    <Parameter Name="PorcentajeDcto" Parameter="porcentajeDcto" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="TipoDcto" Parameter="tipoDcto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="PorcentajeDctoAdicional" Parameter="porcentajeDctoAdicional" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VBG01134" Method="VBG011341">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="RelacionComercial" Parameter="relacionComercial" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="NomRelCom" Parameter="nomRelCom" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Parameter Name="ExisteAgenda" Parameter="existeAgenda" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <ElementType Name="VBG01134Result1">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaVenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoVendedor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Bloqueado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01124" Method="VBG01124">
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Item_ID" Parameter="item_ID" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_TipoEnlaceContable" Parameter="iD_TipoEnlaceContable" Type="System.Int32" DbType="Int" />
+    <ElementType Name="VBG01124Result">
+      <Column Name="Item_ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(640)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(2,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(2,2) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadPresentacion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Tolerancia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadInv" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadInv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FactorUnidadInv" Type="System.Decimal" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_UnidadControl" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ControlaLotes" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ControlaSeries" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Cuenta" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01313" Method="VBG01313">
+    <Parameter Name="ID" Parameter="iD" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_Cliente" Parameter="iD_Cliente" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Parameter Name="Moneda" Parameter="moneda" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Parameter Name="Vigencia" Parameter="vigencia" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="VigenciaTermino" Parameter="vigenciaTermino" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Precio" Parameter="precio" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="DescuentoEspecial" Parameter="descuentoEspecial" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="PrecioEspecial" Parameter="precioEspecial" Type="System.Decimal" DbType="Money" Direction="InOut" />
+    <Parameter Name="PorcentajeDcto" Parameter="porcentajeDcto" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="TipoDcto" Parameter="tipoDcto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PorcentajeDctoAdicional" Parameter="porcentajeDctoAdicional" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsPedido_Listar" Method="gsPedido_Listar">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FechaDesde" Parameter="fechaDesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaHasta" Parameter="fechaHasta" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_Vendedor" Parameter="iD_Vendedor" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FormaPago" Parameter="formaPago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EstadoAprobacion" Parameter="estadoAprobacion" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsPedido_ListarResult">
+      <Column Name="Op" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Agenda" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NoRegistro" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaOrden" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FechaDespacho" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Envio" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Envio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Vendedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Moneda" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CondicionCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CondicionCredito" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Neto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dcto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Notas" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Prioridad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaVigencia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDespacho" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Aprobacion1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAprobacion1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAprobacion1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprobacion2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UsuarioAprobacion2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaAprobacion2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipoPedido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentoVenta" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AlmacenDespacho" Type="System.String" DbType="VarChar(261) NOT NULL" CanBeNull="false" />
+      <Column Name="CantGuia" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CantProd" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="Transportista" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG01314" Method="VBG01314">
+    <Parameter Name="ID" Parameter="iD" Type="System.Decimal" DbType="Decimal(20,0)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsAgenda_BucarProveedor" Method="gsAgenda_BucarProveedor">
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ExisteAgenda" Parameter="existeAgenda" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <ElementType Name="gsAgenda_BucarProveedorResult">
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoPersona" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaVenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MonedaCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TEA" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DiasCredito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Vendedor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoVendedor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Bloqueado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.gsUsuario_CambiarPassword" Method="gsUsuario_CambiarPassword">
+    <Parameter Name="_CodUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_Password" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsItem_ListarProducto" Method="gsItem_ListarProducto">
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(200)" />
+    <ElementType Name="gsItem_ListarProductoResult">
+      <Column Name="Ficha" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Item" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(253)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VBG00418" Method="VBG00418">
+    <Parameter Name="ID_Amarre" Parameter="iD_Amarre" Type="System.Decimal" DbType="Decimal(18,0)" Direction="InOut" />
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Agenda" Parameter="iD_Agenda" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_AgendaAnexo" Parameter="iD_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_Item" Parameter="iD_Item" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ID_ItemAnexo" Parameter="iD_ItemAnexo" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="ID_CCosto" Parameter="iD_CCosto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadGestion" Parameter="iD_UnidadGestion" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ID_UnidadProyecto" Parameter="iD_UnidadProyecto" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="Importe" Parameter="importe" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ID_Documento" Parameter="iD_Documento" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="Serie" Parameter="serie" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="FechaEmision" Parameter="fechaEmision" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Observaciones" Parameter="observaciones" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="ImporteBaseIGV" Parameter="importeBaseIGV" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ImporteIGV" Parameter="importeIGV" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="ImporteInafecto" Parameter="importeInafecto" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.gsEgresosVarios_BuscarDetalle" Method="gsEgresosVarios_BuscarDetalle">
+    <Parameter Name="Op" Parameter="op" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="gsEgresosVarios_BuscarDetalleResult">
+      <Column Name="ID_Amarre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Agenda" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_AgendaAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Agenda" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaAnexo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CtrlCCosto" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CCosto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CCosto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadGestion" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UnidadGestion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_UnidadProyecto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UnidadProyecto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_Item" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(253)" CanBeNull="true" />
+      <Column Name="ID_ItemAnexo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ItemAnexo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Documento" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NombreDocumento" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="Numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="FechaEmision" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ImporteBaseIGV" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteIGV" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteInafecto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="02659c31-7e3b-4629-a88d-1caf22ee81a0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/CobranzasWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CobranzasWCF.xsd" MetadataType="Schema" ID="58ea46b4-686e-4b1e-818b-3738fa988917" SourceId="1" SourceUrl="http://localhost:49648/CobranzasWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="CobranzasWCF1.xsd" MetadataType="Schema" ID="926775db-3b55-44aa-90e4-1df1d0b7945e" SourceId="1" SourceUrl="http://localhost:49648/CobranzasWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CobranzasWCF.disco" MetadataType="Disco" ID="3a78036b-4049-44fa-ac94-671b67531777" SourceId="1" SourceUrl="http://localhost:49648/CobranzasWCF.svc?disco" />
+    <MetadataFile FileName="CobranzasWCF.wsdl" MetadataType="Wsdl" ID="591ab048-372d-4e38-95ae-f14de39c1069" SourceId="1" SourceUrl="http://localhost:49648/CobranzasWCF.svc?wsdl" />
+    <MetadataFile FileName="CobranzasWCF2.xsd" MetadataType="Schema" ID="ef1ae049-10ec-4eab-a3e4-63cd33614dd2" SourceId="1" SourceUrl="http://localhost:49648/CobranzasWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

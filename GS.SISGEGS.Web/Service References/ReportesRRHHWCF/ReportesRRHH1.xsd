@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/ReportesRRHH.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+  <xs:element name="Ingreso_Personal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ingreso_PersonalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Ingreso_PersonalResult" nillable="true" type="q1:ArrayOfIngreso_PersonalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ingreso_PersonalDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ccosto" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstpermiso" nillable="true" type="q2:ArrayOfIngreso_Personal_PermisosResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ingreso_PersonalDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Ingreso_PersonalDetalleResult" nillable="true" type="q3:ArrayOfIngreso_Personal_DetalleResult" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstpermiso" nillable="true" type="q4:ArrayOfIngreso_Personal_PermisosResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Personal_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Personal_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="Personal_ListarResult" nillable="true" type="q5:ArrayOfPersonal_ListarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Personal_Registrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersonal" type="xs:int" />
+        <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageURL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUsuarioRegistro" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Personal_RegistrarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

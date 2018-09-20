@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="68b1f600-ae9f-4fac-a741-ac62c4b6f526" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/EstadoContratoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EstadoContratoWCF.xsd" MetadataType="Schema" ID="f65496c7-07a3-4d44-bf8b-19daa7f4203b" SourceId="1" SourceUrl="http://localhost:49648/EstadoContratoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="EstadoContratoWCF.disco" MetadataType="Disco" ID="eb4d1b59-7965-49c5-9916-814abcd6f359" SourceId="1" SourceUrl="http://localhost:49648/EstadoContratoWCF.svc?disco" />
+    <MetadataFile FileName="EstadoContratoWCF.wsdl" MetadataType="Wsdl" ID="f903407a-2f19-4930-ae29-3a4d64eaf4dd" SourceId="1" SourceUrl="http://localhost:49648/EstadoContratoWCF.svc?wsdl" />
+    <MetadataFile FileName="EstadoContratoWCF1.xsd" MetadataType="Schema" ID="1e82295a-8ace-41a5-a0eb-e5d904c770ab" SourceId="1" SourceUrl="http://localhost:49648/EstadoContratoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="EstadoContratoWCF2.xsd" MetadataType="Schema" ID="58fd1792-d50c-412c-8396-b24756d3c9cf" SourceId="1" SourceUrl="http://localhost:49648/EstadoContratoWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

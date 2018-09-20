@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUsuario_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuario_BuscarResult" nillable="true" type="tns:Usuario_BuscarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuario_BuscarResult" nillable="true" type="tns:ArrayOfUsuario_BuscarResult" />
+  <xs:complexType name="Usuario_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cambiarAmbos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cambioPassword" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passwordGenesys" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario_BuscarResult" nillable="true" type="tns:Usuario_BuscarResult" />
+  <xs:complexType name="ArrayOfgsUsuario_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsUsuario_BuscarResult" nillable="true" type="tns:gsUsuario_BuscarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsUsuario_BuscarResult" nillable="true" type="tns:ArrayOfgsUsuario_BuscarResult" />
+  <xs:complexType name="gsUsuario_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CodUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsUsuario_BuscarResult" nillable="true" type="tns:gsUsuario_BuscarResult" />
+  <xs:complexType name="ArrayOfusp_SelCantidadAccesosPorMenuResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_SelCantidadAccesosPorMenuResult" nillable="true" type="tns:usp_SelCantidadAccesosPorMenuResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_SelCantidadAccesosPorMenuResult" nillable="true" type="tns:ArrayOfusp_SelCantidadAccesosPorMenuResult" />
+  <xs:complexType name="usp_SelCantidadAccesosPorMenuResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MesAcceso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreMes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreTrimestre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrimestreAcceso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UltimoAccesoCorto" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UltimoAccesoLargo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idMenu" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_SelCantidadAccesosPorMenuResult" nillable="true" type="tns:usp_SelCantidadAccesosPorMenuResult" />
+  <xs:complexType name="ArrayOfusp_Sel_MenusNoAccedidosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usp_Sel_MenusNoAccedidosResult" nillable="true" type="tns:usp_Sel_MenusNoAccedidosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusp_Sel_MenusNoAccedidosResult" nillable="true" type="tns:ArrayOfusp_Sel_MenusNoAccedidosResult" />
+  <xs:complexType name="usp_Sel_MenusNoAccedidosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idMenu" type="xs:int" />
+      <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePerfil" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usp_Sel_MenusNoAccedidosResult" nillable="true" type="tns:usp_Sel_MenusNoAccedidosResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_Usuarios_GeneralResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_Usuarios_GeneralResult" nillable="true" type="tns:USP_Sel_Usuarios_GeneralResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_Usuarios_GeneralResult" nillable="true" type="tns:ArrayOfUSP_Sel_Usuarios_GeneralResult" />
+  <xs:complexType name="USP_Sel_Usuarios_GeneralResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Inatec" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Intranet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NeoAgrum" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NomUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Silvestre" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:boolean" />
+      <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_Usuarios_GeneralResult" nillable="true" type="tns:USP_Sel_Usuarios_GeneralResult" />
+</xs:schema>

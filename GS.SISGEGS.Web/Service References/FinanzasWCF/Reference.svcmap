@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b0e21b86-f468-4ccc-8b97-aba078b1f321" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/FinanzasWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FinanzasWCF.wsdl" MetadataType="Wsdl" ID="5a6b2253-cfcd-4265-9f9e-ce5b95b9e550" SourceId="1" SourceUrl="http://localhost:49648/FinanzasWCF.svc?wsdl" />
+    <MetadataFile FileName="FinanzasWCF.disco" MetadataType="Disco" ID="0b24170f-aa06-45ad-95d1-c4a91e7c56dd" SourceId="1" SourceUrl="http://localhost:49648/FinanzasWCF.svc?disco" />
+    <MetadataFile FileName="FinanzasWCF.xsd" MetadataType="Schema" ID="a1a3e232-786c-41cf-b2fa-42f363536650" SourceId="1" SourceUrl="http://localhost:49648/FinanzasWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="FinanzasWCF1.xsd" MetadataType="Schema" ID="bed92ebc-ba66-4dbd-819b-6abf31cb434a" SourceId="1" SourceUrl="http://localhost:49648/FinanzasWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="FinanzasWCF2.xsd" MetadataType="Schema" ID="68f224e5-c857-43ff-b6b8-a93d9f7ddc6b" SourceId="1" SourceUrl="http://localhost:49648/FinanzasWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

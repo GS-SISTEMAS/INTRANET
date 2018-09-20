@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f8d707a-c2c0-44ed-8555-691c69f31c79" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ImpuestoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImpuestoWCF.disco" MetadataType="Disco" ID="c6f43526-9b3c-47b6-ac01-071db6db8235" SourceId="1" SourceUrl="http://localhost:49648/ImpuestoWCF.svc?disco" />
+    <MetadataFile FileName="ImpuestoWCF.xsd" MetadataType="Schema" ID="5244317b-72f4-439f-884d-8daad06b6699" SourceId="1" SourceUrl="http://localhost:49648/ImpuestoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImpuestoWCF1.xsd" MetadataType="Schema" ID="9072f24e-9f29-49b9-9809-ef790a182dbb" SourceId="1" SourceUrl="http://localhost:49648/ImpuestoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImpuestoWCF.wsdl" MetadataType="Wsdl" ID="08b7fd6a-f160-4f61-9938-1838c86f549f" SourceId="1" SourceUrl="http://localhost:49648/ImpuestoWCF.svc?wsdl" />
+    <MetadataFile FileName="ImpuestoWCF2.xsd" MetadataType="Schema" ID="030f21d3-f446-48c9-a246-a4f9cf6954a0" SourceId="1" SourceUrl="http://localhost:49648/ImpuestoWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

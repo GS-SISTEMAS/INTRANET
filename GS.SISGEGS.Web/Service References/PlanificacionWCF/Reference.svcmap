@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5700cb25-b3ce-4eb1-9b31-e3ca6cd9ec21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/PlanificacionWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PlanificacionWCF.disco" MetadataType="Disco" ID="fb4a3840-845a-41ef-a424-bba307527972" SourceId="1" SourceUrl="http://localhost:49648/PlanificacionWCF.svc?disco" />
+    <MetadataFile FileName="PlanificacionWCF.xsd" MetadataType="Schema" ID="27ea27dd-7541-4396-9204-f9021517a650" SourceId="1" SourceUrl="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="PlanificacionWCF.wsdl" MetadataType="Wsdl" ID="85561c3e-864d-45e7-bdc1-45f590a60ec2" SourceId="1" SourceUrl="http://localhost:49648/PlanificacionWCF.svc?wsdl" />
+    <MetadataFile FileName="PlanificacionWCF1.xsd" MetadataType="Schema" ID="3622206b-795e-4f0f-a2fe-a48b06c31df2" SourceId="1" SourceUrl="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="PlanificacionWCF2.xsd" MetadataType="Schema" ID="1b4ea4fd-e105-4b01-85ad-c6c848573d38" SourceId="1" SourceUrl="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

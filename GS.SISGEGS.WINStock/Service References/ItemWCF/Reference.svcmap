@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d255d05-fbf7-4f17-afb4-5c8986658a8d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ItemWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ItemWCF.xsd" MetadataType="Schema" ID="bab510c8-b907-41ef-87bf-cacc6dd43f71" SourceId="1" SourceUrl="http://localhost:49648/ItemWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ItemWCF1.xsd" MetadataType="Schema" ID="965abb4e-faaa-46fd-87d7-5b820f8c9c18" SourceId="1" SourceUrl="http://localhost:49648/ItemWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ItemWCF2.xsd" MetadataType="Schema" ID="577dc9d9-cb5e-40fe-b509-5a5e86e245a7" SourceId="1" SourceUrl="http://localhost:49648/ItemWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ItemWCF.wsdl" MetadataType="Wsdl" ID="29093839-efc3-4b76-a0aa-a01963187e98" SourceId="1" SourceUrl="http://localhost:49648/ItemWCF.svc?wsdl" />
+    <MetadataFile FileName="ItemWCF.disco" MetadataType="Disco" ID="4c829a2f-2974-4d15-81b4-be4acc1382ae" SourceId="1" SourceUrl="http://localhost:49648/ItemWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

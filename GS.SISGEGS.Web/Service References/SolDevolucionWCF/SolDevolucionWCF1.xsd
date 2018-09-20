@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+  <xs:element name="DocVenta_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocVenta_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DocVenta_ListarResult" nillable="true" type="q1:ArrayOfgsDocVenta_ListarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionMotivo_ComboBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionMotivo_ComboBoxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DevolucionMotivo_ComboBoxResult" nillable="true" type="q2:ArrayOfgsDevolucionMotivo_ComboBoxResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocVenta_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstDetalle" nillable="true" type="q3:ArrayOfgsDocVenta_BuscarDetalleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocVenta_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DocVenta_BuscarResult" nillable="true" type="q4:gsDocVenta_BuscarResult" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstDetalle" nillable="true" type="q5:ArrayOfgsDocVenta_BuscarDetalleResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgendaAnexo_ListarAlmacenDevolucion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgendaAnexo_ListarAlmacenDevolucionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="AgendaAnexo_ListarAlmacenDevolucionResult" nillable="true" type="q6:ArrayOfgsAgendaAnexo_ListarAlmacenDevolucionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_Registrar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="objDevolucionSolicitud" nillable="true" type="q7:gsDevolucionSolicitud" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstProductos" nillable="true" type="q8:ArrayOfgsDevolucionSolicitudDetalle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_RegistrarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_Listar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFinal" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID_Cliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_ListarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DevolucionSolicitud_ListarResult" nillable="true" type="q9:ArrayOfgsDevolucionSolicitud_ListarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_Buscar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstProductos" nillable="true" type="q10:ArrayOfgsDevolucionSolicitudDetalle_BuscarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_BuscarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="DevolucionSolicitud_BuscarResult" nillable="true" type="q11:gsDevolucionSolicitud_BuscarResult" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" minOccurs="0" name="lstProductos" nillable="true" type="q12:ArrayOfgsDevolucionSolicitudDetalle_BuscarResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_Aprobar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_AprobarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_Eliminar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idDevolucionSolicitud" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevolucionSolicitud_EliminarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

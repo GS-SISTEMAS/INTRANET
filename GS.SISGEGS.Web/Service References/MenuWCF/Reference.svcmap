@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32acc7d6-64a2-48c5-b37a-c797eb7531b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/MenuWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MenuWCF3.xsd" MetadataType="Schema" ID="56e0e5ee-f07e-4d7f-bd40-9b1d85a49d80" SourceId="1" SourceUrl="http://localhost:49648/MenuWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MenuWCF1.disco" MetadataType="Disco" ID="33864bc2-18bc-4cbc-a9a6-5f190fe5f154" SourceId="1" SourceUrl="http://localhost:49648/MenuWCF.svc?disco" />
+    <MetadataFile FileName="MenuWCF4.xsd" MetadataType="Schema" ID="c13bc308-4405-40bd-8ecd-4ada5ebac002" SourceId="1" SourceUrl="http://localhost:49648/MenuWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MenuWCF5.xsd" MetadataType="Schema" ID="415fa5c5-e64b-430c-a5ef-88a81f19ea40" SourceId="1" SourceUrl="http://localhost:49648/MenuWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MenuWCFsvc.wsdl" MetadataType="Wsdl" ID="e689b09f-82b8-482c-b793-d6aef372e32b" SourceId="1" SourceUrl="http://localhost:49648/MenuWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

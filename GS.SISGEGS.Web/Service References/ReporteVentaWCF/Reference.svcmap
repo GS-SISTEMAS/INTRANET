@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b1054605-5a3b-4ad3-ba11-25e082acc156" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ReporteVentaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReporteVentaWCF.wsdl" MetadataType="Wsdl" ID="c46adaf4-708e-4466-95df-fafb303570d6" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?wsdl" />
+    <MetadataFile FileName="ReporteVentaWCF.xsd" MetadataType="Schema" ID="259bdceb-4eb1-4132-aec9-e8b4521c4ce6" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReporteVentaWCF1.xsd" MetadataType="Schema" ID="1e767f8d-5aa3-407c-a87c-c73cc52e5d89" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReporteVentaWCF2.xsd" MetadataType="Schema" ID="62afb4cf-0125-4a17-b42b-b209b5d7302a" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReporteVentaWCF3.xsd" MetadataType="Schema" ID="790b13a4-3702-4543-9d5b-81c271f7916a" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="ReporteVentaWCF.disco" MetadataType="Disco" ID="c0496788-12d6-4ba2-af41-89d3127cb11e" SourceId="1" SourceUrl="http://localhost:49648/ReporteVentaWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CreditoWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/CreditoWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/CreditoWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/CreditoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICreditoWCF_Credito_ListarCondicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Credito_ListarCondicion" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_Credito_ListarCondicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Credito_ListarCondicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_ObtenerLetrasSinCanje_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLetrasSinCanje" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_ObtenerLetrasSinCanje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLetrasSinCanjeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_ObtenerVerificacionAprobacion2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerVerificacionAprobacion2" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_ObtenerVerificacionAprobacion2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerVerificacionAprobacion2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_Enviar_Notificacion_Aprobacion2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Enviar_Notificacion_Aprobacion2" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_Enviar_Notificacion_Aprobacion2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Enviar_Notificacion_Aprobacion2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_RegistrarLog_AprobacionDeudaVencida_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarLog_AprobacionDeudaVencida" />
+  </wsdl:message>
+  <wsdl:message name="ICreditoWCF_RegistrarLog_AprobacionDeudaVencida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarLog_AprobacionDeudaVencidaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICreditoWCF">
+    <wsdl:operation name="Credito_ListarCondicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreditoWCF/Credito_ListarCondicion" message="tns:ICreditoWCF_Credito_ListarCondicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreditoWCF/Credito_ListarCondicionResponse" message="tns:ICreditoWCF_Credito_ListarCondicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLetrasSinCanje">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreditoWCF/ObtenerLetrasSinCanje" message="tns:ICreditoWCF_ObtenerLetrasSinCanje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreditoWCF/ObtenerLetrasSinCanjeResponse" message="tns:ICreditoWCF_ObtenerLetrasSinCanje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVerificacionAprobacion2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreditoWCF/ObtenerVerificacionAprobacion2" message="tns:ICreditoWCF_ObtenerVerificacionAprobacion2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreditoWCF/ObtenerVerificacionAprobacion2Response" message="tns:ICreditoWCF_ObtenerVerificacionAprobacion2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Enviar_Notificacion_Aprobacion2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreditoWCF/Enviar_Notificacion_Aprobacion2" message="tns:ICreditoWCF_Enviar_Notificacion_Aprobacion2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreditoWCF/Enviar_Notificacion_Aprobacion2Response" message="tns:ICreditoWCF_Enviar_Notificacion_Aprobacion2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarLog_AprobacionDeudaVencida">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreditoWCF/RegistrarLog_AprobacionDeudaVencida" message="tns:ICreditoWCF_RegistrarLog_AprobacionDeudaVencida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreditoWCF/RegistrarLog_AprobacionDeudaVencidaResponse" message="tns:ICreditoWCF_RegistrarLog_AprobacionDeudaVencida_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICreditoWCF" type="tns:ICreditoWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Credito_ListarCondicion">
+      <soap:operation soapAction="http://tempuri.org/ICreditoWCF/Credito_ListarCondicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLetrasSinCanje">
+      <soap:operation soapAction="http://tempuri.org/ICreditoWCF/ObtenerLetrasSinCanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVerificacionAprobacion2">
+      <soap:operation soapAction="http://tempuri.org/ICreditoWCF/ObtenerVerificacionAprobacion2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Enviar_Notificacion_Aprobacion2">
+      <soap:operation soapAction="http://tempuri.org/ICreditoWCF/Enviar_Notificacion_Aprobacion2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarLog_AprobacionDeudaVencida">
+      <soap:operation soapAction="http://tempuri.org/ICreditoWCF/RegistrarLog_AprobacionDeudaVencida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreditoWCF">
+    <wsdl:port name="BasicHttpBinding_ICreditoWCF" binding="tns:BasicHttpBinding_ICreditoWCF">
+      <soap:address location="http://localhost:49648/CreditoWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

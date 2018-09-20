@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd1cd5d0-c0e8-4bc3-a3e4-8fa506f221b8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ComisionWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ComisionWCF.xsd" MetadataType="Schema" ID="17682b8f-946d-44e6-acd5-444e93d55967" SourceId="1" SourceUrl="http://localhost:49648/ComisionWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ComisionWCF1.xsd" MetadataType="Schema" ID="735eb6e0-7e17-4281-bd74-edafdaebc4fb" SourceId="1" SourceUrl="http://localhost:49648/ComisionWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ComisionWCF.wsdl" MetadataType="Wsdl" ID="fcf75313-b13d-42d2-9862-33ebfbfa9e99" SourceId="1" SourceUrl="http://localhost:49648/ComisionWCF.svc?wsdl" />
+    <MetadataFile FileName="ComisionWCF2.xsd" MetadataType="Schema" ID="69ff0c70-21c0-491c-bf10-8cbdc321d931" SourceId="1" SourceUrl="http://localhost:49648/ComisionWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ComisionWCF.disco" MetadataType="Disco" ID="6361d3c1-85d9-4274-b11d-2d44921b2cdc" SourceId="1" SourceUrl="http://localhost:49648/ComisionWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

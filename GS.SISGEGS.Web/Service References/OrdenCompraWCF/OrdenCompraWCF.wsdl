@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OrdenCompraWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrdenCompraWCF_OrdenCompraListar_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrdenCompraListar" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_OrdenCompraListar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrdenCompraListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Anular_OC_InputMessage">
+    <wsdl:part name="parameters" element="tns:Anular_OC" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Anular_OC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Anular_OCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_ListarOcImportacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarOcImportacion" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_ListarOcImportacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarOcImportacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OP_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OP" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OPLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OPLinea" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OPLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OPLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OpParcial_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OpParcial" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_OC_OpParcial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_OC_OpParcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_Oc_Parcial_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_Oc_Parcial" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_Oc_Parcial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_Oc_ParcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_Oc_Parcial_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Oc_Parcial" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_Oc_Parcial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Oc_ParcialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_Oc_ParcialLinea_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Oc_ParcialLinea" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_Oc_ParcialLinea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_Oc_ParcialLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_SeguimientoLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_SeguimientoLista" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_SeguimientoLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_SeguimientoListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_ImpParciales_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_ImpParciales" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_ImpParciales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_ImpParcialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_Estados_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_Estados" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_Estados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_EstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_TipoVia_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_TipoVia" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_TipoVia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_TipoViaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_SegImp_IdSeg_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_SegImp_IdSeg" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_SegImp_IdSeg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_SegImp_IdSegResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_OcImp_IdSeg_InputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_OcImp_IdSeg" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Seleccionar_GenesysOC_OcImp_IdSeg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Seleccionar_GenesysOC_OcImp_IdSegResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_Seguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_Seguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_Seguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_SeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_OcImp_Seguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_OcImp_Seguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Eliminar_OcImp_Seguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_OcImp_SeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_OcImpSeg_Liquidacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_OcImpSeg_Liquidacion" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_Registrar_OcImpSeg_Liquidacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_OcImpSeg_LiquidacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Seleccionar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_Seleccionar" />
+  </wsdl:message>
+  <wsdl:message name="IOrdenCompraWCF_DocumentosSegImportacion_Seleccionar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosSegImportacion_SeleccionarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOrdenCompraWCF">
+    <wsdl:operation name="OrdenCompraListar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/OrdenCompraListar" message="tns:IOrdenCompraWCF_OrdenCompraListar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/OrdenCompraListarResponse" message="tns:IOrdenCompraWCF_OrdenCompraListar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Anular_OC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Anular_OC" message="tns:IOrdenCompraWCF_Anular_OC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Anular_OCResponse" message="tns:IOrdenCompraWCF_Anular_OC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarOcImportacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/ListarOcImportacion" message="tns:IOrdenCompraWCF_ListarOcImportacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/ListarOcImportacionResponse" message="tns:IOrdenCompraWCF_ListarOcImportacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OP" message="tns:IOrdenCompraWCF_Seleccionar_OC_OP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OPResponse" message="tns:IOrdenCompraWCF_Seleccionar_OC_OP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OPLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OPLinea" message="tns:IOrdenCompraWCF_Seleccionar_OC_OPLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OPLineaResponse" message="tns:IOrdenCompraWCF_Seleccionar_OC_OPLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OpParcial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OpParcial" message="tns:IOrdenCompraWCF_Seleccionar_OC_OpParcial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OpParcialResponse" message="tns:IOrdenCompraWCF_Seleccionar_OC_OpParcial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Oc_Parcial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_Oc_Parcial" message="tns:IOrdenCompraWCF_Registrar_Oc_Parcial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_Oc_ParcialResponse" message="tns:IOrdenCompraWCF_Registrar_Oc_Parcial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Oc_Parcial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_Parcial" message="tns:IOrdenCompraWCF_Eliminar_Oc_Parcial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_ParcialResponse" message="tns:IOrdenCompraWCF_Eliminar_Oc_Parcial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Oc_ParcialLinea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_ParcialLinea" message="tns:IOrdenCompraWCF_Eliminar_Oc_ParcialLinea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_ParcialLineaResponse" message="tns:IOrdenCompraWCF_Eliminar_Oc_ParcialLinea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_SeguimientoLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SeguimientoLista" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_SeguimientoLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SeguimientoListaResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_SeguimientoLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_ImpParciales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_ImpParciales" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_ImpParciales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_ImpParcialesResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_ImpParciales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_Estados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_Estados" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_Estados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_EstadosResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_Estados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_TipoVia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_TipoVia" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_TipoVia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_TipoViaResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_TipoVia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_SegImp_IdSeg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SegImp_IdSeg" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_SegImp_IdSeg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SegImp_IdSegResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_SegImp_IdSeg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_OcImp_IdSeg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_OcImp_IdSeg" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_OcImp_IdSeg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_OcImp_IdSegResponse" message="tns:IOrdenCompraWCF_Seleccionar_GenesysOC_OcImp_IdSeg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Seguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_Seguimiento" message="tns:IOrdenCompraWCF_Registrar_Seguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_SeguimientoResponse" message="tns:IOrdenCompraWCF_Registrar_Seguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_OcImp_Seguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_OcImp_Seguimiento" message="tns:IOrdenCompraWCF_Eliminar_OcImp_Seguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Eliminar_OcImp_SeguimientoResponse" message="tns:IOrdenCompraWCF_Eliminar_OcImp_Seguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_OcImpSeg_Liquidacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_OcImpSeg_Liquidacion" message="tns:IOrdenCompraWCF_Registrar_OcImpSeg_Liquidacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/Registrar_OcImpSeg_LiquidacionResponse" message="tns:IOrdenCompraWCF_Registrar_OcImpSeg_Liquidacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Registrar" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_RegistrarResponse" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Eliminar" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_EliminarResponse" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Seleccionar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Seleccionar" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Seleccionar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_SeleccionarResponse" message="tns:IOrdenCompraWCF_DocumentosSegImportacion_Seleccionar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOrdenCompraWCF" type="tns:IOrdenCompraWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OrdenCompraListar">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/OrdenCompraListar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Anular_OC">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Anular_OC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarOcImportacion">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/ListarOcImportacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OP">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OPLinea">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OPLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_OC_OpParcial">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_OC_OpParcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Oc_Parcial">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Registrar_Oc_Parcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Oc_Parcial">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_Parcial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_Oc_ParcialLinea">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Eliminar_Oc_ParcialLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_SeguimientoLista">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SeguimientoLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_ImpParciales">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_ImpParciales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_Estados">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_Estados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_TipoVia">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_TipoVia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_SegImp_IdSeg">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_SegImp_IdSeg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seleccionar_GenesysOC_OcImp_IdSeg">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Seleccionar_GenesysOC_OcImp_IdSeg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Seguimiento">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Registrar_Seguimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_OcImp_Seguimiento">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Eliminar_OcImp_Seguimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_OcImpSeg_Liquidacion">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/Registrar_OcImpSeg_Liquidacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosSegImportacion_Seleccionar">
+      <soap:operation soapAction="http://tempuri.org/IOrdenCompraWCF/DocumentosSegImportacion_Seleccionar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrdenCompraWCF">
+    <wsdl:port name="BasicHttpBinding_IOrdenCompraWCF" binding="tns:BasicHttpBinding_IOrdenCompraWCF">
+      <soap:address location="http://localhost:49648/OrdenCompraWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

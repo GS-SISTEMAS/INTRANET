@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfIngreso_PersonalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ingreso_PersonalResult" nillable="true" type="tns:Ingreso_PersonalResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIngreso_PersonalResult" nillable="true" type="tns:ArrayOfIngreso_PersonalResult" />
+  <xs:complexType name="Ingreso_PersonalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Minutos" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ingreso_PersonalResult" nillable="true" type="tns:Ingreso_PersonalResult" />
+  <xs:complexType name="ArrayOfIngreso_Personal_PermisosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ingreso_Personal_PermisosResult" nillable="true" type="tns:Ingreso_Personal_PermisosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIngreso_Personal_PermisosResult" nillable="true" type="tns:ArrayOfIngreso_Personal_PermisosResult" />
+  <xs:complexType name="Ingreso_Personal_PermisosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Minutos" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ingreso_Personal_PermisosResult" nillable="true" type="tns:Ingreso_Personal_PermisosResult" />
+  <xs:complexType name="ArrayOfIngreso_Personal_DetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ingreso_Personal_DetalleResult" nillable="true" type="tns:Ingreso_Personal_DetalleResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIngreso_Personal_DetalleResult" nillable="true" type="tns:ArrayOfIngreso_Personal_DetalleResult" />
+  <xs:complexType name="Ingreso_Personal_DetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Minutos" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ingreso_Personal_DetalleResult" nillable="true" type="tns:Ingreso_Personal_DetalleResult" />
+  <xs:complexType name="ArrayOfPersonal_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Personal_ListarResult" nillable="true" type="tns:Personal_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonal_ListarResult" nillable="true" type="tns:ArrayOfPersonal_ListarResult" />
+  <xs:complexType name="Personal_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodEmpresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImagenURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Personal_ListarResult" nillable="true" type="tns:Personal_ListarResult" />
+</xs:schema>

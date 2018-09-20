@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gs0dev" Class="dmIntranetDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.1.8;Initial Catalog=gs0dev;User ID=sa" SettingsObjectName="GS.SISGEGS.DM.Properties.Settings" SettingsPropertyName="gs0devConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Menu" Member="Menu">
+    <Type Name="Menu">
+      <Column Name="idMenu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="codigoPadre" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="nombreMenu" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="url" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="defecto" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioRegistro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioModifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaModifico" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Empresa" Member="Empresa">
+    <Type Name="Empresa">
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="razonSocial" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreComercial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="abreviatura" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="idUbigeo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="RUC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="logotipo" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="baseDatos" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="idDocCajaChica" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioRegistro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioModifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaModifico" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Empresa_Perfil" Member="Perfil" ThisKey="idEmpresa" OtherKey="idEmpresa" Type="Perfil" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Perfil" Member="Perfil">
+    <Type Name="Perfil">
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombrePerfil" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioRegistro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioModifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaModifico" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Perfil_Usuario" Member="Usuario" ThisKey="idPerfil" OtherKey="idPerfil" Type="Usuario" />
+      <Association Name="Empresa_Perfil" Member="Empresa" ThisKey="idEmpresa" OtherKey="idEmpresa" Type="Empresa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="loginUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="nroDocumento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="idUsuarioRegistro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuarioModifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaModifico" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Perfil_Usuario" Member="Perfil" ThisKey="idPerfil" OtherKey="idPerfil" Type="Perfil" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Excepcion_Registrar" Method="Excepcion_Registrar">
+    <Parameter Name="_descripcion" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="_metodo" Type="System.String" DbType="VarChar(1000)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Empresa_ComboBox" Method="Empresa_ComboBox">
+    <ElementType Name="Empresa_ComboBoxResult">
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombreComercial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="baseDatos" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Menu_CargarInicio" Method="Menu_CargarInicio">
+    <Parameter Name="_idPerfil" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Menu_CargarInicioResult">
+      <Column Name="codigo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="codigoPadre" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="nombreMenu" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="url" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Menu_Registrar" Method="Menu_Registrar">
+    <Parameter Name="_idMenuPadre" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_nombreMenu" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="_url" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="_defecto" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="_activo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="_idUsuarioRegistro" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Menu_Listar" Method="Menu_Listar">
+    <ElementType Name="Menu_ListarResult">
+      <Column Name="idMenu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codigo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="codigoPadre" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="VarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="defecto" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="nombreMenu" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Menu_Modificar" Method="Menu_Modificar">
+    <Parameter Name="_idMenu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_nombreMenu" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="_url" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="_defecto" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="_activo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="_idUsuarioModificacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MenuPerfil_Registrar" Method="MenuPerfil_Registrar">
+    <Parameter Name="_idPerfil" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_lstMenu" Type="System.String" DbType="VarChar(2048)" />
+    <Parameter Name="_idUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Variante_Buscar" Method="Variante_Buscar">
+    <Parameter Name="_idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_codigo" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="Variante_BuscarResult">
+      <Column Name="idVariante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parametro1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="parametro2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro5" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro6" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro7" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro8" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parametro9" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Perfil_Listar" Method="Perfil_Listar">
+    <Parameter Name="_descripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="_idEmpresa" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Perfil_ListarResult">
+      <Column Name="nombreComercial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombrePerfil" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Perfil_Buscar" Method="Perfil_Buscar">
+    <Parameter Name="_idPerfil" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Perfil_BuscarResult">
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombrePerfil" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Perfil_Eliminar" Method="Perfil_Eliminar">
+    <Parameter Name="_idPerfil" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_idUsuarioModifico" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Perfil_Registrar" Method="Perfil_Registrar">
+    <Parameter Name="_idPerfil" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_nombrePerfil" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="_idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_idUsuarioRegistro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_activo" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Usuario_Login" Method="Usuario_Login">
+    <Parameter Name="_idUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Usuario_LoginResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="nombrePerfil" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="nombreComercial" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="logotipo" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nroDocumento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Usuario_Autenticar" Method="Usuario_Autenticar">
+    <Parameter Name="_loginUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="_idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_password" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="Usuario_AutenticarResult">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="loginUsuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cambioPassword" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="idEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Usuario_CambiarPassword" Method="Usuario_CambiarPassword">
+    <Parameter Name="_idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="_password" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

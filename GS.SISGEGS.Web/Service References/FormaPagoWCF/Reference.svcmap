@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7093376c-e7b2-453b-b9a5-b0f27769d0a0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FormaPagoWCF1.disco" MetadataType="Disco" ID="4accf08c-ff8e-4373-9188-42739bd1c94b" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc?disco" />
+    <MetadataFile FileName="FormaPagoWCF3.xsd" MetadataType="Schema" ID="ccc33826-f53b-4d36-b60b-e89e9c3fa612" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="FormaPagoWCF4.xsd" MetadataType="Schema" ID="05babe04-5365-48c7-91d8-09fbe59433ea" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="FormaPagoWCF1.wsdl" MetadataType="Wsdl" ID="b146e1a2-127d-47bd-b803-586c76958531" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc?wsdl" />
+    <MetadataFile FileName="FormaPagoWCF5.xsd" MetadataType="Schema" ID="c189d6ec-f127-401a-a121-c17e59b19088" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/FormaPagoWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

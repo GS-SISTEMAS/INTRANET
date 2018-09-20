@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGS_GetAllModulosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetAllModulosResult" nillable="true" type="tns:GS_GetAllModulosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetAllModulosResult" nillable="true" type="tns:ArrayOfGS_GetAllModulosResult" />
+  <xs:complexType name="GS_GetAllModulosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Modulo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetAllModulosResult" nillable="true" type="tns:GS_GetAllModulosResult" />
+  <xs:complexType name="ArrayOfGS_GetPlanificacionByPeriodoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetPlanificacionByPeriodoResult" nillable="true" type="tns:GS_GetPlanificacionByPeriodoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetPlanificacionByPeriodoResult" nillable="true" type="tns:ArrayOfGS_GetPlanificacionByPeriodoResult" />
+  <xs:complexType name="GS_GetPlanificacionByPeriodoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idPlanificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="periodo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetPlanificacionByPeriodoResult" nillable="true" type="tns:GS_GetPlanificacionByPeriodoResult" />
+  <xs:complexType name="ArrayOfGS_GetPlanificacionDetalleByIdPlanResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetPlanificacionDetalleByIdPlanResult" nillable="true" type="tns:GS_GetPlanificacionDetalleByIdPlanResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetPlanificacionDetalleByIdPlanResult" nillable="true" type="tns:ArrayOfGS_GetPlanificacionDetalleByIdPlanResult" />
+  <xs:complexType name="GS_GetPlanificacionDetalleByIdPlanResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCierre" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idPlanificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Detalle" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Modulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetPlanificacionDetalleByIdPlanResult" nillable="true" type="tns:GS_GetPlanificacionDetalleByIdPlanResult" />
+  <xs:complexType name="ArrayOfGS_GetPlanDetalleToInsertResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetPlanDetalleToInsertResult" nillable="true" type="tns:GS_GetPlanDetalleToInsertResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetPlanDetalleToInsertResult" nillable="true" type="tns:ArrayOfGS_GetPlanDetalleToInsertResult" />
+  <xs:complexType name="GS_GetPlanDetalleToInsertResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCierre" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flag" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idPlanificacion" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Detalle" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Modulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetPlanDetalleToInsertResult" nillable="true" type="tns:GS_GetPlanDetalleToInsertResult" />
+  <xs:complexType name="ArrayOfGS_GetPlanDetalleToEditResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetPlanDetalleToEditResult" nillable="true" type="tns:GS_GetPlanDetalleToEditResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetPlanDetalleToEditResult" nillable="true" type="tns:ArrayOfGS_GetPlanDetalleToEditResult" />
+  <xs:complexType name="GS_GetPlanDetalleToEditResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCierre" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flag" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idPlanificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Detalle" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Modulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetPlanDetalleToEditResult" nillable="true" type="tns:GS_GetPlanDetalleToEditResult" />
+  <xs:complexType name="ArrayOfGS_GetAgendaListaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetAgendaListaResult" nillable="true" type="tns:GS_GetAgendaListaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetAgendaListaResult" nillable="true" type="tns:ArrayOfGS_GetAgendaListaResult" />
+  <xs:complexType name="GS_GetAgendaListaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Agenda" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetAgendaListaResult" nillable="true" type="tns:GS_GetAgendaListaResult" />
+  <xs:complexType name="ArrayOfGS_GetHistorialCambiosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_GetHistorialCambiosResult" nillable="true" type="tns:GS_GetHistorialCambiosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_GetHistorialCambiosResult" nillable="true" type="tns:ArrayOfGS_GetHistorialCambiosResult" />
+  <xs:complexType name="GS_GetHistorialCambiosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCierre" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idHistorial" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Detalle" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Modulo" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Solicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="responsable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioCreacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_GetHistorialCambiosResult" nillable="true" type="tns:GS_GetHistorialCambiosResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_MetaPresupuestoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_MetaPresupuestoResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_MetaPresupuestoResult" nillable="true" type="tns:ArrayOfUSP_Sel_MetaPresupuestoResult" />
+  <xs:complexType name="USP_Sel_MetaPresupuestoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Aprobado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_G5" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCodigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+      <xs:element minOccurs="0" name="NomUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreG5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZonaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreKardex" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_MetaPresupuestoResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_MetaPresupuestoDetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_MetaPresupuestoDetResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoDetResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_MetaPresupuestoDetResult" nillable="true" type="tns:ArrayOfUSP_Sel_MetaPresupuestoDetResult" />
+  <xs:complexType name="USP_Sel_MetaPresupuestoDetResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_G5" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kardex" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreG5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreKardex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_MetaPresupuestoDetResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoDetResult" />
+  <xs:complexType name="USP_Sel_MetaPresupuestoCabResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Aprobado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_MetaPresupuestoCabResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoCabResult" />
+  <xs:complexType name="USP_Sel_TipoClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Propiedad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_TipoClienteResult" nillable="true" type="tns:USP_Sel_TipoClienteResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_MetaPresupuestoPromotorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_MetaPresupuestoPromotorResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoPromotorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_MetaPresupuestoPromotorResult" nillable="true" type="tns:ArrayOfUSP_Sel_MetaPresupuestoPromotorResult" />
+  <xs:complexType name="USP_Sel_MetaPresupuestoPromotorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Aprobado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Promotor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombrePromotor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_MetaPresupuestoPromotorResult" nillable="true" type="tns:USP_Sel_MetaPresupuestoPromotorResult" />
+  <xs:complexType name="ArrayOfUSP_SEL_MetaPresupuestoPendienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_MetaPresupuestoPendienteResult" nillable="true" type="tns:USP_SEL_MetaPresupuestoPendienteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_MetaPresupuestoPendienteResult" nillable="true" type="tns:ArrayOfUSP_SEL_MetaPresupuestoPendienteResult" />
+  <xs:complexType name="USP_SEL_MetaPresupuestoPendienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadPendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_G5" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre_G5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_MetaPresupuestoPendienteResult" nillable="true" type="tns:USP_SEL_MetaPresupuestoPendienteResult" />
+  <xs:complexType name="ArrayOfUSP_Sel_PromotoresxVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_Sel_PromotoresxVendedorResult" nillable="true" type="tns:USP_Sel_PromotoresxVendedorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_Sel_PromotoresxVendedorResult" nillable="true" type="tns:ArrayOfUSP_Sel_PromotoresxVendedorResult" />
+  <xs:complexType name="USP_Sel_PromotoresxVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Promotor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombrePromotor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_Sel_PromotoresxVendedorResult" nillable="true" type="tns:USP_Sel_PromotoresxVendedorResult" />
+  <xs:complexType name="ArrayOfUSP_SEL_VENTA_POR_VENDEDOR2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USP_SEL_VENTA_POR_VENDEDOR2" nillable="true" type="tns:USP_SEL_VENTA_POR_VENDEDOR2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSP_SEL_VENTA_POR_VENDEDOR2" nillable="true" type="tns:ArrayOfUSP_SEL_VENTA_POR_VENDEDOR2" />
+  <xs:complexType name="USP_SEL_VENTA_POR_VENDEDOR2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anno" type="xs:int" />
+      <xs:element minOccurs="0" name="Gerente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Gerente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Zona" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalActual" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalAnnoAnterior" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalOficial" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Variacion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USP_SEL_VENTA_POR_VENDEDOR2" nillable="true" type="tns:USP_SEL_VENTA_POR_VENDEDOR2" />
+</xs:schema>

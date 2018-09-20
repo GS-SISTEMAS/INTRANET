@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49648/EgresosWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfgsEgresosVarios_ListarCajaChicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVarios_ListarCajaChicaResult" nillable="true" type="tns:gsEgresosVarios_ListarCajaChicaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVarios_ListarCajaChicaResult" nillable="true" type="tns:ArrayOfgsEgresosVarios_ListarCajaChicaResult" />
+  <xs:complexType name="gsEgresosVarios_ListarCajaChicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Anexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAprobacion1" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAprobacion2" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAño" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaDia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaMes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaSemana" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaTrimestre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HoraAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Doc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Sede" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NatGasto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Ok0" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Planilla" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Proyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoTc" type="xs:int" />
+      <xs:element minOccurs="0" name="Transaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioAcceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioAprobacion0" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioAprobacion1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioAprobacion2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vcmto" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVarios_ListarCajaChicaResult" nillable="true" type="tns:gsEgresosVarios_ListarCajaChicaResult" />
+  <xs:complexType name="ArrayOfgsEgresosVarios_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVarios_BuscarDetalleResult" nillable="true" type="tns:gsEgresosVarios_BuscarDetalleResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVarios_BuscarDetalleResult" nillable="true" type="tns:ArrayOfgsEgresosVarios_BuscarDetalleResult" />
+  <xs:complexType name="gsEgresosVarios_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgendaAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CtrlCCosto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Estado" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Amarre" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Documento" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_ItemAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteBaseIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteInafecto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadProyecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVarios_BuscarDetalleResult" nillable="true" type="tns:gsEgresosVarios_BuscarDetalleResult" />
+  <xs:complexType name="gsEgresosVarios_BuscarCabeceraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Doc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_NaturalezaGastoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Sede" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Ok0" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Op" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoTc" type="xs:int" />
+      <xs:element minOccurs="0" name="Vcmto" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVarios_BuscarCabeceraResult" nillable="true" type="tns:gsEgresosVarios_BuscarCabeceraResult" />
+  <xs:complexType name="gsEgresosVariosUsuario_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_CentroCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_UnidadProyecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVariosUsuario_BuscarResult" nillable="true" type="tns:gsEgresosVariosUsuario_BuscarResult" />
+  <xs:complexType name="ArrayOfVBG03096Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG03096Result" nillable="true" type="tns:VBG03096Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG03096Result" nillable="true" type="tns:ArrayOfVBG03096Result" />
+  <xs:complexType name="VBG03096Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_NaturalezaGastoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imputable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG03096Result" nillable="true" type="tns:VBG03096Result" />
+  <xs:complexType name="ArrayOfVBG02665Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG02665Result" nillable="true" type="tns:VBG02665Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG02665Result" nillable="true" type="tns:ArrayOfVBG02665Result" />
+  <xs:complexType name="VBG02665Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imputable" type="xs:int" />
+      <xs:element minOccurs="0" name="UnidadGestion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG02665Result" nillable="true" type="tns:VBG02665Result" />
+  <xs:complexType name="ArrayOfVBG02668Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG02668Result" nillable="true" type="tns:VBG02668Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG02668Result" nillable="true" type="tns:ArrayOfVBG02668Result" />
+  <xs:complexType name="VBG02668Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imputable" type="xs:int" />
+      <xs:element minOccurs="0" name="UnidadProyecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG02668Result" nillable="true" type="tns:VBG02668Result" />
+  <xs:complexType name="ArrayOfVBG00786Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00786Result" nillable="true" type="tns:VBG00786Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00786Result" nillable="true" type="tns:ArrayOfVBG00786Result" />
+  <xs:complexType name="VBG00786Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CentroCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imputable" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00786Result" nillable="true" type="tns:VBG00786Result" />
+  <xs:complexType name="ArrayOfgsDocumento_ListarTipoCompraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocumento_ListarTipoCompraResult" nillable="true" type="tns:gsDocumento_ListarTipoCompraResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocumento_ListarTipoCompraResult" nillable="true" type="tns:ArrayOfgsDocumento_ListarTipoCompraResult" />
+  <xs:complexType name="gsDocumento_ListarTipoCompraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocumento_ListarTipoCompraResult" nillable="true" type="tns:gsDocumento_ListarTipoCompraResult" />
+  <xs:complexType name="ArrayOfVBG01122Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG01122Result" nillable="true" type="tns:VBG01122Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG01122Result" nillable="true" type="tns:ArrayOfVBG01122Result" />
+  <xs:complexType name="VBG01122Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG01122Result" nillable="true" type="tns:VBG01122Result" />
+  <xs:complexType name="gsEgresosVariosInt_BuscarCabeceraResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Doc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_NaturalezaGastoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Sede" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ok0" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ok2" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoTc" type="xs:int" />
+      <xs:element minOccurs="0" name="Vcmto" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVariosInt_BuscarCabeceraResult" nillable="true" type="tns:gsEgresosVariosInt_BuscarCabeceraResult" />
+  <xs:complexType name="ArrayOfgsEgresosVariosDInt_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVariosDInt_BuscarDetalleResult" nillable="true" type="tns:gsEgresosVariosDInt_BuscarDetalleResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVariosDInt_BuscarDetalleResult" nillable="true" type="tns:ArrayOfgsEgresosVariosDInt_BuscarDetalleResult" />
+  <xs:complexType name="gsEgresosVariosDInt_BuscarDetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgendaAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CtrlCCosto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaEmision" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Amarre" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Documento" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_ItemAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteBaseIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteInafecto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Item" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadProyecto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVariosDInt_BuscarDetalleResult" nillable="true" type="tns:gsEgresosVariosDInt_BuscarDetalleResult" />
+  <xs:complexType name="ArrayOfgsEgresosVariosInt_ListarCajaChicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVariosInt_ListarCajaChicaResult" nillable="true" type="tns:gsEgresosVariosInt_ListarCajaChicaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVariosInt_ListarCajaChicaResult" nillable="true" type="tns:ArrayOfgsEgresosVariosInt_ListarCajaChicaResult" />
+  <xs:complexType name="gsEgresosVariosInt_ListarCajaChicaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Anexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EstadoFlujo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaAño" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaDia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaMes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaSemana" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaTrimestre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HoraAcceso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AgendaAnexo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CCosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Documento" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Sede" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_UnidadGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_UnidadProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NatGasto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Proyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoTc" type="xs:int" />
+      <xs:element minOccurs="0" name="UGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioAcceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vcmto" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVariosInt_ListarCajaChicaResult" nillable="true" type="tns:gsEgresosVariosInt_ListarCajaChicaResult" />
+  <xs:complexType name="gsFlujoPermisoEditarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flagEdit" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="flagObservacion" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ultimo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsFlujoPermisoEditarResult" nillable="true" type="tns:gsFlujoPermisoEditarResult" />
+  <xs:complexType name="ArrayOfgsEgresoCajaFlujoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresoCajaFlujoResult" nillable="true" type="tns:gsEgresoCajaFlujoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresoCajaFlujoResult" nillable="true" type="tns:ArrayOfgsEgresoCajaFlujoResult" />
+  <xs:complexType name="gsEgresoCajaFlujoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aprobado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaAprobacion" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresoCajaFlujoResult" nillable="true" type="tns:gsEgresoCajaFlujoResult" />
+  <xs:complexType name="ArrayOfgsIndicadorEnvioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsIndicadorEnvioResult" nillable="true" type="tns:gsIndicadorEnvioResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsIndicadorEnvioResult" nillable="true" type="tns:ArrayOfgsIndicadorEnvioResult" />
+  <xs:complexType name="gsIndicadorEnvioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoUsuario" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Colaborador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Semana" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsIndicadorEnvioResult" nillable="true" type="tns:gsIndicadorEnvioResult" />
+  <xs:complexType name="ArrayOfgsEgresosVarios_MaxObservacionesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVarios_MaxObservacionesResult" nillable="true" type="tns:gsEgresosVarios_MaxObservacionesResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVarios_MaxObservacionesResult" nillable="true" type="tns:ArrayOfgsEgresosVarios_MaxObservacionesResult" />
+  <xs:complexType name="gsEgresosVarios_MaxObservacionesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgendaNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UsuarioAcceso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVarios_MaxObservacionesResult" nillable="true" type="tns:gsEgresosVarios_MaxObservacionesResult" />
+  <xs:complexType name="ArrayOfgsEgresosVarios_DetalleObservacionesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEgresosVarios_DetalleObservacionesResult" nillable="true" type="tns:gsEgresosVarios_DetalleObservacionesResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEgresosVarios_DetalleObservacionesResult" nillable="true" type="tns:ArrayOfgsEgresosVarios_DetalleObservacionesResult" />
+  <xs:complexType name="gsEgresosVarios_DetalleObservacionesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaAprobacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Flujo" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEgresosVarios_DetalleObservacionesResult" nillable="true" type="tns:gsEgresosVarios_DetalleObservacionesResult" />
+  <xs:complexType name="ArrayOfgsIndicadorNoEnvioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsIndicadorNoEnvioResult" nillable="true" type="tns:gsIndicadorNoEnvioResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsIndicadorNoEnvioResult" nillable="true" type="tns:ArrayOfgsIndicadorNoEnvioResult" />
+  <xs:complexType name="gsIndicadorNoEnvioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoUsuario" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Colaborador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contador" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Semana" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsIndicadorNoEnvioResult" nillable="true" type="tns:gsIndicadorNoEnvioResult" />
+</xs:schema>

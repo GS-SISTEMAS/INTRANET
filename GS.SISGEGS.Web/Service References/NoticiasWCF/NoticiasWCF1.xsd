@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfNoticia_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Noticia_ListarResult" nillable="true" type="tns:Noticia_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNoticia_ListarResult" nillable="true" type="tns:ArrayOfNoticia_ListarResult" />
+  <xs:complexType name="Noticia_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cantidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaPublicacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idNoticia" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Noticia_ListarResult" nillable="true" type="tns:Noticia_ListarResult" />
+  <xs:complexType name="ArrayOfNoticiaFoto_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NoticiaFoto_ListarResult" nillable="true" type="tns:NoticiaFoto_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNoticiaFoto_ListarResult" nillable="true" type="tns:ArrayOfNoticiaFoto_ListarResult" />
+  <xs:complexType name="NoticiaFoto_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="altura" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="anchura" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elimino" type="xs:boolean" />
+      <xs:element minOccurs="0" name="horizontal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idNoticiaFoto" type="xs:int" />
+      <xs:element minOccurs="0" name="urlImagen" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NoticiaFoto_ListarResult" nillable="true" type="tns:NoticiaFoto_ListarResult" />
+  <xs:complexType name="Noticia_BuscarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="color1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="color2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="color3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaPublicacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idNoticia" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="texto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Noticia_BuscarResult" nillable="true" type="tns:Noticia_BuscarResult" />
+</xs:schema>

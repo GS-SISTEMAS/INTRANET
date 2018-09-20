@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfOrdenCompraSeguimientoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdenCompraSeguimientoBE" nillable="true" type="tns:OrdenCompraSeguimientoBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdenCompraSeguimientoBE" nillable="true" type="tns:ArrayOfOrdenCompraSeguimientoBE" />
+  <xs:complexType name="OrdenCompraSeguimientoBE">
+    <xs:sequence>
+      <xs:element name="_x003C_Id_SegImp_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_No_RegistroParcial_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Op_OC_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrdenCompraSeguimientoBE" nillable="true" type="tns:OrdenCompraSeguimientoBE" />
+</xs:schema>

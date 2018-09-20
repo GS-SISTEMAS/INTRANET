@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3b7281ff-267b-4b96-ab7f-3b188ad0b0b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/SolDevolucionWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SolDevolucionWCF.xsd" MetadataType="Schema" ID="92fa6039-8072-4693-ab63-167c3ea4a844" SourceId="1" SourceUrl="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="SolDevolucionWCF.disco" MetadataType="Disco" ID="e28109ac-b417-4aa2-aa60-e981c3b9ffd4" SourceId="1" SourceUrl="http://localhost:49648/SolDevolucionWCF.svc?disco" />
+    <MetadataFile FileName="SolDevolucionWCF1.xsd" MetadataType="Schema" ID="ec5ae942-6040-4850-ad66-3ba2ffb1d868" SourceId="1" SourceUrl="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="SolDevolucionWCF2.xsd" MetadataType="Schema" ID="d13ed1b7-5651-489e-956f-8cb39364d956" SourceId="1" SourceUrl="http://localhost:49648/SolDevolucionWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="SolDevolucionWCF.wsdl" MetadataType="Wsdl" ID="185e7eeb-c66e-4af3-bf5f-4ecf3772feea" SourceId="1" SourceUrl="http://localhost:49648/SolDevolucionWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

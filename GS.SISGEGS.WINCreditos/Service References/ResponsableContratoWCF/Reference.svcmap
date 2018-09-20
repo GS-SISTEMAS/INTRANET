@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f896469c-b0ae-4211-8687-a43e821e88fa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ResponsableContratoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ResponsableContratoWCF.disco" MetadataType="Disco" ID="15769e2c-e99e-4e75-becf-c125a21ac3e1" SourceId="1" SourceUrl="http://localhost:49648/ResponsableContratoWCF.svc?disco" />
+    <MetadataFile FileName="ResponsableContratoWCF.xsd" MetadataType="Schema" ID="4c1cfade-4929-4b47-8dca-60301243e928" SourceId="1" SourceUrl="http://localhost:49648/ResponsableContratoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="ResponsableContratoWCF1.xsd" MetadataType="Schema" ID="6e8c7bc5-6abf-4c3b-b307-495573ca5550" SourceId="1" SourceUrl="http://localhost:49648/ResponsableContratoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="ResponsableContratoWCF2.xsd" MetadataType="Schema" ID="d4d4f742-c0dd-469d-ae04-9fb96668a462" SourceId="1" SourceUrl="http://localhost:49648/ResponsableContratoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="ResponsableContratoWCF.wsdl" MetadataType="Wsdl" ID="bf5d684e-2507-46cd-b2f7-e50667c610bd" SourceId="1" SourceUrl="http://localhost:49648/ResponsableContratoWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

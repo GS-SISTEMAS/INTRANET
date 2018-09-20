@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f88e99bc-aebf-4139-94db-9bdf2250ede8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/WmsWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WmsWCF.xsd" MetadataType="Schema" ID="652fecb7-990e-4b11-87ef-22b609fb6b59" SourceId="1" SourceUrl="http://localhost:49648/WmsWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="WmsWCF1.xsd" MetadataType="Schema" ID="aa087d73-81e4-4236-b6fc-6bcdd779d0b4" SourceId="1" SourceUrl="http://localhost:49648/WmsWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="WmsWCF2.xsd" MetadataType="Schema" ID="5cbd2c5d-0c2d-4c69-aa5b-c63302ba861a" SourceId="1" SourceUrl="http://localhost:49648/WmsWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="WmsWCF.wsdl" MetadataType="Wsdl" ID="bb2003ea-69da-452a-9281-47d746c2b92b" SourceId="1" SourceUrl="http://localhost:49648/WmsWCF.svc?wsdl" />
+    <MetadataFile FileName="WmsWCF.disco" MetadataType="Disco" ID="066f7877-ef1f-46f6-96e0-e3b5439caae1" SourceId="1" SourceUrl="http://localhost:49648/WmsWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

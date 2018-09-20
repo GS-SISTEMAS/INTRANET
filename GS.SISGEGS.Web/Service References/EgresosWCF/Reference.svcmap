@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7d5e5e7c-c5d4-4760-a915-e56bf0f5d060" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/EgresosWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EgresosWCF.disco" MetadataType="Disco" ID="670568f7-8ac9-4b13-a790-3888dc15afbc" SourceId="1" SourceUrl="http://localhost:49648/EgresosWCF.svc?disco" />
+    <MetadataFile FileName="EgresosWCF.wsdl" MetadataType="Wsdl" ID="9dc47543-3b7f-46d1-a3f1-09b315648de5" SourceId="1" SourceUrl="http://localhost:49648/EgresosWCF.svc?wsdl" />
+    <MetadataFile FileName="EgresosWCF2.xsd" MetadataType="Schema" ID="1e25fc4d-d189-4098-ac3c-9a185a7ec74d" SourceId="1" SourceUrl="http://localhost:49648/EgresosWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="EgresosWCF1.xsd" MetadataType="Schema" ID="234b0d38-228f-4720-a06e-d4b5b99571a8" SourceId="1" SourceUrl="http://localhost:49648/EgresosWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="EgresosWCF.xsd" MetadataType="Schema" ID="cef7b5e8-dc00-48f4-80f3-a28ac610a550" SourceId="1" SourceUrl="http://localhost:49648/EgresosWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

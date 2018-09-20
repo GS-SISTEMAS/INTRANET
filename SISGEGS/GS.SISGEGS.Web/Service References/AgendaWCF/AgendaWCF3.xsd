@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfgsAgenda_ListarClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgenda_ListarClienteResult" nillable="true" type="tns:gsAgenda_ListarClienteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgenda_ListarClienteResult" nillable="true" type="tns:ArrayOfgsAgenda_ListarClienteResult" />
+  <xs:complexType name="gsAgenda_ListarClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCorto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_ListarClienteResult" nillable="true" type="tns:gsAgenda_ListarClienteResult" />
+  <xs:complexType name="ArrayOfgsAgenda_ListarVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgenda_ListarVendedorResult" nillable="true" type="tns:gsAgenda_ListarVendedorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgenda_ListarVendedorResult" nillable="true" type="tns:ArrayOfgsAgenda_ListarVendedorResult" />
+  <xs:complexType name="gsAgenda_ListarVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCorto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_ListarVendedorResult" nillable="true" type="tns:gsAgenda_ListarVendedorResult" />
+  <xs:complexType name="VBG01134Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasCredito" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_MonedaCompra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_MonedaVenta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoVendedor" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG01134Result" nillable="true" type="tns:VBG01134Result" />
+  <xs:complexType name="ArrayOfVBG00167Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00167Result" nillable="true" type="tns:VBG00167Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00167Result" nillable="true" type="tns:ArrayOfVBG00167Result" />
+  <xs:complexType name="VBG00167Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Glosa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00167Result" nillable="true" type="tns:VBG00167Result" />
+  <xs:complexType name="ArrayOfVBG00746Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00746Result" nillable="true" type="tns:VBG00746Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00746Result" nillable="true" type="tns:ArrayOfVBG00746Result" />
+  <xs:complexType name="VBG00746Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AlmacenAnexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Almacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_AlmacenAnexo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00746Result" nillable="true" type="tns:VBG00746Result" />
+  <xs:complexType name="ArrayOfVBG03678Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG03678Result" nillable="true" type="tns:VBG03678Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG03678Result" nillable="true" type="tns:ArrayOfVBG03678Result" />
+  <xs:complexType name="VBG03678Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG03678Result" nillable="true" type="tns:VBG03678Result" />
+  <xs:complexType name="ArrayOfVBG02699Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG02699Result" nillable="true" type="tns:VBG02699Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG02699Result" nillable="true" type="tns:ArrayOfVBG02699Result" />
+  <xs:complexType name="VBG02699Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG02699Result" nillable="true" type="tns:VBG02699Result" />
+  <xs:complexType name="ArrayOfgsAgenda_ListarContactoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgenda_ListarContactoResult" nillable="true" type="tns:gsAgenda_ListarContactoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgenda_ListarContactoResult" nillable="true" type="tns:ArrayOfgsAgenda_ListarContactoResult" />
+  <xs:complexType name="gsAgenda_ListarContactoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCorto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_ListarContactoResult" nillable="true" type="tns:gsAgenda_ListarContactoResult" />
+  <xs:complexType name="gsAgenda_BucarProveedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasCredito" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_MonedaCompra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_MonedaVenta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoVendedor" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_BucarProveedorResult" nillable="true" type="tns:gsAgenda_BucarProveedorResult" />
+  <xs:complexType name="ArrayOfgsAgenda_ListarProveedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgenda_ListarProveedorResult" nillable="true" type="tns:gsAgenda_ListarProveedorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgenda_ListarProveedorResult" nillable="true" type="tns:ArrayOfgsAgenda_ListarProveedorResult" />
+  <xs:complexType name="gsAgenda_ListarProveedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DiasCredito" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_MonedaCompra" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_MonedaVenta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoVendedor" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_ListarProveedorResult" nillable="true" type="tns:gsAgenda_ListarProveedorResult" />
+  <xs:complexType name="ArrayOfgsAgenda_ListarTransportistaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsAgenda_ListarTransportistaResult" nillable="true" type="tns:gsAgenda_ListarTransportistaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsAgenda_ListarTransportistaResult" nillable="true" type="tns:ArrayOfgsAgenda_ListarTransportistaResult" />
+  <xs:complexType name="gsAgenda_ListarTransportistaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCorto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsAgenda_ListarTransportistaResult" nillable="true" type="tns:gsAgenda_ListarTransportistaResult" />
+</xs:schema>

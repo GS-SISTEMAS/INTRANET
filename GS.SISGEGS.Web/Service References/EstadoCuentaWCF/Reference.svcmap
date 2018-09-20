@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3a8b0bbc-3543-4119-8c35-de66f9a3cffc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/EstadoCuentaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EstadoCuentaWCF1.xsd" MetadataType="Schema" ID="5d4cf34f-bda0-4ef2-9662-62030b487ed8" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="EstadoCuentaWCF.disco" MetadataType="Disco" ID="deb9ced5-761f-4b21-8aa0-49b8fd0b5764" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?disco" />
+    <MetadataFile FileName="EstadoCuentaWCF2.xsd" MetadataType="Schema" ID="c4444329-fa40-42a6-b8ba-b4cf96702d18" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="EstadoCuentaWCF3.xsd" MetadataType="Schema" ID="d75e483c-1166-468f-9ca3-7889cf9ccf01" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="EstadoCuentaWCF.xsd" MetadataType="Schema" ID="26e66d34-a68c-4576-88a9-9b12d4bd8f7f" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="EstadoCuentaWCF.wsdl" MetadataType="Wsdl" ID="58192754-ecfc-438e-8d2e-0feac39913b4" SourceId="1" SourceUrl="http://localhost:49648/EstadoCuentaWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

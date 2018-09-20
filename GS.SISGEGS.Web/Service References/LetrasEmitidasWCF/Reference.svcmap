@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="001e87c6-770d-4f0b-b7a0-d6722c12cab2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/LetrasEmitidasWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LetrasEmitidasWCF.disco" MetadataType="Disco" ID="cdc0fd9e-0b43-47bf-85b1-e04deb871ff9" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?disco" />
+    <MetadataFile FileName="LetrasEmitidasWCF.wsdl" MetadataType="Wsdl" ID="28b67786-3c67-473d-b505-6f34a41d6bd9" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?wsdl" />
+    <MetadataFile FileName="LetrasEmitidasWCF3.xsd" MetadataType="Schema" ID="b3d57dfd-2e63-4947-94e3-028c8d910061" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="LetrasEmitidasWCF.xsd" MetadataType="Schema" ID="2a2bd4ae-de42-4723-8bac-f2735dd034f2" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="LetrasEmitidasWCF1.xsd" MetadataType="Schema" ID="9b678d82-4aa9-4e94-b766-640538817d3b" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="LetrasEmitidasWCF2.xsd" MetadataType="Schema" ID="8da960a4-5607-4e85-8f96-5f53a42a92b9" SourceId="1" SourceUrl="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

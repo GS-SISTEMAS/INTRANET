@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfgsReporteCanceladosWebResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCanceladosWebResult" nillable="true" type="tns:gsReporteCanceladosWebResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCanceladosWebResult" nillable="true" type="tns:ArrayOfgsReporteCanceladosWebResult" />
+  <xs:complexType name="gsReporteCanceladosWebResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Banco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CtaCte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiasMora" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaAplicado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaCobranza" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Glosa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Banco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Moneda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_TipoDoc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_TipoPago" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteCancelado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreTipoPago" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PagadoDolares" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCanceladosWebResult" nillable="true" type="tns:gsReporteCanceladosWebResult" />
+  <xs:complexType name="ArrayOfgsDocVenta_ReporteVenta_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocVenta_ReporteVenta_ClienteResult" nillable="true" type="tns:gsDocVenta_ReporteVenta_ClienteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocVenta_ReporteVenta_ClienteResult" nillable="true" type="tns:ArrayOfgsDocVenta_ReporteVenta_ClienteResult" />
+  <xs:complexType name="gsDocVenta_ReporteVenta_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CostoVenta" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Diferencia" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ESTADOCREDITO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Rentabilidad" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValorPlanificado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValorVenta" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocVenta_ReporteVenta_ClienteResult" nillable="true" type="tns:gsDocVenta_ReporteVenta_ClienteResult" />
+  <xs:complexType name="ArrayOfgsDocVenta_ReporteVenta_ClienteResumenResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsDocVenta_ReporteVenta_ClienteResumenResult" nillable="true" type="tns:gsDocVenta_ReporteVenta_ClienteResumenResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsDocVenta_ReporteVenta_ClienteResumenResult" nillable="true" type="tns:ArrayOfgsDocVenta_ReporteVenta_ClienteResumenResult" />
+  <xs:complexType name="gsDocVenta_ReporteVenta_ClienteResumenResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClaseCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Venta" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsDocVenta_ReporteVenta_ClienteResumenResult" nillable="true" type="tns:gsDocVenta_ReporteVenta_ClienteResumenResult" />
+  <xs:complexType name="ArrayOfgsReporteCanceladosWebResumenResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCanceladosWebResumenResult" nillable="true" type="tns:gsReporteCanceladosWebResumenResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCanceladosWebResumenResult" nillable="true" type="tns:ArrayOfgsReporteCanceladosWebResumenResult" />
+  <xs:complexType name="gsReporteCanceladosWebResumenResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaseCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="periodoMes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoYear" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="totalMes" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCanceladosWebResumenResult" nillable="true" type="tns:gsReporteCanceladosWebResumenResult" />
+  <xs:complexType name="ArrayOfgsReporteCanceladosWebResumenVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCanceladosWebResumenVendedorResult" nillable="true" type="tns:gsReporteCanceladosWebResumenVendedorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCanceladosWebResumenVendedorResult" nillable="true" type="tns:ArrayOfgsReporteCanceladosWebResumenVendedorResult" />
+  <xs:complexType name="gsReporteCanceladosWebResumenVendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importe_01a08" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_01a30" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_09a30" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_121a360" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_31a60" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_361a720" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_61a120" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_721amas" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_NoVencido" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="PagadoDolares" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCanceladosWebResumenVendedorResult" nillable="true" type="tns:gsReporteCanceladosWebResumenVendedorResult" />
+  <xs:complexType name="ArrayOfgsReporteCanceladosResumenMes_actualResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCanceladosResumenMes_actualResult" nillable="true" type="tns:gsReporteCanceladosResumenMes_actualResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCanceladosResumenMes_actualResult" nillable="true" type="tns:ArrayOfgsReporteCanceladosResumenMes_actualResult" />
+  <xs:complexType name="gsReporteCanceladosResumenMes_actualResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaseCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaMes" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="periodoMesE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoYearE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="totalMes" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCanceladosResumenMes_actualResult" nillable="true" type="tns:gsReporteCanceladosResumenMes_actualResult" />
+  <xs:complexType name="ArrayOfgsReporteCobranzaWeb_DetalleMesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCobranzaWeb_DetalleMesResult" nillable="true" type="tns:gsReporteCobranzaWeb_DetalleMesResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCobranzaWeb_DetalleMesResult" nillable="true" type="tns:ArrayOfgsReporteCobranzaWeb_DetalleMesResult" />
+  <xs:complexType name="gsReporteCobranzaWeb_DetalleMesResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaseCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaMes" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="periodoMesC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoMesE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoYearC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoYearE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="totalMes" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCobranzaWeb_DetalleMesResult" nillable="true" type="tns:gsReporteCobranzaWeb_DetalleMesResult" />
+  <xs:complexType name="ArrayOfgsReporteCanceladosResumenMes_v3Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCanceladosResumenMes_v3Result" nillable="true" type="tns:gsReporteCanceladosResumenMes_v3Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCanceladosResumenMes_v3Result" nillable="true" type="tns:ArrayOfgsReporteCanceladosResumenMes_v3Result" />
+  <xs:complexType name="gsReporteCanceladosResumenMes_v3Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaseCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalVentaMes" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="periodoMesE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="periodoYearE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="totalMes" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCanceladosResumenMes_v3Result" nillable="true" type="tns:gsReporteCanceladosResumenMes_v3Result" />
+  <xs:complexType name="ArrayOfgsProyectadoCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsProyectadoCobranza_ListarResult" nillable="true" type="tns:gsProyectadoCobranza_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsProyectadoCobranza_ListarResult" nillable="true" type="tns:ArrayOfgsProyectadoCobranza_ListarResult" />
+  <xs:complexType name="gsProyectadoCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deuda" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Zona" type="xs:int" />
+      <xs:element minOccurs="0" name="MontoS1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoS2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoS3" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoS4" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Proyectado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Sectorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Sectorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id_proyectado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id_vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="obsercacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="periodo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsProyectadoCobranza_ListarResult" nillable="true" type="tns:gsProyectadoCobranza_ListarResult" />
+  <xs:complexType name="ArrayOfgsGestionCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsGestionCobranza_ListarResult" nillable="true" type="tns:gsGestionCobranza_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsGestionCobranza_ListarResult" nillable="true" type="tns:ArrayOfgsGestionCobranza_ListarResult" />
+  <xs:complexType name="gsGestionCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreEstaus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id_estatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id_semana" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="periodo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsGestionCobranza_ListarResult" nillable="true" type="tns:gsGestionCobranza_ListarResult" />
+  <xs:complexType name="ArrayOfgsEstatus_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsEstatus_ListarResult" nillable="true" type="tns:gsEstatus_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsEstatus_ListarResult" nillable="true" type="tns:ArrayOfgsEstatus_ListarResult" />
+  <xs:complexType name="gsEstatus_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreEstaus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_estatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsEstatus_ListarResult" nillable="true" type="tns:gsEstatus_ListarResult" />
+  <xs:complexType name="ArrayOfgsReporteCobranzas_Poryectadas_VendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCobranzas_Poryectadas_VendedorResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_VendedorResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCobranzas_Poryectadas_VendedorResult" nillable="true" type="tns:ArrayOfgsReporteCobranzas_Poryectadas_VendedorResult" />
+  <xs:complexType name="gsReporteCobranzas_Poryectadas_VendedorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvanceCobrado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="AvanceEsperado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Diferencia" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteEsperado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteProyectado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Zona_nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCobranzas_Poryectadas_VendedorResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_VendedorResult" />
+  <xs:complexType name="ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_DetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" nillable="true" type="tns:ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" />
+  <xs:complexType name="gsReporteCobranzas_Poryectadas_Vendedor_DetalleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avance" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diferencia" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteProyectado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_Vendedor_DetalleResult" />
+  <xs:complexType name="ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_FechaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCobranzas_Poryectadas_Vendedor_FechaResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_Vendedor_FechaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_FechaResult" nillable="true" type="tns:ArrayOfgsReporteCobranzas_Poryectadas_Vendedor_FechaResult" />
+  <xs:complexType name="gsReporteCobranzas_Poryectadas_Vendedor_FechaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avance" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diferencia" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaCobranza" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImporteProyectado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona_nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCobranzas_Poryectadas_Vendedor_FechaResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_Vendedor_FechaResult" />
+  <xs:complexType name="ArrayOfgsVentasCobranzas_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsVentasCobranzas_ListarResult" nillable="true" type="tns:gsVentasCobranzas_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsVentasCobranzas_ListarResult" nillable="true" type="tns:ArrayOfgsVentasCobranzas_ListarResult" />
+  <xs:complexType name="gsVentasCobranzas_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="abril" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="agosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anho" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="conceptos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="diciembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="enero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="febrero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="julio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="junio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="marzo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mayo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="noviembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="octubre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="septiembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsVentasCobranzas_ListarResult" nillable="true" type="tns:gsVentasCobranzas_ListarResult" />
+  <xs:complexType name="ArrayOfgsReporteCancelados_ProyectadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCancelados_ProyectadoResult" nillable="true" type="tns:gsReporteCancelados_ProyectadoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCancelados_ProyectadoResult" nillable="true" type="tns:ArrayOfgsReporteCancelados_ProyectadoResult" />
+  <xs:complexType name="gsReporteCancelados_ProyectadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_01a08" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_01a30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_09a30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_121a360" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_31a60" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_361a720" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_61a120" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_721amas" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe_NoVencido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCancelados_ProyectadoResult" nillable="true" type="tns:gsReporteCancelados_ProyectadoResult" />
+  <xs:complexType name="ArrayOfReporte_VentaxCobranzaLegalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Reporte_VentaxCobranzaLegalResult" nillable="true" type="tns:Reporte_VentaxCobranzaLegalResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReporte_VentaxCobranzaLegalResult" nillable="true" type="tns:ArrayOfReporte_VentaxCobranzaLegalResult" />
+  <xs:complexType name="Reporte_VentaxCobranzaLegalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="abril" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="agosto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="conceptos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="diciembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="enero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="febrero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="julio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="junio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="marzo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mayo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="noviembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="octubre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="septiembre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reporte_VentaxCobranzaLegalResult" nillable="true" type="tns:Reporte_VentaxCobranzaLegalResult" />
+  <xs:complexType name="ArrayOfgsReporteFacturasInafectasV1Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteFacturasInafectasV1Result" nillable="true" type="tns:gsReporteFacturasInafectasV1Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteFacturasInafectasV1Result" nillable="true" type="tns:ArrayOfgsReporteFacturasInafectasV1Result" />
+  <xs:complexType name="gsReporteFacturasInafectasV1Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaDoc" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cobrado" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteFacturasInafectasV1Result" nillable="true" type="tns:gsReporteFacturasInafectasV1Result" />
+  <xs:complexType name="ArrayOfProyectadoCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProyectadoCobranza_ListarResult" nillable="true" type="tns:ProyectadoCobranza_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProyectadoCobranza_ListarResult" nillable="true" type="tns:ArrayOfProyectadoCobranza_ListarResult" />
+  <xs:complexType name="ProyectadoCobranza_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="OpOrigen" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idProyectado" type="xs:int" />
+      <xs:element minOccurs="0" name="id_Semana" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProyectadoCobranza_ListarResult" nillable="true" type="tns:ProyectadoCobranza_ListarResult" />
+  <xs:complexType name="ArrayOfZonasSectorista_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZonasSectorista_ListarResult" nillable="true" type="tns:ZonasSectorista_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZonasSectorista_ListarResult" nillable="true" type="tns:ArrayOfZonasSectorista_ListarResult" />
+  <xs:complexType name="ZonasSectorista_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_Sectorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZonasSectorista_ListarResult" nillable="true" type="tns:ZonasSectorista_ListarResult" />
+  <xs:complexType name="ArrayOfZonasSectoristaPermiso_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZonasSectoristaPermiso_ListarResult" nillable="true" type="tns:ZonasSectoristaPermiso_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZonasSectoristaPermiso_ListarResult" nillable="true" type="tns:ArrayOfZonasSectoristaPermiso_ListarResult" />
+  <xs:complexType name="ZonasSectoristaPermiso_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Zona" type="xs:int" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="activo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idPermiso" type="xs:int" />
+      <xs:element minOccurs="0" name="id_agenda" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZonasSectoristaPermiso_ListarResult" nillable="true" type="tns:ZonasSectoristaPermiso_ListarResult" />
+  <xs:complexType name="ArrayOfspEstadoCuenta_ProyectadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="spEstadoCuenta_ProyectadoResult" nillable="true" type="tns:spEstadoCuenta_ProyectadoResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfspEstadoCuenta_ProyectadoResult" nillable="true" type="tns:ArrayOfspEstadoCuenta_ProyectadoResult" />
+  <xs:complexType name="spEstadoCuenta_ProyectadoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImportePendiente" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendienteNoVencido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendienteVencido" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MontoS1" type="xs:double" />
+      <xs:element minOccurs="0" name="MontoS2" type="xs:double" />
+      <xs:element minOccurs="0" name="MontoS3" type="xs:double" />
+      <xs:element minOccurs="0" name="MontoS4" type="xs:double" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Proyectado" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado01a30" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado121a240" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado121a360" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado241aMas" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado31a60" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado360aMas" type="xs:double" />
+      <xs:element minOccurs="0" name="Proyectado61a120" type="xs:double" />
+      <xs:element minOccurs="0" name="ProyectadoNoVencido" type="xs:double" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="obsercacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="spEstadoCuenta_ProyectadoResult" nillable="true" type="tns:spEstadoCuenta_ProyectadoResult" />
+  <xs:complexType name="ArrayOfspEstadoCuenta_Proyectado_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="spEstadoCuenta_Proyectado_ClienteResult" nillable="true" type="tns:spEstadoCuenta_Proyectado_ClienteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfspEstadoCuenta_Proyectado_ClienteResult" nillable="true" type="tns:ArrayOfspEstadoCuenta_Proyectado_ClienteResult" />
+  <xs:complexType name="spEstadoCuenta_Proyectado_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeudaDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DeudaSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasMora" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCorte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Moneda" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendienteNoVencido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendienteVencido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_01a30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_121a360" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_31a60" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_361aMas" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_61a120" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_NoVencido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_PorVencer30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_VenceHoy" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigenOp" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Proyectado" type="xs:double" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monedasigno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="spEstadoCuenta_Proyectado_ClienteResult" nillable="true" type="tns:spEstadoCuenta_Proyectado_ClienteResult" />
+  <xs:complexType name="ArrayOfProyectadoCobranza_DocumentosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProyectadoCobranza_DocumentosResult" nillable="true" type="tns:ProyectadoCobranza_DocumentosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProyectadoCobranza_DocumentosResult" nillable="true" type="tns:ArrayOfProyectadoCobranza_DocumentosResult" />
+  <xs:complexType name="ProyectadoCobranza_DocumentosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpOrigen" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Proyectado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Signo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TablaOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProyectadoCobranza_DocumentosResult" nillable="true" type="tns:ProyectadoCobranza_DocumentosResult" />
+  <xs:complexType name="ArrayOfgsReporteCobranzas_Poryectadas_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteCobranzas_Poryectadas_ClienteResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_ClienteResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteCobranzas_Poryectadas_ClienteResult" nillable="true" type="tns:ArrayOfgsReporteCobranzas_Poryectadas_ClienteResult" />
+  <xs:complexType name="gsReporteCobranzas_Poryectadas_ClienteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Avance" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diferencia" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Id_Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImporteCobrado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteProyectado" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteCobranzas_Poryectadas_ClienteResult" nillable="true" type="tns:gsReporteCobranzas_Poryectadas_ClienteResult" />
+  <xs:complexType name="ArrayOfgsReporteProyectado_Cuadro1Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteProyectado_Cuadro1Result" nillable="true" type="tns:gsReporteProyectado_Cuadro1Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteProyectado_Cuadro1Result" nillable="true" type="tns:ArrayOfgsReporteProyectado_Cuadro1Result" />
+  <xs:complexType name="gsReporteProyectado_Cuadro1Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_01a15" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_121a240" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_16a30" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_240aMas" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_31a60" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_61a90" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_91a120" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_NoVencido" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_NoVencido30a0" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Importe_NoVencidoMenor30" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Mes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteProyectado_Cuadro1Result" nillable="true" type="tns:gsReporteProyectado_Cuadro1Result" />
+  <xs:complexType name="ArrayOfgsReporteProyectado_Cuadro2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporteProyectado_Cuadro2Result" nillable="true" type="tns:gsReporteProyectado_Cuadro2Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporteProyectado_Cuadro2Result" nillable="true" type="tns:ArrayOfgsReporteProyectado_Cuadro2Result" />
+  <xs:complexType name="gsReporteProyectado_Cuadro2Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Clientes01a70" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Clientes71aMas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientesNoVencido" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientesPendiente" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mes" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporteProyectado_Cuadro2Result" nillable="true" type="tns:gsReporteProyectado_Cuadro2Result" />
+  <xs:complexType name="ArrayOfZonas_Reportes_CobranzaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Zonas_Reportes_CobranzaResult" nillable="true" type="tns:Zonas_Reportes_CobranzaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZonas_Reportes_CobranzaResult" nillable="true" type="tns:ArrayOfZonas_Reportes_CobranzaResult" />
+  <xs:complexType name="Zonas_Reportes_CobranzaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaHoraActualizacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Zona" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Zonas_Reportes_CobranzaResult" nillable="true" type="tns:Zonas_Reportes_CobranzaResult" />
+</xs:schema>

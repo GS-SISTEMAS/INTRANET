@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfgsReporte_IndicadoresCreditosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporte_IndicadoresCreditosResult" nillable="true" type="tns:gsReporte_IndicadoresCreditosResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporte_IndicadoresCreditosResult" nillable="true" type="tns:ArrayOfgsReporte_IndicadoresCreditosResult" />
+  <xs:complexType name="gsReporte_IndicadoresCreditosResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditoDisponible" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EstadoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Moneda" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LimiteCredito" type="xs:decimal" />
+      <xs:element minOccurs="0" name="No_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vencido30a180" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indDeudaVencida" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="sumaDeuda" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporte_IndicadoresCreditosResult" nillable="true" type="tns:gsReporte_IndicadoresCreditosResult" />
+  <xs:complexType name="ArrayOfGS_ReporteLtasREF_RENOVResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_ReporteLtasREF_RENOVResult" nillable="true" type="tns:GS_ReporteLtasREF_RENOVResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_ReporteLtasREF_RENOVResult" nillable="true" type="tns:ArrayOfGS_ReporteLtasREF_RENOVResult" />
+  <xs:complexType name="GS_ReporteLtasREF_RENOVResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeudaTotal" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImportePorVencer" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRefinanciada" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalRenovada" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_ReporteLtasREF_RENOVResult" nillable="true" type="tns:GS_ReporteLtasREF_RENOVResult" />
+  <xs:complexType name="ArrayOfGS_ReporteIndicadorLetrasProtestadasResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GS_ReporteIndicadorLetrasProtestadasResult" nillable="true" type="tns:GS_ReporteIndicadorLetrasProtestadasResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGS_ReporteIndicadorLetrasProtestadasResult" nillable="true" type="tns:ArrayOfGS_ReporteIndicadorLetrasProtestadasResult" />
+  <xs:complexType name="GS_ReporteIndicadorLetrasProtestadasResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Banco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeudaDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DeudaSoles" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiasMora" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EstadoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAceptada" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_Agenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Doc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_EstadoDoc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Moneda" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_Zona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_TipoDoc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Importe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImporteFinanciado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePagado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_01a08" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_01a30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_09a30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_121a360" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_121aMas" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_31a60" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_361a720" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_361aMas" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_61a120" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_61a90" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_721aMas" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_91a120" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_NoVencido" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_PorVencer30" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImportePendiente_VenceHoy" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IndicadorProtes" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Moneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="No_Vendedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroUnico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Origen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigenOp" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Situacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="importeProtestado" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="monedasigno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GS_ReporteIndicadorLetrasProtestadasResult" nillable="true" type="tns:GS_ReporteIndicadorLetrasProtestadasResult" />
+  <xs:complexType name="ArrayOfgsReporte_IndicadoresDeudaVencidaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporte_IndicadoresDeudaVencidaResult" nillable="true" type="tns:gsReporte_IndicadoresDeudaVencidaResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporte_IndicadoresDeudaVencidaResult" nillable="true" type="tns:ArrayOfgsReporte_IndicadoresDeudaVencidaResult" />
+  <xs:complexType name="gsReporte_IndicadoresDeudaVencidaResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeudaVencida" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vencido30a180" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indDeudaVencida" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="numeroDeudaTotal" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroDeudaVenc" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroVenc30180" type="xs:int" />
+      <xs:element minOccurs="0" name="sumaDeuda" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporte_IndicadoresDeudaVencidaResult" nillable="true" type="tns:gsReporte_IndicadoresDeudaVencidaResult" />
+  <xs:complexType name="ArrayOfgsReporte_IndicadoresDeudaVencCreditoActResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gsReporte_IndicadoresDeudaVencCreditoActResult" nillable="true" type="tns:gsReporte_IndicadoresDeudaVencCreditoActResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgsReporte_IndicadoresDeudaVencCreditoActResult" nillable="true" type="tns:ArrayOfgsReporte_IndicadoresDeudaVencCreditoActResult" />
+  <xs:complexType name="gsReporte_IndicadoresDeudaVencCreditoActResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClienteNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditoDisponible" type="xs:int" />
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZonaCobranza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indDeudaCliente" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="numeroVenc30Mas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="gsReporte_IndicadoresDeudaVencCreditoActResult" nillable="true" type="tns:gsReporte_IndicadoresDeudaVencCreditoActResult" />
+</xs:schema>

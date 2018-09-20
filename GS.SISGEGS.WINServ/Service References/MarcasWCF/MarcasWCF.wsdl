@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MarcasWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/MarcasWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/MarcasWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/MarcasWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMarcasWCF_TitularMarca_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TitularMarca_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_TitularMarca_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TitularMarca_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_RegistroMarca_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistroMarca_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_RegistroMarca_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistroMarca_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_TipoMarca_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:TipoMarca_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_TipoMarca_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TipoMarca_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_Pais_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pais_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_Pais_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pais_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_Marca_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Marca_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_Marca_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Marca_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_ResponsablesRegistros_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResponsablesRegistros_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_ResponsablesRegistros_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResponsablesRegistros_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_RegistroMarca_Notificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistroMarca_Notificacion" />
+  </wsdl:message>
+  <wsdl:message name="IMarcasWCF_RegistroMarca_Notificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistroMarca_NotificacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMarcasWCF">
+    <wsdl:operation name="TitularMarca_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/TitularMarca_Listar" message="tns:IMarcasWCF_TitularMarca_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/TitularMarca_ListarResponse" message="tns:IMarcasWCF_TitularMarca_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroMarca_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/RegistroMarca_Listar" message="tns:IMarcasWCF_RegistroMarca_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/RegistroMarca_ListarResponse" message="tns:IMarcasWCF_RegistroMarca_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TipoMarca_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/TipoMarca_Listar" message="tns:IMarcasWCF_TipoMarca_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/TipoMarca_ListarResponse" message="tns:IMarcasWCF_TipoMarca_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pais_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/Pais_Listar" message="tns:IMarcasWCF_Pais_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/Pais_ListarResponse" message="tns:IMarcasWCF_Pais_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/Marca_Listar" message="tns:IMarcasWCF_Marca_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/Marca_ListarResponse" message="tns:IMarcasWCF_Marca_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResponsablesRegistros_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/ResponsablesRegistros_Listar" message="tns:IMarcasWCF_ResponsablesRegistros_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/ResponsablesRegistros_ListarResponse" message="tns:IMarcasWCF_ResponsablesRegistros_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroMarca_Notificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarcasWCF/RegistroMarca_Notificacion" message="tns:IMarcasWCF_RegistroMarca_Notificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarcasWCF/RegistroMarca_NotificacionResponse" message="tns:IMarcasWCF_RegistroMarca_Notificacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMarcasWCF" type="tns:IMarcasWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TitularMarca_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/TitularMarca_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroMarca_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/RegistroMarca_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TipoMarca_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/TipoMarca_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pais_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/Pais_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Marca_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/Marca_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResponsablesRegistros_Listar">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/ResponsablesRegistros_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroMarca_Notificacion">
+      <soap:operation soapAction="http://tempuri.org/IMarcasWCF/RegistroMarca_Notificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarcasWCF">
+    <wsdl:port name="BasicHttpBinding_IMarcasWCF" binding="tns:BasicHttpBinding_IMarcasWCF">
+      <soap:address location="http://localhost:49648/MarcasWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

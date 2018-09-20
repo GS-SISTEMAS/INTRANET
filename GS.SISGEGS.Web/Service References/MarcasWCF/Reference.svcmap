@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4706e82f-2457-4835-8f27-c9cbc0d140f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/MarcasWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MarcasWCF.xsd" MetadataType="Schema" ID="69e84e09-9cf6-45bb-98a3-d5ebd4e4e7a1" SourceId="1" SourceUrl="http://localhost:49648/MarcasWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MarcasWCF1.xsd" MetadataType="Schema" ID="b2dcd22c-306d-4d5a-b258-6e15490f2380" SourceId="1" SourceUrl="http://localhost:49648/MarcasWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MarcasWCF2.xsd" MetadataType="Schema" ID="301fb4dd-9d84-411c-a06a-1197a666a0af" SourceId="1" SourceUrl="http://localhost:49648/MarcasWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MarcasWCF.wsdl" MetadataType="Wsdl" ID="e56a9fe2-bd72-47cc-a86d-8682958e8441" SourceId="1" SourceUrl="http://localhost:49648/MarcasWCF.svc?wsdl" />
+    <MetadataFile FileName="MarcasWCF.disco" MetadataType="Disco" ID="ca487c91-d2ab-43a7-a0bf-4b39fd665a4b" SourceId="1" SourceUrl="http://localhost:49648/MarcasWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

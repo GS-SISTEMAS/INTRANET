@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08faa2b3-4ff3-4689-adcb-40c4b75ed6ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CentroCostoWCF.wsdl" MetadataType="Wsdl" ID="5b55b855-dd75-491e-b830-5642673bffa2" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc?wsdl" />
+    <MetadataFile FileName="CentroCostoWCF.disco" MetadataType="Disco" ID="474bd750-3f86-4f21-a68b-a1d0d1f1b7a6" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc?disco" />
+    <MetadataFile FileName="CentroCostoWCF.xsd" MetadataType="Schema" ID="ae285aa6-812f-4537-a72f-6501276587db" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CentroCostoWCF1.xsd" MetadataType="Schema" ID="69687def-3b9d-4081-aa7a-a0ec9cab938e" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="CentroCostoWCF2.xsd" MetadataType="Schema" ID="84fbd05f-dc93-4de9-8764-68a3ad8f5164" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/CentroCostoWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

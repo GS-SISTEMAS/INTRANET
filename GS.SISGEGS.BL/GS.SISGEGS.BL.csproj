@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02C5ADB9-DE96-445E-9B75-CEEBBA80F98E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.SISGEGS.BL</RootNamespace>
+    <AssemblyName>GS.SISGEGS.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GS.configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\GS.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendaBL.cs" />
+    <Compile Include="AreaBL.cs" />
+    <Compile Include="AuditoriaBL.cs" />
+    <Compile Include="AvisoBL.cs" />
+    <Compile Include="CentroCostoBL.cs" />
+    <Compile Include="CierreCostoBL.cs" />
+    <Compile Include="Cobranzas.cs" />
+    <Compile Include="ComisionBL.cs" />
+    <Compile Include="ConfigIndicadoresBL.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="ContratosBL.cs" />
+    <Compile Include="CorreoBL.cs" />
+    <Compile Include="CreditoBL.cs" />
+    <Compile Include="DespachoBL.cs" />
+    <Compile Include="DevolucionBL.cs" />
+    <Compile Include="DireccionBL.cs" />
+    <Compile Include="DistribGastoBL.cs" />
+    <Compile Include="DocumentoBL.cs" />
+    <Compile Include="DocVentaBL.cs" />
+    <Compile Include="EgresosBL.cs" />
+    <Compile Include="EmpresaBL.cs" />
+    <Compile Include="EnvioBL.cs" />
+    <Compile Include="EstadoContratoBL.cs" />
+    <Compile Include="FormaPagoBL.cs" />
+    <Compile Include="GuiaBL.cs" />
+    <Compile Include="Helpers\EncryptHelper.cs" />
+    <Compile Include="ImpuestoBL.cs" />
+    <Compile Include="EstadoCuentaBL.cs" />
+    <Compile Include="FacturaElectronicaBL.cs" />
+    <Compile Include="IndicadoresBL.cs" />
+    <Compile Include="ItemBL.cs" />
+    <Compile Include="LetrasEmitidasBL.cs" />
+    <Compile Include="MarcasBL.cs" />
+    <Compile Include="MateriaContratoBL.cs" />
+    <Compile Include="MenuBL.cs" />
+    <Compile Include="MerlinBL.cs" />
+    <Compile Include="MonedaBL.cs" />
+    <Compile Include="NaturalezaGastoBL.cs" />
+    <Compile Include="NoticiaBL.cs" />
+    <Compile Include="OrdenCompraBL.cs" />
+    <Compile Include="OrdenVentaBL.cs" />
+    <Compile Include="PedidoBL.cs" />
+    <Compile Include="PerfilBL.cs" />
+    <Compile Include="PlanificacionBL.cs" />
+    <Compile Include="ProduccionBL.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesBL.cs" />
+    <Compile Include="ResponsableContratoBL.cs" />
+    <Compile Include="RRHHBL.cs" />
+    <Compile Include="SedeBL.cs" />
+    <Compile Include="SMSBL.cs" />
+    <Compile Include="TipoContratoBL.cs" />
+    <Compile Include="UnidadBL.cs" />
+    <Compile Include="UsuarioBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VarianteBL.cs" />
+    <Compile Include="VoucherBL.cs" />
+    <Compile Include="WmsBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GS.SISGEGS.BE\GS.SISGEGS.BE.csproj">
+      <Project>{75fe5952-0135-49f6-b143-e44b67ad1c44}</Project>
+      <Name>GS.SISGEGS.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.SISGEGS.DM\GS.SISGEGS.DM.csproj">
+      <Project>{10a35074-9231-4513-bb44-77e0b7a7b117}</Project>
+      <Name>GS.SISGEGS.DM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\GS.configuration.dll" />
+    <Content Include="Resources\DeudaVencidaMes.txt" />
+    <Content Include="Resources\SelectCobrandoMes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

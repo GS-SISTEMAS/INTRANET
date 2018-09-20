@@ -1,0 +1,239 @@
+﻿
+
+body{
+    /*height:660px;*/
+    width:100%;
+    height:100%
+}
+
+.mensajeError {
+    color:red;
+    font-size:12px;
+}
+
+.mensajeExito {
+    color:green;
+    font-size:12px;
+}
+
+.containerSubTitulo {
+    background-color:#458B00;
+}
+
+.containerSeparador {
+    background-color: #E5E2E1;
+}
+
+.containerMensaje {
+    float:left;
+    width:100%;
+    height:20px;
+    background-color:#E0E0E0;
+}
+
+.containerBody {
+    height:580px;
+    float:left;
+    width:100%;
+}
+
+.popUpSmall {
+    height:250px;
+    width:250px;
+}
+
+.popUpMedium {
+    height:560px;
+    width:560px;
+}
+
+.popUpLarge {
+    height:560px;
+    width:560px;
+}
+
+.titulo {
+    font-size:20px;
+    color:#458B00;
+}
+
+.tituloInverso {
+    font-size: 20px;
+    color: white;
+    background-color: #458B00;
+}
+
+.subTitulo {
+    font-size:14px;
+    color:white;
+    font-weight:bold;
+}
+
+.colum1 {
+    width:9%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum2 {
+    width:19%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum3 {
+    width:29%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum4 {
+    width:39%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum5 {
+    width:49%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum6 {
+    width:59%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum7 {
+    width:69%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum8 {
+    width:79%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum9 {
+    width:89%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum10 {
+    width:99%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.fila {
+    width:90%;
+    float:left;
+    margin:2px 5% 2px 5%;
+}
+
+.etiqueta {
+    color:#000000;
+    font-family:Arial;
+    font-size:11.5px;
+    font-weight:bold;
+}
+
+.etiquetaSubTitulo {
+    color:white;
+    font-family:Arial;
+    font-size:11.5px;
+    font-weight:bold;
+}
+
+.multicontainer {
+    width:100%;
+    float:left;
+    margin:0px 0px 5px 0px;
+}
+
+.tabcontainer {
+    width:100%;
+    height:100%;
+    border:solid;
+    border-width:1px;
+    border-color:#E0E0E0;
+}
+
+div.RadPivotGrid .rpgFieldItem.aggregateCustom1, div.RadPivotGrid .rpgColumnHeader.aggregateCustom1 {
+    color:darkblue;
+}
+
+div.RadPivotGrid .rpgFieldItem.aggregateCustom2, div.RadPivotGrid .rpgColumnHeader.aggregateCustom2 {
+    color:black;
+}
+
+div.RadPivotGrid_Silk .rpgContentZoneDiv td {
+    border-color: white;
+}
+
+.legendWrapper {
+    overflow: hidden;
+}
+
+    .legendWrapper > div > .legend {
+        margin-right: 70px;
+    }
+
+        .legendWrapper > div > .legend:last-child {
+            margin-left: 0;
+        }
+
+.demo-container .legendWrapper h3 {
+    margin-bottom: 20px;
+}
+
+.legend {
+    float: left;
+    margin-bottom: 20px;
+}
+
+    .legend > span {
+        display: inline-block;
+        margin-bottom: 8px;
+        white-space: nowrap;
+    }
+
+    .legend ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .legend li {
+        margin: 5px 0;
+    }
+
+    .legend .colorBox {
+        display: inline-block;
+        margin-right: 10px;
+        width: 25px;
+        height: 15px;
+        vertical-align: sub;
+    }
+
+    * + html .legend .colorBox {
+        vertical-align: baseline;
+    }
+
+* + html .legendWrapper > div > .legend {
+    margin-right: 50px;
+}
+
+.bordetab {
+    margin-top: -2px;
+    padding: 3px;
+}
+
+.labelSinFormato{
+    font-family:Arial;
+    font-size:9px;
+}

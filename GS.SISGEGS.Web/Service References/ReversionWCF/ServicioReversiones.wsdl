@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tci.net.pe/WS_eCica/Reversiones/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tci.net.pe/WS_eCica/Reversiones/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="soap12_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tci.net.pe/WS_eCica/Reversiones/Imports">
+      <xsd:import schemaLocation="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc?xsd=xsd0" namespace="http://tci.net.pe/WS_eCica/Reversiones/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioReversiones_RegistrarResumenReversion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarResumenReversion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_RegistrarResumenReversion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarResumenReversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConsultarRespuestaReversionRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaReversionRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConsultarRespuestaReversionRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaReversionRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConsultarRespuestaReversionPercepcion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaReversionPercepcion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConsultarRespuestaReversionPercepcion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaReversionPercepcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConfirmarRespuestaReversiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarRespuestaReversiones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioReversiones_ConfirmarRespuestaReversiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarRespuestaReversionesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioReversiones">
+    <wsdl:operation name="RegistrarResumenReversion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/RegistrarResumenReversion" message="tns:IServicioReversiones_RegistrarResumenReversion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/RegistrarResumenReversionResponse" message="tns:IServicioReversiones_RegistrarResumenReversion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionRetencion" message="tns:IServicioReversiones_ConsultarRespuestaReversionRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionRetencionResponse" message="tns:IServicioReversiones_ConsultarRespuestaReversionRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionPercepcion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionPercepcion" message="tns:IServicioReversiones_ConsultarRespuestaReversionPercepcion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionPercepcionResponse" message="tns:IServicioReversiones_ConsultarRespuestaReversionPercepcion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaReversiones">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConfirmarRespuestaReversiones" message="tns:IServicioReversiones_ConfirmarRespuestaReversiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConfirmarRespuestaReversionesResponse" message="tns:IServicioReversiones_ConfirmarRespuestaReversiones_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soap11" type="tns:IServicioReversiones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarResumenReversion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/RegistrarResumenReversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionPercepcion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionPercepcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaReversiones">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConfirmarRespuestaReversiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="soap12" type="tns:IServicioReversiones">
+    <wsp:PolicyReference URI="#soap12_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarResumenReversion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/RegistrarResumenReversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaReversionPercepcion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConsultarRespuestaReversionPercepcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaReversiones">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Reversiones/IServicioReversiones/ConfirmarRespuestaReversiones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

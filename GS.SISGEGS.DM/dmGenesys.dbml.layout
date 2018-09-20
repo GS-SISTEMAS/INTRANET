@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.875, 22.625" name="dmGenesys">
+  <DataContextMoniker Name="/dmGenesysDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9c3e7080-a730-4ca9-9d68-912247ea86af" isExpanded="false" absoluteBounds="0.75, 1, 2, 0.45">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsDevolucionSolicitud" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5793c219-311b-4cd3-9dd3-b662ee9a2d67" absoluteBounds="0.765, 1.46, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfe72de7-7dfb-4681-a355-fd1364d063b0" absoluteBounds="1, 6.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsPedidoCabecera" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b29402a-7ecf-4825-8a48-d73fac146bfa" absoluteBounds="1.0150000000000001, 6.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" absoluteBounds="7.75, 4.125, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/dmGenesysDataContext/Agenda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f942e39-077a-41fc-b103-62d44d44dda0" absoluteBounds="7.765, 4.585, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.45923076923077 : 13.3956526692708); (8.45923076923077 : 13.6456526692708); (9.05461538461539 : 13.6456526692708); (9.05461538461539 : 13.3956526692708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_Agenda" />
+      <nodes>
+        <classShapeMoniker Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" />
+        <classShapeMoniker Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ab1ebe7c-7dde-4a49-976f-dd6020a64b74" absoluteBounds="4.625, 8.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dmGenesysDataContext/AgendaRel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e33f92f7-ccf9-47cd-b5eb-c93d91d059a1" absoluteBounds="4.64, 8.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 9.16429768880208); (6.625 : 9.16429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_AgendaRel" />
+      <nodes>
+        <classShapeMoniker Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" />
+        <classShapeMoniker Id="ab1ebe7c-7dde-4a49-976f-dd6020a64b74" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4ef946b8-be19-4349-b24d-3ecc78f482c0" absoluteBounds="11.625, 4.125, 2, 18.308819986979167">
+      <DataClassMoniker Name="/dmGenesysDataContext/OV" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3daa7edd-7dd0-4f1a-9c4b-957dade488d1" absoluteBounds="11.64, 4.585, 1.9700000000000002, 17.748819986979164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.75 : 8.76032633463542); (11.625 : 8.76032633463542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_OV" />
+      <nodes>
+        <classShapeMoniker Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" />
+        <classShapeMoniker Id="4ef946b8-be19-4349-b24d-3ecc78f482c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 6.38016316731771); (11.625 : 6.38016316731771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/Agenda/Agenda_OV1" />
+      <nodes>
+        <classShapeMoniker Id="e01ebdc8-60c6-40ed-982a-7653e002fc6b" />
+        <classShapeMoniker Id="4ef946b8-be19-4349-b24d-3ecc78f482c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="44abb3a7-26a1-4a2c-a72a-599ce715aa8f" absoluteBounds="14.625, 4.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsUsuarioPedido" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6ecfbe2-0fda-49af-a295-5abadea3cec3" absoluteBounds="14.64, 4.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16fc3a9a-2f24-4f24-8001-3b9b8bce2813" isExpanded="false" absoluteBounds="3.375, 3, 2, 0.45">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsPedidoDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="082e21c1-3526-4701-9a54-ac75cccb679c" absoluteBounds="3.3899999999999997, 3.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2 : 6.5); (2 : 3.225); (3.375 : 3.225)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dmGenesysDataContext/gsPedidoCabecera/gsPedidoCabecera_gsPedidoDetalle" />
+      <nodes>
+        <classShapeMoniker Id="dfe72de7-7dfb-4681-a355-fd1364d063b0" />
+        <classShapeMoniker Id="16fc3a9a-2f24-4f24-8001-3b9b8bce2813" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="650b8ab3-93b4-426d-ad34-2b572ab8ed9d" isExpanded="false" absoluteBounds="3.125, 0.875, 2, 0.45">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsReporteCostoVenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88d9c88f-9f9c-4d33-aa89-ee56a5151468" absoluteBounds="3.14, 1.335, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b10ba31-3ffe-4e11-be35-f68de9b9d1a6" absoluteBounds="3.5, 2, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/dmGenesysDataContext/gsDevolucionSolicitudDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="166096db-45f5-42b2-a2b8-8f3a64c2faa0" absoluteBounds="3.515, 2.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.45); (3.5 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dmGenesysDataContext/gsDevolucionSolicitud/gsDevolucionSolicitud_gsDevolucionSolicitudDetalle" />
+      <nodes>
+        <classShapeMoniker Id="9c3e7080-a730-4ca9-9d68-912247ea86af" />
+        <classShapeMoniker Id="1b10ba31-3ffe-4e11-be35-f68de9b9d1a6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ea3fbd0a-72d6-4152-af5e-16d615cea571" isExpanded="false" absoluteBounds="0.625, 1.875, 2.625, 0.45">
+      <DataClassMoniker Name="/dmGenesysDataContext/USP_SEL_VENTA_POR_VENDEDOR2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d375882-242f-4bb8-9eb2-5862223bda7e" absoluteBounds="0.64, 2.335, 2.5949999999999998, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

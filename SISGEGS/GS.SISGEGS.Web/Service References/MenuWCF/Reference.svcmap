@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32acc7d6-64a2-48c5-b37a-c797eb7531b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MenuWCF3.xsd" MetadataType="Schema" ID="886d9386-9f19-4a56-b6fe-00d4ccd43b42" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MenuWCFsvc11.wsdl" MetadataType="Wsdl" ID="e68d7773-e9dc-4c17-9b8a-2967b80b691d" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc?wsdl" />
+    <MetadataFile FileName="MenuWCF4.xsd" MetadataType="Schema" ID="21fd6fa6-e051-47ca-a01e-5054a138938b" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MenuWCF5.xsd" MetadataType="Schema" ID="d4f1b589-ad67-4a68-8ef5-14af3df4b9e3" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MenuWCF1.disco" MetadataType="Disco" ID="532c2c17-aa5e-4646-a529-3a0505493dcd" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MenuWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

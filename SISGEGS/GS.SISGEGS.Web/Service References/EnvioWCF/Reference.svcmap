@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94fd1fcd-ed1e-4943-b9b9-dfd3f6439ef4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnvioWCF1.wsdl" MetadataType="Wsdl" ID="8564fba9-a308-4e51-869d-62a87012753b" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc?wsdl" />
+    <MetadataFile FileName="EnvioWCF3.xsd" MetadataType="Schema" ID="0267c22f-3580-4298-9179-be7cf1dc4c83" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="EnvioWCF4.xsd" MetadataType="Schema" ID="9f7777cb-0dab-420c-ad38-e9c3a471edbb" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="EnvioWCF5.xsd" MetadataType="Schema" ID="60c77b54-73c9-444c-9053-c4ccea5a3e8a" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="EnvioWCF1.disco" MetadataType="Disco" ID="4123430b-dde4-4f3a-8539-0da58ad54aa9" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/EnvioWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

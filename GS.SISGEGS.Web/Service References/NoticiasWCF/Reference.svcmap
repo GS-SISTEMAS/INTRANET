@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="052f8f87-4d1c-4558-a3ba-4cd739d83b45" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/NoticiasWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NoticiasWCF.xsd" MetadataType="Schema" ID="c02eacae-74d2-4275-8229-b2a9a9299260" SourceId="1" SourceUrl="http://localhost:49648/NoticiasWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="NoticiasWCF.disco" MetadataType="Disco" ID="23f61512-f61c-474d-b03c-b1a3aca54b8c" SourceId="1" SourceUrl="http://localhost:49648/NoticiasWCF.svc?disco" />
+    <MetadataFile FileName="NoticiasWCF1.xsd" MetadataType="Schema" ID="3e973bef-bcb8-4068-bcaf-ad66bda7f38b" SourceId="1" SourceUrl="http://localhost:49648/NoticiasWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="NoticiasWCF.wsdl" MetadataType="Wsdl" ID="a9c9999f-9b47-4879-937b-61af8efd5665" SourceId="1" SourceUrl="http://localhost:49648/NoticiasWCF.svc?wsdl" />
+    <MetadataFile FileName="NoticiasWCF2.xsd" MetadataType="Schema" ID="377fc78f-1d5c-4c38-a73a-aa38fe02cd8a" SourceId="1" SourceUrl="http://localhost:49648/NoticiasWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

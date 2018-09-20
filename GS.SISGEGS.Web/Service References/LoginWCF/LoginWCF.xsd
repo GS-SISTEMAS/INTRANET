@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Usuario_AutenticarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cambiarAmbos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cambioPassword" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="loginUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passwordGenesys" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario_AutenticarResult" nillable="true" type="tns:Usuario_AutenticarResult" />
+  <xs:complexType name="Usuario_LoginResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="almTramDoc" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="aprobarDevolucionSol1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="aprobarPedido" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="aprobarPlanilla0" type="xs:boolean" />
+      <xs:element minOccurs="0" name="aprobarPlanilla1" type="xs:boolean" />
+      <xs:element minOccurs="0" name="aprobarPorcentaje" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="aprobarTransfGratuita" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="logotipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modificarPedido" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombrePerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="revisarPlanilla" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario_LoginResult" nillable="true" type="tns:Usuario_LoginResult" />
+  <xs:complexType name="VBG00004Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgenteRetenedorIGV" type="xs:int" />
+      <xs:element minOccurs="0" name="ControlRetencionIGV" type="xs:int" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnlaceContableAutomatico" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EstructuraActividad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraCentrosDeCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraFamiliaAgenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraFamiliaKardex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraNaturalezaGastoIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraPartidaPresupuestal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraPlanContable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraPlanCuentasFamilia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraRecurso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraSector" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraTarea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraUnidadesDeGestion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstructuraUnidadesDeProyecto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EvaluaLimCredito" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Faxes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaBloqueo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicioOperaciones" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicioRetencionIGV" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID_BcoDoc" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ID_CtaRetencionIGV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_DocumentoRetencionIGV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImpMinAfectoRetenIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImpMinAfectoRetenIGVDolares" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LogoPresentacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PorcentajeRetencionIGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaldosContableAutomatico" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Telefonos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Web" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00004Result" nillable="true" type="tns:VBG00004Result" />
+  <xs:complexType name="ArrayOfMenu_CargarInicioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menu_CargarInicioResult" nillable="true" type="tns:Menu_CargarInicioResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenu_CargarInicioResult" nillable="true" type="tns:ArrayOfMenu_CargarInicioResult" />
+  <xs:complexType name="Menu_CargarInicioResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPadre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu_CargarInicioResult" nillable="true" type="tns:Menu_CargarInicioResult" />
+</xs:schema>

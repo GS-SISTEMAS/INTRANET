@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mstPage.master.cs" Inherits="GS.SISGEGS.Web.Security.mstPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+
+    <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server" />
+    <link type="text/css" href="../Styles/bootstrap.css" rel="stylesheet"/>
+    <link type="text/css" href="../Styles/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../Images/favicon.ico" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/script.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>    
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js" />
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js" />
+        </Scripts>
+    </telerik:RadScriptManager>
+    <script type="text/javascript">
+    </script>
+        <telerik:RadAjaxPanel ID="pnlPrincipal" runat="server" CssClass="container-fluid">
+            <div class="row" style="background-color:#356F0B; color:white; font-weight:bold; border-style: solid; border-width: 1px 1px 0px 1px; border-color:#183801">
+                <div class="col-md-3">
+                    <asp:Label ID="lblNombre" runat="server"></asp:Label>
+                </div>
+                <div class="col-md-3">
+                    <asp:Label ID="lblPerfil" runat="server"></asp:Label>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-2">
+                    <asp:Image ID="imgLogo" runat="server" Height="20px" Width="80px"/>
+                </div>
+            </div>
+            <div class="row">
+                <telerik:RadMenu ID="rmMenuPrincipal" runat="server"></telerik:RadMenu>
+            </div>
+            <div class="containerBody">
+                <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="containerMensaje">
+                <asp:ContentPlaceHolder ID="mensaje" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </telerik:RadAjaxPanel>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92a94b92-3cea-4f35-9bf1-bd2b270fb9c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/CentroCostoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CentroCostoWCF.xsd" MetadataType="Schema" ID="9c79852c-7f23-4c28-983c-4bd064e9bc99" SourceId="1" SourceUrl="http://localhost:49648/CentroCostoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="CentroCostoWCF1.xsd" MetadataType="Schema" ID="2c7f0fb7-f9c0-4066-963a-6521070ffb3a" SourceId="1" SourceUrl="http://localhost:49648/CentroCostoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="CentroCostoWCF.disco" MetadataType="Disco" ID="b6746c88-7f9f-4228-87be-14d562e55736" SourceId="1" SourceUrl="http://localhost:49648/CentroCostoWCF.svc?disco" />
+    <MetadataFile FileName="CentroCostoWCF2.xsd" MetadataType="Schema" ID="5b78a94e-f4bf-4b1c-94fd-474c12afd780" SourceId="1" SourceUrl="http://localhost:49648/CentroCostoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CentroCostoWCF.wsdl" MetadataType="Wsdl" ID="5bbdca58-6fb9-48d1-ad5a-29d556f56e0b" SourceId="1" SourceUrl="http://localhost:49648/CentroCostoWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

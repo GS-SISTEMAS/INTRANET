@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tci.net.pe/WS_eCica/Retencion/" elementFormDefault="qualified" targetNamespace="http://tci.net.pe/WS_eCica/Retencion/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RegistrarComprobanteRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_Retencion" type="tns:ene_Retencion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_Retencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_Emisor" type="tns:en_EmisorRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_Receptor" type="tns:en_ReceptorRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_DatosRetencion" type="tns:en_DatosRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_InformacionAdicionales" type="tns:en_InformacionAdicionalesRetencion" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ControlOtorgamiento" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_EmisorRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_RazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NombreComercial" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Telefono" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CorreoContacto" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_SitioWeb" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_DireccionFiscal" type="tns:en_DireccionFiscalEmisorRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DireccionFiscalEmisorRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Ubigeo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_DireccionDetallada" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Urbanizacion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Provincia" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Departamento" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Distrito" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoPais" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ReceptorRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_RazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NombreComercial" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_DireccionFiscal" type="tns:en_DireccionFiscalReceptorRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_CorreoRetencion" type="tns:en_CorreoRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DireccionFiscalReceptorRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Ubigeo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_DireccionDetallada" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Urbanizacion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Provincia" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Departamento" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Distrito" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoPais" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_CorreoRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CorreoPrincipal" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CorreosSecundarios" type="tns:ArrayOfString" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DatosRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_RegimenRetencion" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_TasaRetencion" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Observaciones" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ImporteTotalRetencion" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ImporteTotalPagado" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_CabeceraRetencion" type="tns:en_CabeceraRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_DatosComprobanteRelacionado" type="tns:ArrayOfEn_DatosComprobanteRelacionadoRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_CabeceraRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaEmision" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_DatosComprobanteRelacionadoRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_DatosComprobanteRelacionadoRetencion" nillable="true" type="tns:en_DatosComprobanteRelacionadoRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DatosComprobanteRelacionadoRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoComprobante" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Numero" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaEmision" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ImporteTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoMoneda" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_DatosRetenidos" type="tns:en_DatosRetenidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_DatosRetenidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Fecha" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ImporteSinRetencion" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoMoneda" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_InformeRetencion" type="tns:en_InformeRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_TipoCambio" type="tns:en_TipoCambioRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_InformeRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_ImporteRetenido" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaRetencion" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_MontoTotal" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_TipoCambioRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_TipoMoneda" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_MontoCambio" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_InformacionAdicionalesRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_ImporteTotalRetencionLetras" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_Etiquetas" type="tns:ArrayOfEn_EtiquetasRetencion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_LogoRepresentacionImpresa" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_EtiquetasRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_EtiquetasRetencion" nillable="true" type="tns:en_EtiquetasRetencion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_EtiquetasRetencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Etiqueta" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Valor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistrarComprobanteRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RegistrarComprobanteRetencionResult" type="tns:ens_Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_Respuesta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarEstadoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarEstado" type="tns:ene_ConsultarEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CantidadConsultar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarEstadoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarEstadoRetencionResult" type="tns:ens_ConsultarEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConsultarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ResultadoEstadoComprobante" type="tns:ArrayOfEn_ResultadoEstadoComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ResultadoEstadoComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ResultadoEstadoComprobante" nillable="true" type="tns:en_ResultadoEstadoComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ResultadoEstadoComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_EstadoOtorgado" type="tns:en_EstadoOtorgado" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_EstadoReversion" type="tns:en_EstadoReversion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_EstadoOtorgado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaOtorgado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_EstadoReversion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaRevertido" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfirmarEstadoRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConfirmarEstado" type="tns:ene_ConfirmarEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConfirmarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_Comprobante" type="tns:ArrayOfEn_ComprobanteConfirmarEstado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ComprobanteConfirmarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ComprobanteConfirmarEstado" nillable="true" type="tns:en_ComprobanteConfirmarEstado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteConfirmarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfirmarEstadoRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfirmarEstadoRetencionResult" type="tns:ens_ConfirmarEstado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConfirmarEstado">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRespuestaRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarRespuesta" type="tns:ene_ConsultarRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CantidadConsultar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRespuestaRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarRespuestaRetencionResult" type="tns:ens_ConsultarRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConsultarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ResultadoRespuestaComprobante" type="tns:ArrayOfEn_ResultadoRespuestaComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ResultadoRespuestaComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ResultadoRespuestaComprobante" nillable="true" type="tns:en_ResultadoRespuestaComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ResultadoRespuestaComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_RespuestaComprobante" type="tns:en_RespuestaComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_RespuestaComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_TipoRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaRespuesta" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CodigoRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfirmarRespuestaRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConfirmarRespuesta" type="tns:ene_ConfirmarRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConfirmarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_Comprobante" type="tns:ArrayOfEn_ComprobanteConfirmarRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ComprobanteConfirmarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ComprobanteConfirmarRespuesta" nillable="true" type="tns:en_ComprobanteConfirmarRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteConfirmarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_CodigoRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfirmarRespuestaRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConfirmarRespuestaRetencionResult" type="tns:ens_ConfirmarRespuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConfirmarRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarXMLRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarXML" type="tns:ene_ConsultarXML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_ComprobanteConsultarXML" type="tns:en_ComprobanteConsultarXML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteConsultarXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NumeroRespuesta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarXMLRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarXMLRetencionResult" type="tns:ens_ConsultarXML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConsultarXML">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_ResultadoXML" type="tns:en_ResultadoConsultarXML" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ResultadoConsultarXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_XML" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NombreXML" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaXML" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtorgarComprobante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_OtorgarComprobante" type="tns:ene_OtorgarComprobante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_OtorgarComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_ComprobanteOtorgar" type="tns:ArrayOfEn_ComprobanteOtorgarComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_ComprobanteOtorgarComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_ComprobanteOtorgarComprobante" nillable="true" type="tns:en_ComprobanteOtorgarComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteOtorgarComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OtorgarComprobanteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="OtorgarComprobanteResult" type="tns:ens_OtorgarComprobante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_OtorgarComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarComprobanteIndividual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarComprobanteIndividual" type="tns:ene_ConsultarComprobanteIndividual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarComprobanteIndividual">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarComprobanteIndividualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarComprobanteIndividualResult" type="tns:ens_ConsultarComprobanteIndividual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ConsultarComprobanteIndividual">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_InformacionComprobante" type="tns:en_InformacionComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_InformacionComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaGeneracion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaTransmision" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaOtorgamiento" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaReversion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoHash" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="l_respuestas" type="tns:ArrayOfEn_Respuestas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEn_Respuestas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="en_Respuestas" nillable="true" type="tns:en_Respuestas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_Respuestas">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NroRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_CodigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaSunat" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRepresentacionImpresaRetencion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ent_ConsultarRI" type="tns:ene_ConsultarRI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ene_ConsultarRI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NumeroDocumentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_Comprobante" type="tns:en_ComprobanteConsultarRI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ComprobanteConsultarRI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_Serie" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="at_Numero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultarRepresentacionImpresaRetencionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ConsultarRepresentacionImpresaRetencionResult" type="tns:ens_ResultadoRI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ens_ResultadoRI">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="at_NivelResultado" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_MensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ent_Resultado" type="tns:en_ResultadoConsultarRI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="en_ResultadoConsultarRI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="at_ArchivoRI" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_NombreRI" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="at_FechaGenerado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

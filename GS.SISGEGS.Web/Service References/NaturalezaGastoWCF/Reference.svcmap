@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dc0669e8-b4b5-4db0-b6a3-d3c0497fef1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NaturalezaGastoWCF3.xsd" MetadataType="Schema" ID="9bd88f84-a854-4fd8-b9a7-307cfe8372b1" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="NaturalezaGastoWCF31.xsd" MetadataType="Schema" ID="171ac7a6-ae7b-4d5f-a2cc-7212b34df254" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="NaturalezaGastoWCF32.xsd" MetadataType="Schema" ID="f86085f3-861a-4468-afed-69fe5c027dcc" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="NaturalezaGastoWCF1.disco" MetadataType="Disco" ID="637fa142-9d57-4d46-9018-d374c3e9de4e" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc?disco" />
+    <MetadataFile FileName="NaturalezaGastoWCF1.wsdl" MetadataType="Wsdl" ID="4f4f586f-c82f-4228-94b3-06a42853133c" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/NaturalezaGastoWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

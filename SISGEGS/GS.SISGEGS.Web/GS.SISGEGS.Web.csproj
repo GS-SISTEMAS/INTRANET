@@ -1,0 +1,1050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3250B3AC-1449-48A9-936F-868A9421F44D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.SISGEGS.Web</RootNamespace>
+    <AssemblyName>GS.SISGEGS.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Telerik.Web.UI, Version=2015.2.826.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2015.2.826.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Maths">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\lib\RCAJAX\2015.2.826.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commercial\Consulta\Stock.aspx.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Consulta\Stock.aspx.designer.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastos.aspx.cs">
+      <DependentUpon>frmGastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastos.aspx.designer.cs">
+      <DependentUpon>frmGastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastosEdt.aspx.cs">
+      <DependentUpon>frmGastosEdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastosEdt.aspx.designer.cs">
+      <DependentUpon>frmGastosEdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastosMng.aspx.cs">
+      <DependentUpon>frmGastosMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Gastos\frmGastosMng.aspx.designer.cs">
+      <DependentUpon>frmGastosMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Pedidov2\frmPedido.aspx.cs">
+      <DependentUpon>frmPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Pedidov2\frmPedido.aspx.designer.cs">
+      <DependentUpon>frmPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmDocumentos.aspx.cs">
+      <DependentUpon>frmDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmDocumentos.aspx.designer.cs">
+      <DependentUpon>frmDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedido.aspx.cs">
+      <DependentUpon>frmPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedido.aspx.designer.cs">
+      <DependentUpon>frmPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedidoItem.aspx.cs">
+      <DependentUpon>frmPedidoItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedidoItem.aspx.designer.cs">
+      <DependentUpon>frmPedidoItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedidoMng.aspx.cs">
+      <DependentUpon>frmPedidoMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commercial\Pedido\frmPedidoMng.aspx.designer.cs">
+      <DependentUpon>frmPedidoMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasswordMng.aspx.cs">
+      <DependentUpon>frmPasswordMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPasswordMng.aspx.designer.cs">
+      <DependentUpon>frmPasswordMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConnectionHelpers.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Management\Management\Producto\frmProductoCliente.aspx.cs">
+      <DependentUpon>frmProductoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Management\Producto\frmProductoCliente.aspx.designer.cs">
+      <DependentUpon>frmProductoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Management\Producto\frmProductoClienteMng.aspx.cs">
+      <DependentUpon>frmProductoClienteMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Management\Producto\frmProductoClienteMng.aspx.designer.cs">
+      <DependentUpon>frmProductoClienteMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Security\Empresa\frmEmpresa.aspx.cs">
+      <DependentUpon>frmEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Security\Empresa\frmEmpresa.aspx.designer.cs">
+      <DependentUpon>frmEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Security\Menu\frmMenu.aspx.cs">
+      <DependentUpon>frmMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Security\Menu\frmMenu.aspx.designer.cs">
+      <DependentUpon>frmMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Security\Menu\frmMenuMng.aspx.cs">
+      <DependentUpon>frmMenuMng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Security\Menu\frmMenuMng.aspx.designer.cs">
+      <DependentUpon>frmMenuMng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Security\Perfil\frmPerfil.aspx.cs">
+      <DependentUpon>frmPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Security\Perfil\frmPerfil.aspx.designer.cs">
+      <DependentUpon>frmPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Security\Usuario\frmUsuario.aspx.cs">
+      <DependentUpon>frmUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Security\Usuario\frmUsuario.aspx.designer.cs">
+      <DependentUpon>frmUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\frmCerrar.aspx.cs">
+      <DependentUpon>frmCerrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\frmCerrar.aspx.designer.cs">
+      <DependentUpon>frmCerrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\frmInicio.aspx.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\frmInicio.aspx.designer.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\frmPasswordChange.aspx.cs">
+      <DependentUpon>frmPasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\frmPasswordChange.aspx.designer.cs">
+      <DependentUpon>frmPasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mstPage.Master.cs">
+      <DependentUpon>mstPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mstPage.Master.designer.cs">
+      <DependentUpon>mstPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mstPopUpL.Master.cs">
+      <DependentUpon>mstPopUpL.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mstPopUpL.Master.designer.cs">
+      <DependentUpon>mstPopUpL.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mstPopUpM.Master.cs">
+      <DependentUpon>mstPopUpM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mstPopUpM.Master.designer.cs">
+      <DependentUpon>mstPopUpM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mstPopUpMX.Master.cs">
+      <DependentUpon>mstPopUpMX.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mstPopUpMX.Master.designer.cs">
+      <DependentUpon>mstPopUpMX.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Security\mstPopUpS.Master.cs">
+      <DependentUpon>mstPopUpS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\mstPopUpS.Master.designer.cs">
+      <DependentUpon>mstPopUpS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AgendaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CentroCostoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CreditoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DespachoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DireccionWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DocumentoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EgresosWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EmpresaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EnvioWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FormaPagoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GuiaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImpuestoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ItemWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MenuWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MonedaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NaturalezaGastoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PedidoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SedeWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UnidadWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UsuarioWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VarianteWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadCaptcha\0.wav" />
+    <Content Include="App_Data\RadCaptcha\1.wav" />
+    <Content Include="App_Data\RadCaptcha\2.wav" />
+    <Content Include="App_Data\RadCaptcha\3.wav" />
+    <Content Include="App_Data\RadCaptcha\4.wav" />
+    <Content Include="App_Data\RadCaptcha\5.wav" />
+    <Content Include="App_Data\RadCaptcha\6.wav" />
+    <Content Include="App_Data\RadCaptcha\7.wav" />
+    <Content Include="App_Data\RadCaptcha\8.wav" />
+    <Content Include="App_Data\RadCaptcha\9.wav" />
+    <Content Include="App_Data\RadCaptcha\A.wav" />
+    <Content Include="App_Data\RadCaptcha\B.wav" />
+    <Content Include="App_Data\RadCaptcha\C.wav" />
+    <Content Include="App_Data\RadCaptcha\D.wav" />
+    <Content Include="App_Data\RadCaptcha\E.wav" />
+    <Content Include="App_Data\RadCaptcha\F.wav" />
+    <Content Include="App_Data\RadCaptcha\G.wav" />
+    <Content Include="App_Data\RadCaptcha\H.wav" />
+    <Content Include="App_Data\RadCaptcha\I.wav" />
+    <Content Include="App_Data\RadCaptcha\J.wav" />
+    <Content Include="App_Data\RadCaptcha\K.wav" />
+    <Content Include="App_Data\RadCaptcha\L.wav" />
+    <Content Include="App_Data\RadCaptcha\M.wav" />
+    <Content Include="App_Data\RadCaptcha\N.wav" />
+    <Content Include="App_Data\RadCaptcha\O.wav" />
+    <Content Include="App_Data\RadCaptcha\P.wav" />
+    <Content Include="App_Data\RadCaptcha\Q.wav" />
+    <Content Include="App_Data\RadCaptcha\R.wav" />
+    <Content Include="App_Data\RadCaptcha\S.wav" />
+    <Content Include="App_Data\RadCaptcha\T.wav" />
+    <Content Include="App_Data\RadCaptcha\U.wav" />
+    <Content Include="App_Data\RadCaptcha\V.wav" />
+    <Content Include="App_Data\RadCaptcha\W.wav" />
+    <Content Include="App_Data\RadCaptcha\X.wav" />
+    <Content Include="App_Data\RadCaptcha\Y.wav" />
+    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Commercial\Consulta\Stock.aspx" />
+    <Content Include="Commercial\Gastos\frmGastos.aspx" />
+    <Content Include="Commercial\Gastos\frmGastosEdt.aspx" />
+    <Content Include="Commercial\Gastos\frmGastosMng.aspx" />
+    <Content Include="Commercial\Pedidov2\frmPedido.aspx" />
+    <Content Include="Commercial\Pedido\frmDocumentos.aspx" />
+    <Content Include="Commercial\Pedido\frmPedido.aspx" />
+    <Content Include="Commercial\Pedido\frmPedidoItem.aspx" />
+    <Content Include="Commercial\Pedido\frmPedidoMng.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="frmPasswordMng.aspx" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\Icons\circle-green-16.png" />
+    <Content Include="Images\Icons\circle-green-32.png" />
+    <Content Include="Images\Icons\circle-red-16.png" />
+    <Content Include="Images\Icons\circle-red-32.png" />
+    <Content Include="Images\Icons\circle-yellow-16.png" />
+    <Content Include="Images\Icons\circle-yellow-32.png" />
+    <Content Include="Images\Icons\delete-16.png" />
+    <Content Include="Images\Icons\delete-32.png" />
+    <Content Include="Images\Icons\file-empty-16.png" />
+    <Content Include="Images\Icons\file-empty-20.png" />
+    <Content Include="Images\Icons\file-empty-32.png" />
+    <Content Include="Images\Icons\floppy-16.png" />
+    <Content Include="Images\Icons\floppy-20.png" />
+    <Content Include="Images\Icons\floppy-32.png" />
+    <Content Include="Images\Icons\pencil-16.png" />
+    <Content Include="Images\Icons\pencil-20.png" />
+    <Content Include="Images\Icons\pencil-32.png" />
+    <Content Include="Images\Icons\search-16.png" />
+    <Content Include="Images\Icons\search-20.png" />
+    <Content Include="Images\Icons\search-32.png" />
+    <Content Include="Images\Icons\sign-add-16.png" />
+    <Content Include="Images\Icons\sign-add-20.png" />
+    <Content Include="Images\Icons\sign-add-32.png" />
+    <Content Include="Images\Icons\sign-ban-16.png" />
+    <Content Include="Images\Icons\sign-ban-20.png" />
+    <Content Include="Images\Icons\sign-ban-32.png" />
+    <Content Include="Images\Icons\sign-check-16.png" />
+    <Content Include="Images\Icons\sign-check-20.png" />
+    <Content Include="Images\Icons\sign-check-32.png" />
+    <Content Include="Images\Icons\sign-error-16.png" />
+    <Content Include="Images\Icons\sign-error-20.png" />
+    <Content Include="Images\Icons\sign-error-32.png" />
+    <Content Include="Images\Icons\sticky-ban-16.png" />
+    <Content Include="Images\Icons\sticky-note-16.png" />
+    <Content Include="Images\Icons\sticky-note-20.png" />
+    <Content Include="Images\Icons\sticky-note-32.png" />
+    <Content Include="Images\Icons\trashcan-16.png" />
+    <Content Include="Images\Icons\trashcan-20.png" />
+    <Content Include="Images\Icons\trashcan-32.png" />
+    <Content Include="Images\Icons\user-id-16.png" />
+    <Content Include="Images\Icons\user-id-20.png" />
+    <Content Include="Images\Icons\user-id-32.png" />
+    <Content Include="Images\Logos\grupo.png" />
+    <Content Include="Images\Logos\neoagrum.png" />
+    <Content Include="Images\Logos\silvestre.png" />
+    <Content Include="Management\Management\Producto\frmProductoCliente.aspx" />
+    <Content Include="Management\Management\Producto\frmProductoClienteMng.aspx" />
+    <Content Include="Management\Security\Empresa\frmEmpresa.aspx" />
+    <Content Include="Management\Security\Menu\frmMenu.aspx" />
+    <Content Include="Management\Security\Menu\frmMenuMng.aspx" />
+    <Content Include="Management\Security\Perfil\frmPerfil.aspx" />
+    <Content Include="Management\Security\Usuario\frmUsuario.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Security\favicon.ico" />
+    <Content Include="Security\frmCerrar.aspx" />
+    <Content Include="Security\frmInicio.aspx" />
+    <Content Include="Security\frmPasswordChange.aspx" />
+    <Content Include="Security\mstPage.Master" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Menu_CargarInicioResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Usuario_LoginResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Menu_ListarResult.datasource" />
+    <Content Include="Security\mstPopUpS.Master" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Empresa_ComboBoxResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00716Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00001Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BuscarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BuscarClienteResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BuscarVendedorResult.datasource" />
+    <Content Include="Security\mstPopUpL.Master" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarClienteResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarVendedorResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00209Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00167Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG02689Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00700Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG02908Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsCredito_ListarCondicionResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00698Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00746Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG03630Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG03629Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG03678Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG03679Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG02699Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00187Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00890Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarPorNombreResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00865Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsPedido_ListarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_BuscarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00034Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsImpuesto_ListarPorItemResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG01134Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsPedido_BuscarCabeceraResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsPedido_BuscarDetalleResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsImpuesto_BuscarPorPedidoResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.BE.Agenda_LimiteCreditoBE.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarContactoResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsEgresosVarios_ListarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsEgresosVarios_BuscarCabeceraResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsEgresosVarios_BuscarDetalleResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BucarProveedorResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarProveedorResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00705Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsDocumento_ListarTipoCompraResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarGastosResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarTransportistaResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarTipoGastoResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG01122Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarProductoResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsEgresosVarios_ListarCajaChicaResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarTipoGastoCCResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00786Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG03096Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG02665Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG02668Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Variante_BuscarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG00939Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsGuiaVenta_ListarXPedidoResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarStockResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsItem_ListarPrecioClienteResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.VBG01124Result.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Perfil_ListarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsCotizacionCab_BuscarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsCotizacionDet_BuscarResult.datasource" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.gsCotizacionImp_BuscarResult.datasource" />
+    <None Include="Properties\PublishProfiles\IntranetGS.pubxml" />
+    <Content Include="Security\mstPopUpMX.Master" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.wsdl" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AgendaWCF\GS.SISGEGS.Web.AgendaWCF.Agenda_BucarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AgendaWCF\GS.SISGEGS.Web.AgendaWCF.Agenda_BuscarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CentroCostoWCF\CentroCostoWCF.wsdl" />
+    <None Include="Service References\CentroCostoWCF\CentroCostoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroCostoWCF\CentroCostoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CentroCostoWCF\CentroCostoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CreditoWCF\CreditoWCF.wsdl" />
+    <None Include="Service References\CreditoWCF\CreditoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CreditoWCF\CreditoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CreditoWCF\CreditoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DespachoWCF\DespachoWCF1.wsdl" />
+    <None Include="Service References\DespachoWCF\DespachoWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DespachoWCF\DespachoWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DespachoWCF\DespachoWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DireccionWCF\DireccionWCF1.wsdl" />
+    <None Include="Service References\DireccionWCF\DireccionWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DireccionWCF\DireccionWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DireccionWCF\DireccionWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentoWCF\DocumentoWCF.wsdl" />
+    <None Include="Service References\DocumentoWCF\DocumentoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentoWCF\DocumentoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DocumentoWCF\DocumentoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DespachoWCF\DespachoWCF1.disco" />
+    <None Include="Service References\DireccionWCF\DireccionWCF1.disco" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.disco" />
+    <None Include="Service References\AgendaWCF\configuration91.svcinfo" />
+    <None Include="Service References\AgendaWCF\configuration.svcinfo" />
+    <None Include="Service References\AgendaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CentroCostoWCF\CentroCostoWCF.disco" />
+    <None Include="Service References\CentroCostoWCF\configuration91.svcinfo" />
+    <None Include="Service References\CentroCostoWCF\configuration.svcinfo" />
+    <None Include="Service References\CentroCostoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CreditoWCF\CreditoWCF.disco" />
+    <None Include="Service References\CreditoWCF\configuration91.svcinfo" />
+    <None Include="Service References\CreditoWCF\configuration.svcinfo" />
+    <None Include="Service References\CreditoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DocumentoWCF\DocumentoWCF.disco" />
+    <None Include="Service References\DocumentoWCF\configuration91.svcinfo" />
+    <None Include="Service References\DocumentoWCF\configuration.svcinfo" />
+    <None Include="Service References\DocumentoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EgresosWCF\EgresosWCF.wsdl" />
+    <None Include="Service References\EgresosWCF\EgresosWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EgresosWCF\EgresosWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EgresosWCF\EgresosWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\EgresosWCF\GS.SISGEGS.Web.EgresosWCF.EgresosVarios_BuscarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EmpresaWCF\EmpresaWCF.wsdl" />
+    <None Include="Service References\EmpresaWCF\EmpresaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpresaWCF\EmpresaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmpresaWCF\EmpresaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EnvioWCF\EnvioWCF1.wsdl" />
+    <None Include="Service References\EnvioWCF\EnvioWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EnvioWCF\EnvioWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EnvioWCF\EnvioWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FormaPagoWCF\FormaPagoWCF1.wsdl" />
+    <None Include="Service References\FormaPagoWCF\FormaPagoWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FormaPagoWCF\FormaPagoWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FormaPagoWCF\FormaPagoWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GuiaWCF\GuiaWCF1.wsdl" />
+    <None Include="Service References\GuiaWCF\GuiaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GuiaWCF\GuiaWCF31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GuiaWCF\GuiaWCF32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\configuration91.svcinfo" />
+    <None Include="Service References\ImpuestoWCF\configuration.svcinfo" />
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.wsdl" />
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GuiaWCF\configuration91.svcinfo" />
+    <None Include="Service References\GuiaWCF\configuration.svcinfo" />
+    <None Include="Service References\GuiaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GuiaWCF\GuiaWCF1.disco" />
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.disco" />
+    <None Include="Service References\EgresosWCF\EgresosWCF.disco" />
+    <None Include="Service References\EgresosWCF\configuration91.svcinfo" />
+    <None Include="Service References\EgresosWCF\configuration.svcinfo" />
+    <None Include="Service References\EgresosWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EmpresaWCF\EmpresaWCF.disco" />
+    <None Include="Service References\EmpresaWCF\configuration91.svcinfo" />
+    <None Include="Service References\EmpresaWCF\configuration.svcinfo" />
+    <None Include="Service References\EmpresaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ItemWCF\GS.SISGEGS.Web.ItemWCF.Item_BuscarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ItemWCF\GS.SISGEGS.Web.ItemWCF.Item_BuscarPrecioClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ItemWCF\GS.SISGEGS.Web.ItemWCF.Item_RegistrarPrecioClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ItemWCF\ItemWCF1.wsdl" />
+    <None Include="Service References\ItemWCF\ItemWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuWCF\configuration91.svcinfo" />
+    <None Include="Service References\MenuWCF\configuration.svcinfo" />
+    <None Include="Service References\MenuWCF\MenuWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuWCF\MenuWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuWCF\MenuWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MenuWCF\MenuWCFsvc11.wsdl" />
+    <None Include="Service References\MenuWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DireccionWCF\configuration91.svcinfo" />
+    <None Include="Service References\DireccionWCF\configuration.svcinfo" />
+    <None Include="Service References\DireccionWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MonedaWCF\MonedaWCF1.wsdl" />
+    <None Include="Service References\MonedaWCF\MonedaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MonedaWCF\MonedaWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MonedaWCF\MonedaWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EnvioWCF\EnvioWCF1.disco" />
+    <None Include="Service References\FormaPagoWCF\FormaPagoWCF1.disco" />
+    <None Include="Service References\MenuWCF\MenuWCF1.disco" />
+    <None Include="Service References\MonedaWCF\MonedaWCF1.disco" />
+    <None Include="Service References\NaturalezaGastoWCF\NaturalezaGastoWCF1.disco" />
+    <None Include="Service References\NaturalezaGastoWCF\NaturalezaGastoWCF1.wsdl" />
+    <None Include="Service References\NaturalezaGastoWCF\NaturalezaGastoWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NaturalezaGastoWCF\NaturalezaGastoWCF31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NaturalezaGastoWCF\NaturalezaGastoWCF32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF1.disco" />
+    <Content Include="Service References\PedidoWCF\GS.SISGEGS.Web.PedidoWCF.Pedido_ListarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\PedidoWCF\PedidoWCF1.wsdl" />
+    <None Include="Service References\PedidoWCF\PedidoWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PedidoWCF\PedidoWCF41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PedidoWCF\PedidoWCF42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PedidoWCF\PedidoWCF43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SedeWCF\configuration91.svcinfo" />
+    <None Include="Service References\SedeWCF\configuration.svcinfo" />
+    <None Include="Service References\SedeWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EnvioWCF\configuration91.svcinfo" />
+    <None Include="Service References\EnvioWCF\configuration.svcinfo" />
+    <None Include="Service References\EnvioWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DespachoWCF\configuration91.svcinfo" />
+    <None Include="Service References\DespachoWCF\configuration.svcinfo" />
+    <None Include="Service References\DespachoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MonedaWCF\configuration91.svcinfo" />
+    <None Include="Service References\MonedaWCF\configuration.svcinfo" />
+    <None Include="Service References\MonedaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FormaPagoWCF\configuration91.svcinfo" />
+    <None Include="Service References\FormaPagoWCF\configuration.svcinfo" />
+    <None Include="Service References\FormaPagoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ItemWCF\configuration91.svcinfo" />
+    <None Include="Service References\ItemWCF\configuration.svcinfo" />
+    <None Include="Service References\ItemWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NaturalezaGastoWCF\configuration91.svcinfo" />
+    <None Include="Service References\NaturalezaGastoWCF\configuration.svcinfo" />
+    <None Include="Service References\NaturalezaGastoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SedeWCF\SedeWCF1.wsdl" />
+    <None Include="Service References\SedeWCF\SedeWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SedeWCF\SedeWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SedeWCF\SedeWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnidadWCF\configuration91.svcinfo" />
+    <None Include="Service References\UnidadWCF\configuration.svcinfo" />
+    <None Include="Service References\UnidadWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UnidadWCF\UnidadWCF1.wsdl" />
+    <None Include="Service References\UnidadWCF\UnidadWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnidadWCF\UnidadWCF31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnidadWCF\UnidadWCF32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UsuarioWCF\UsuarioWCF1.wsdl" />
+    <None Include="Service References\UsuarioWCF\UsuarioWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UsuarioWCF\UsuarioWCF4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UsuarioWCF\UsuarioWCF5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VarianteWCF\configuration91.svcinfo" />
+    <None Include="Service References\VarianteWCF\configuration.svcinfo" />
+    <None Include="Service References\VarianteWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SedeWCF\SedeWCF1.disco" />
+    <None Include="Service References\UnidadWCF\UnidadWCF1.disco" />
+    <None Include="Service References\VarianteWCF\VarianteWCF1.disco" />
+    <None Include="Service References\PedidoWCF\configuration91.svcinfo" />
+    <None Include="Service References\PedidoWCF\configuration.svcinfo" />
+    <None Include="Service References\PedidoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UsuarioWCF\UsuarioWCF1.disco" />
+    <None Include="Service References\PedidoWCF\PedidoWCF1.disco" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Security\mstPopUpM.Master" />
+    <Content Include="Properties\DataSources\GS.SISGEGS.DM.Usuario_AutenticarResult.datasource" />
+    <None Include="Service References\UsuarioWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UsuarioWCF\configuration.svcinfo" />
+    <None Include="Service References\UsuarioWCF\configuration91.svcinfo" />
+    <Content Include="Styles\bootstrap.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\de-DE.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VarianteWCF\VarianteWCF1.wsdl" />
+    <None Include="Service References\VarianteWCF\VarianteWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VarianteWCF\VarianteWCF31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VarianteWCF\VarianteWCF32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AgendaWCF\" />
+    <WCFMetadataStorage Include="Service References\CentroCostoWCF\" />
+    <WCFMetadataStorage Include="Service References\CreditoWCF\" />
+    <WCFMetadataStorage Include="Service References\DespachoWCF\" />
+    <WCFMetadataStorage Include="Service References\DireccionWCF\" />
+    <WCFMetadataStorage Include="Service References\DocumentoWCF\" />
+    <WCFMetadataStorage Include="Service References\EgresosWCF\" />
+    <WCFMetadataStorage Include="Service References\EmpresaWCF\" />
+    <WCFMetadataStorage Include="Service References\EnvioWCF\" />
+    <WCFMetadataStorage Include="Service References\FormaPagoWCF\" />
+    <WCFMetadataStorage Include="Service References\GuiaWCF\" />
+    <WCFMetadataStorage Include="Service References\ImpuestoWCF\" />
+    <WCFMetadataStorage Include="Service References\ItemWCF\" />
+    <WCFMetadataStorage Include="Service References\MenuWCF\" />
+    <WCFMetadataStorage Include="Service References\MonedaWCF\" />
+    <WCFMetadataStorage Include="Service References\NaturalezaGastoWCF\" />
+    <WCFMetadataStorage Include="Service References\PedidoWCF\" />
+    <WCFMetadataStorage Include="Service References\SedeWCF\" />
+    <WCFMetadataStorage Include="Service References\UnidadWCF\" />
+    <WCFMetadataStorage Include="Service References\UsuarioWCF\" />
+    <WCFMetadataStorage Include="Service References\VarianteWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GS.SISGEGS.BE\GS.SISGEGS.BE.csproj">
+      <Project>{75fe5952-0135-49f6-b143-e44b67ad1c44}</Project>
+      <Name>GS.SISGEGS.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.SISGEGS.DM\GS.SISGEGS.DM.csproj">
+      <Project>{10a35074-9231-4513-bb44-77e0b7a7b117}</Project>
+      <Name>GS.SISGEGS.DM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49573/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

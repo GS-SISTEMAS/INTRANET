@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8390984A-2954-486E-9A5C-CC3CED3B3B4E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.SISGEGS.WINCreditos</RootNamespace>
+    <AssemblyName>GS.SISGEGS.WINCreditos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EstadoCuenta_Alerta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AgendaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ContratosWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CorreoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EstadoCuentaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MarcasWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ResponsableContratoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.Agenda_BuscarEmpresaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.AreaResponsable_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ClaseMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ContratosVencer_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.Contrato_ObtenerResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.DocumentosMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.EstadoMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgendaCliente_BuscarLimiteCreditoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BucarProveedorResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_BuscarClienteDetalleResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ContactoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarClienteResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarContactoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarGarantiaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarProveedorResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarTransportistaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsAgenda_ListarVendedorResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsArea_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsChofer_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsClientesCorreo_EnvioResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsClientesXVendedor_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsEstadoCuenta_MesBIResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsEstadoCuenta_TotalResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsListarLogLineaCreditoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsListarObservacionesAgendaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsPlaca_DespachoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsPlaca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporteVencidosPorMesClienteResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporteVencidosPorMesDetalleResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporteVencidosPorMesResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporteVentasxDiasCobranzaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DeudaVencidaTotalResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientesBIResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientesResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientesResumenClienteResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientesResumenVendedorResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientes_LegalResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientes_ProvisionResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsReporte_DocumentosPendientes_ProyectadoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsUsuario_SectoristaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsVendedores_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsVendedor_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsZonaSectorista_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.gsZona_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_GetCicloLetrasResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_GetFacturasVencPorPlazoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_GetLetrasPorEstadoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_GetLetrasVencPorPlazoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_LetrasGraficoPieResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_RecuperaCorreoAgendaResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.GS_ReporteEstadoCuentaMngResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.Marca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.Pais_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ProveedorContrato_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RegistroMarcaHistorico_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RegistroMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RegistroMarca_Listar_v2Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RegistroMarca_NotificacionResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RegistroMarca_ObtenerResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ReporteGeneralContratosResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ResponsablesContrato_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.ResponsablesRegistros_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.RPT00015Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.TipoDocumentoMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.TipoMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.TitularMarca_ListarResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG00062_PROVEEDORResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG00167Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG00746Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG01134Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG01134_validarCorreoResult.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG02699Result.datasource" />
+    <None Include="Properties\DataSources\GS.SISGEGS.DM.VBG03678Result.datasource" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.wsdl" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_BucarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_BuscarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_BuscarCliente_ContadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_LimiteCreditoBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_RegistrarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINCreditos.AgendaWCF.Agenda_ValidarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ContratosWCF\ContratosWCF.wsdl" />
+    <None Include="Service References\ContratosWCF\ContratosWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ContratosWCF\ContratosWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ContratosWCF\ContratosWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CorreoWCF\CorreoWCF.wsdl" />
+    <None Include="Service References\CorreoWCF\CorreoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CorreoWCF\CorreoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF.wsdl" />
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MarcasWCF\MarcasWCF.wsdl" />
+    <None Include="Service References\MarcasWCF\MarcasWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MarcasWCF\MarcasWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MarcasWCF\MarcasWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResponsableContratoWCF\ResponsableContratoWCF.wsdl" />
+    <None Include="Service References\ResponsableContratoWCF\ResponsableContratoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResponsableContratoWCF\ResponsableContratoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResponsableContratoWCF\ResponsableContratoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AgendaWCF\" />
+    <WCFMetadataStorage Include="Service References\ContratosWCF\" />
+    <WCFMetadataStorage Include="Service References\CorreoWCF\" />
+    <WCFMetadataStorage Include="Service References\EstadoCuentaWCF\" />
+    <WCFMetadataStorage Include="Service References\MarcasWCF\" />
+    <WCFMetadataStorage Include="Service References\ResponsableContratoWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GS.SISGEGS.DM\GS.SISGEGS.DM.csproj">
+      <Project>{10a35074-9231-4513-bb44-77e0b7a7b117}</Project>
+      <Name>GS.SISGEGS.DM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResponsableContratoWCF\ResponsableContratoWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResponsableContratoWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResponsableContratoWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResponsableContratoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContratosWCF\ContratosWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContratosWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContratosWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ContratosWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarcasWCF\MarcasWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarcasWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarcasWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MarcasWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\AgendaWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EstadoCuentaWCF\EstadoCuentaWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EstadoCuentaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EstadoCuentaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EstadoCuentaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorreoWCF\CorreoWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorreoWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorreoWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CorreoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GS.SISGEGS.WINCreditos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

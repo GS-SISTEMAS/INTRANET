@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e41971f3-6eaf-489d-a859-5cb7fc93a582" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/TipoContratoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TipoContratoWCF.wsdl" MetadataType="Wsdl" ID="4db7aeaa-5e6d-4863-9419-bd9aa27068ed" SourceId="1" SourceUrl="http://localhost:49648/TipoContratoWCF.svc?wsdl" />
+    <MetadataFile FileName="TipoContratoWCF.xsd" MetadataType="Schema" ID="fded9d64-997d-4be7-9476-a482cce77180" SourceId="1" SourceUrl="http://localhost:49648/TipoContratoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="TipoContratoWCF1.xsd" MetadataType="Schema" ID="68ccee0f-874c-4e1b-a3ff-98f7c7c673dd" SourceId="1" SourceUrl="http://localhost:49648/TipoContratoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="TipoContratoWCF2.xsd" MetadataType="Schema" ID="6b83f114-8f31-495d-a0b3-a01267895455" SourceId="1" SourceUrl="http://localhost:49648/TipoContratoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="TipoContratoWCF.disco" MetadataType="Disco" ID="5f61cf67-c57c-4e00-87c1-06c097825560" SourceId="1" SourceUrl="http://localhost:49648/TipoContratoWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

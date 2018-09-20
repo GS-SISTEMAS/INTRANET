@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AgendaWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarVendedor" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_BuscarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_BuscarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_BuscarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_BuscarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarDireccionCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarDireccionCliente" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarDireccionCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarDireccionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarAlmacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarAlmacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarAlmacenCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacenCliente" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexo_ListarAlmacenCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexo_ListarAlmacenClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexoReferencia_ListarPorSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexoReferencia_ListarPorSucursal" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_AgendaAnexoReferencia_ListarPorSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgendaAnexoReferencia_ListarPorSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_LineaCredito_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_LineaCredito" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_LineaCredito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_LineaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_BucarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_BucarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_BucarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_BucarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarTransportista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarTransportista" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_ListarTransportista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_ListarTransportistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_RegistrarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_RegistrarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IAgendaWCF_Agenda_RegistrarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Agenda_RegistrarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAgendaWCF">
+    <wsdl:operation name="Agenda_ListarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarCliente" message="tns:IAgendaWCF_Agenda_ListarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarClienteResponse" message="tns:IAgendaWCF_Agenda_ListarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarVendedor" message="tns:IAgendaWCF_Agenda_ListarVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarVendedorResponse" message="tns:IAgendaWCF_Agenda_ListarVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BuscarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_BuscarCliente" message="tns:IAgendaWCF_Agenda_BuscarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_BuscarClienteResponse" message="tns:IAgendaWCF_Agenda_BuscarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarDireccionCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarDireccionCliente" message="tns:IAgendaWCF_AgendaAnexo_ListarDireccionCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarDireccionClienteResponse" message="tns:IAgendaWCF_AgendaAnexo_ListarDireccionCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacen" message="tns:IAgendaWCF_AgendaAnexo_ListarAlmacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacenResponse" message="tns:IAgendaWCF_AgendaAnexo_ListarAlmacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacenCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacenCliente" message="tns:IAgendaWCF_AgendaAnexo_ListarAlmacenCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacenClienteResponse" message="tns:IAgendaWCF_AgendaAnexo_ListarAlmacenCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexoReferencia_ListarPorSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexoReferencia_ListarPorSucursal" message="tns:IAgendaWCF_AgendaAnexoReferencia_ListarPorSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/AgendaAnexoReferencia_ListarPorSucursalResponse" message="tns:IAgendaWCF_AgendaAnexoReferencia_ListarPorSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_LineaCredito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_LineaCredito" message="tns:IAgendaWCF_Agenda_LineaCredito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_LineaCreditoResponse" message="tns:IAgendaWCF_Agenda_LineaCredito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarContacto" message="tns:IAgendaWCF_Agenda_ListarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarContactoResponse" message="tns:IAgendaWCF_Agenda_ListarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BucarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_BucarProveedor" message="tns:IAgendaWCF_Agenda_BucarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_BucarProveedorResponse" message="tns:IAgendaWCF_Agenda_BucarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarProveedor" message="tns:IAgendaWCF_Agenda_ListarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarProveedorResponse" message="tns:IAgendaWCF_Agenda_ListarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarTransportista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarTransportista" message="tns:IAgendaWCF_Agenda_ListarTransportista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_ListarTransportistaResponse" message="tns:IAgendaWCF_Agenda_ListarTransportista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_RegistrarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_RegistrarProveedor" message="tns:IAgendaWCF_Agenda_RegistrarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgendaWCF/Agenda_RegistrarProveedorResponse" message="tns:IAgendaWCF_Agenda_RegistrarProveedor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAgendaWCF" type="tns:IAgendaWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Agenda_ListarCliente">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_ListarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarVendedor">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_ListarVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BuscarCliente">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_BuscarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarDireccionCliente">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarDireccionCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacen">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexo_ListarAlmacenCliente">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/AgendaAnexo_ListarAlmacenCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgendaAnexoReferencia_ListarPorSucursal">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/AgendaAnexoReferencia_ListarPorSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_LineaCredito">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_LineaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarContacto">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_ListarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_BucarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_BucarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_ListarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_ListarTransportista">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_ListarTransportista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Agenda_RegistrarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IAgendaWCF/Agenda_RegistrarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgendaWCF">
+    <wsdl:port name="BasicHttpBinding_IAgendaWCF" binding="tns:BasicHttpBinding_IAgendaWCF">
+      <soap:address location="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

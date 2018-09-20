@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UsuarioWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/UsuarioWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/UsuarioWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/UsuarioWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUsuarioWCF_Usuario_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_BuscarGenesys_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarGenesys" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_BuscarGenesys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BuscarGenesysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_CambiarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_CambiarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_CambiarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_CambiarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_ListarMenusPorUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ListarMenusPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_ListarMenusPorUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ListarMenusPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_ListarMenusNoAccedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ListarMenusNoAccedidos" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_ListarMenusNoAccedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ListarMenusNoAccedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Listar_Usuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Listar_Usuarios" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Usuario_Listar_Usuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_Listar_UsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Actualizar_Estado_Usuarios_General_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Estado_Usuarios_General" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Actualizar_Estado_Usuarios_General_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Estado_Usuarios_GeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Actualizar_Estado_Usuarios_Empresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Estado_Usuarios_Empresa" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioWCF_Actualizar_Estado_Usuarios_Empresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_Estado_Usuarios_EmpresaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUsuarioWCF">
+    <wsdl:operation name="Usuario_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_Buscar" message="tns:IUsuarioWCF_Usuario_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_BuscarResponse" message="tns:IUsuarioWCF_Usuario_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarGenesys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_BuscarGenesys" message="tns:IUsuarioWCF_Usuario_BuscarGenesys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_BuscarGenesysResponse" message="tns:IUsuarioWCF_Usuario_BuscarGenesys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_Registrar" message="tns:IUsuarioWCF_Usuario_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_RegistrarResponse" message="tns:IUsuarioWCF_Usuario_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_Actualizar" message="tns:IUsuarioWCF_Usuario_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_ActualizarResponse" message="tns:IUsuarioWCF_Usuario_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_CambiarContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_CambiarContrasena" message="tns:IUsuarioWCF_Usuario_CambiarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_CambiarContrasenaResponse" message="tns:IUsuarioWCF_Usuario_CambiarContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarMenusPorUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusPorUsuario" message="tns:IUsuarioWCF_Usuario_ListarMenusPorUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusPorUsuarioResponse" message="tns:IUsuarioWCF_Usuario_ListarMenusPorUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarMenusNoAccedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusNoAccedidos" message="tns:IUsuarioWCF_Usuario_ListarMenusNoAccedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusNoAccedidosResponse" message="tns:IUsuarioWCF_Usuario_ListarMenusNoAccedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Listar_Usuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_Listar_Usuarios" message="tns:IUsuarioWCF_Usuario_Listar_Usuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Usuario_Listar_UsuariosResponse" message="tns:IUsuarioWCF_Usuario_Listar_Usuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Estado_Usuarios_General">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_General" message="tns:IUsuarioWCF_Actualizar_Estado_Usuarios_General_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_GeneralResponse" message="tns:IUsuarioWCF_Actualizar_Estado_Usuarios_General_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Estado_Usuarios_Empresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_Empresa" message="tns:IUsuarioWCF_Actualizar_Estado_Usuarios_Empresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_EmpresaResponse" message="tns:IUsuarioWCF_Actualizar_Estado_Usuarios_Empresa_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUsuarioWCF" type="tns:IUsuarioWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Usuario_Buscar">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_BuscarGenesys">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_BuscarGenesys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_CambiarContrasena">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_CambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarMenusPorUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusPorUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_ListarMenusNoAccedidos">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_ListarMenusNoAccedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_Listar_Usuarios">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Usuario_Listar_Usuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Estado_Usuarios_General">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_General" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Estado_Usuarios_Empresa">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioWCF/Actualizar_Estado_Usuarios_Empresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuarioWCF">
+    <wsdl:port name="BasicHttpBinding_IUsuarioWCF" binding="tns:BasicHttpBinding_IUsuarioWCF">
+      <soap:address location="http://localhost:49648/UsuarioWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

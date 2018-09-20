@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EstadoCuentaWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://localhost:49648/EstadoCuentaWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxCliente" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LimiteCreditoxCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LimiteCreditoxCliente" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LimiteCreditoxCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LimiteCreditoxClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenCliente" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenVendedor" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenTotal_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenTotal" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarResumenTotal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarResumenTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VentasDiasCobranza_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VentasDiasCobranza" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VentasDiasCobranza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VentasDiasCobranzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMes" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMesCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMesCliente" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMesCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMesClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMesDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMesDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_VencidosMesDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_VencidosMesDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_Proyectado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxCliente_Proyectado" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_Proyectado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxCliente_ProyectadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxBI_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxBI" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxBI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxBIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxClienteBI_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxClienteBI" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarxClienteBI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarxClienteBIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ReporteProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ReporteProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ReporteProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ReporteProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ClienteBI_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ClienteBI" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ClienteBI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ClienteBIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_GetCicloLetras_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCicloLetras" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_GetCicloLetras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCicloLetrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_GraficoPie_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_GraficoPie" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_GraficoPie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_GraficoPieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LetrasPorEstados_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LetrasPorEstados" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LetrasPorEstados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LetrasPorEstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LetrasVencPorPlazo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LetrasVencPorPlazo" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_LetrasVencPorPlazo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_LetrasVencPorPlazoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_FacturasVencPorPlazo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_FacturasVencPorPlazo" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_FacturasVencPorPlazo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_FacturasVencPorPlazoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_Listar_Legal_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Listar_Legal" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_Listar_Legal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Listar_LegalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_Listar_Provision_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Listar_Provision" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_Listar_Provision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_Listar_ProvisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarAprobacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarAprobacion" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_EstadoCuenta_ListarAprobacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoCuenta_ListarAprobacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_RiesgoCliente_RegistrarBulkCopy_InputMessage">
+    <wsdl:part name="parameters" element="tns:RiesgoCliente_RegistrarBulkCopy" />
+  </wsdl:message>
+  <wsdl:message name="IEstadoCuentaWCF_RiesgoCliente_RegistrarBulkCopy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RiesgoCliente_RegistrarBulkCopyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEstadoCuentaWCF">
+    <wsdl:operation name="EstadoCuenta_ListarxCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxCliente" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxClienteResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LimiteCreditoxCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LimiteCreditoxCliente" message="tns:IEstadoCuentaWCF_EstadoCuenta_LimiteCreditoxCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LimiteCreditoxClienteResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_LimiteCreditoxCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenCliente" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenClienteResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenVendedor" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenVendedorResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenTotal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenTotal" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenTotal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenTotalResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarResumenTotal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VentasDiasCobranza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VentasDiasCobranza" message="tns:IEstadoCuentaWCF_EstadoCuenta_VentasDiasCobranza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VentasDiasCobranzaResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_VentasDiasCobranza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMes" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMesCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesCliente" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMesCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesClienteResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMesCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMesDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesDetalle" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMesDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesDetalleResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_VencidosMesDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxCliente_Proyectado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxCliente_Proyectado" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_Proyectado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxCliente_ProyectadoResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxCliente_Proyectado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxBI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxBI" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxBI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxBIResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxBI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxClienteBI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxClienteBI" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxClienteBI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxClienteBIResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarxClienteBI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ReporteProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ReporteProveedor" message="tns:IEstadoCuentaWCF_EstadoCuenta_ReporteProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ReporteProveedorResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ReporteProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ClienteBI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ClienteBI" message="tns:IEstadoCuentaWCF_EstadoCuenta_ClienteBI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ClienteBIResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ClienteBI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCicloLetras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/GetCicloLetras" message="tns:IEstadoCuentaWCF_GetCicloLetras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/GetCicloLetrasResponse" message="tns:IEstadoCuentaWCF_GetCicloLetras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_GraficoPie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_GraficoPie" message="tns:IEstadoCuentaWCF_EstadoCuenta_GraficoPie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_GraficoPieResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_GraficoPie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LetrasPorEstados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasPorEstados" message="tns:IEstadoCuentaWCF_EstadoCuenta_LetrasPorEstados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasPorEstadosResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_LetrasPorEstados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LetrasVencPorPlazo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasVencPorPlazo" message="tns:IEstadoCuentaWCF_EstadoCuenta_LetrasVencPorPlazo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasVencPorPlazoResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_LetrasVencPorPlazo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_FacturasVencPorPlazo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_FacturasVencPorPlazo" message="tns:IEstadoCuentaWCF_EstadoCuenta_FacturasVencPorPlazo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_FacturasVencPorPlazoResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_FacturasVencPorPlazo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Listar_Legal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_Legal" message="tns:IEstadoCuentaWCF_EstadoCuenta_Listar_Legal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_LegalResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_Listar_Legal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Listar_Provision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_Provision" message="tns:IEstadoCuentaWCF_EstadoCuenta_Listar_Provision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_ProvisionResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_Listar_Provision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarAprobacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarAprobacion" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarAprobacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarAprobacionResponse" message="tns:IEstadoCuentaWCF_EstadoCuenta_ListarAprobacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RiesgoCliente_RegistrarBulkCopy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/RiesgoCliente_RegistrarBulkCopy" message="tns:IEstadoCuentaWCF_RiesgoCliente_RegistrarBulkCopy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEstadoCuentaWCF/RiesgoCliente_RegistrarBulkCopyResponse" message="tns:IEstadoCuentaWCF_RiesgoCliente_RegistrarBulkCopy_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEstadoCuentaWCF" type="tns:IEstadoCuentaWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EstadoCuenta_ListarxCliente">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LimiteCreditoxCliente">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LimiteCreditoxCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenCliente">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenVendedor">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarResumenTotal">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarResumenTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VentasDiasCobranza">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VentasDiasCobranza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMes">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMesCliente">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_VencidosMesDetalle">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_VencidosMesDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxCliente_Proyectado">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxCliente_Proyectado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxBI">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxBI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarxClienteBI">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarxClienteBI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ReporteProveedor">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ReporteProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ClienteBI">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ClienteBI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCicloLetras">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/GetCicloLetras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_GraficoPie">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_GraficoPie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LetrasPorEstados">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasPorEstados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_LetrasVencPorPlazo">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_LetrasVencPorPlazo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_FacturasVencPorPlazo">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_FacturasVencPorPlazo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Listar_Legal">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_Legal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_Listar_Provision">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_Listar_Provision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoCuenta_ListarAprobacion">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/EstadoCuenta_ListarAprobacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RiesgoCliente_RegistrarBulkCopy">
+      <soap:operation soapAction="http://tempuri.org/IEstadoCuentaWCF/RiesgoCliente_RegistrarBulkCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EstadoCuentaWCF">
+    <wsdl:port name="BasicHttpBinding_IEstadoCuentaWCF" binding="tns:BasicHttpBinding_IEstadoCuentaWCF">
+      <soap:address location="http://localhost:49648/EstadoCuentaWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

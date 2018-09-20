@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01a3462a-8a60-4d3e-a727-0d19ffafc3c5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioReversiones.xsd" MetadataType="Schema" ID="0c3fef79-35d2-4c60-a4ff-7ad544d85d3e" SourceId="1" SourceUrl="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioReversiones.wsdl" MetadataType="Wsdl" ID="cf19858e-c272-4fb5-b206-87de211c21c7" SourceId="1" SourceUrl="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ServicioReversiones.disco" MetadataType="Disco" ID="26deb845-5d7d-48f0-af4a-0a76de95d202" SourceId="1" SourceUrl="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc?disco" />
+    <MetadataFile FileName="ServicioReversiones1.wsdl" MetadataType="Wsdl" ID="3815046e-d9f3-422e-a1a6-91b16f86262a" SourceId="1" SourceUrl="http://10.10.1.30/WS_eCica/Reversiones/ServicioReversiones.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

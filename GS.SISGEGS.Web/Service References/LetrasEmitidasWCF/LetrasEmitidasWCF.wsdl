@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LetrasEmitidasWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://localhost:49648/LetrasEmitidasWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Cabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_Cabecera" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Cabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_CabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Documentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_Documentos" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Documentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_DocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Letras_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_Letras" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasEmitidas_Letras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasEmitidas_LetrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicos" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_NumerosUnicos_RegistrarBulkCopy_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumerosUnicos_RegistrarBulkCopy" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_NumerosUnicos_RegistrarBulkCopy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumerosUnicos_RegistrarBulkCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicos_Insertar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicos_InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_NumerosUnicos_Registrar_Proceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumerosUnicos_Registrar_Proceso" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_NumerosUnicos_Registrar_Proceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumerosUnicos_Registrar_ProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicos_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesoLetras_NumerosUnicos_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasElectronicas_Individual_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasElectronicas_Individual" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasElectronicas_Individual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasElectronicas_IndividualResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasElectronicas_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasElectronicas_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_LetrasElectronicas_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetrasElectronicas_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Registrar_LogLetrasDescargadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_LogLetrasDescargadas" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Registrar_LogLetrasDescargadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_LogLetrasDescargadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_CanjeAutomaticoLetras_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanjeAutomaticoLetras_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_CanjeAutomaticoLetras_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanjeAutomaticoLetras_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_CanjeAutomaticoLetras_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanjeAutomaticoLetras_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_CanjeAutomaticoLetras_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanjeAutomaticoLetras_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Financiamiento_CA_Letras_General_InputMessage">
+    <wsdl:part name="parameters" element="tns:Financiamiento_CA_Letras_General" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Financiamiento_CA_Letras_General_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Financiamiento_CA_Letras_GeneralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Estado_Letras_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Estado_Letras_Listar" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Estado_Letras_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Estado_Letras_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_InputMessage">
+    <wsdl:part name="parameters" element="tns:Porcentaje_Avance_Letras_Lista" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Porcentaje_Avance_Letras_ListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_x_Zonas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Porcentaje_Avance_Letras_Lista_x_Zonas" />
+  </wsdl:message>
+  <wsdl:message name="ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_x_Zonas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Porcentaje_Avance_Letras_Lista_x_ZonasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILetrasEmitidasWCF">
+    <wsdl:operation name="LetrasEmitidas_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Listar" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_ListarResponse" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Cabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Cabecera" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Cabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_CabeceraResponse" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Cabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Documentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Documentos" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Documentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_DocumentosResponse" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Documentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Letras">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Letras" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Letras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_LetrasResponse" message="tns:ILetrasEmitidasWCF_LetrasEmitidas_Letras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicosResponse" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumerosUnicos_RegistrarBulkCopy">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_RegistrarBulkCopy" message="tns:ILetrasEmitidasWCF_NumerosUnicos_RegistrarBulkCopy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_RegistrarBulkCopyResponse" message="tns:ILetrasEmitidasWCF_NumerosUnicos_RegistrarBulkCopy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos_Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_Insertar" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_InsertarResponse" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumerosUnicos_Registrar_Proceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_Registrar_Proceso" message="tns:ILetrasEmitidasWCF_NumerosUnicos_Registrar_Proceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_Registrar_ProcesoResponse" message="tns:ILetrasEmitidasWCF_NumerosUnicos_Registrar_Proceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_Listar" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_ListarResponse" message="tns:ILetrasEmitidasWCF_ProcesoLetras_NumerosUnicos_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetrasElectronicas_Individual">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_Individual" message="tns:ILetrasEmitidasWCF_LetrasElectronicas_Individual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_IndividualResponse" message="tns:ILetrasEmitidasWCF_LetrasElectronicas_Individual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetrasElectronicas_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_Listar" message="tns:ILetrasEmitidasWCF_LetrasElectronicas_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_ListarResponse" message="tns:ILetrasEmitidasWCF_LetrasElectronicas_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_LogLetrasDescargadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Registrar_LogLetrasDescargadas" message="tns:ILetrasEmitidasWCF_Registrar_LogLetrasDescargadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Registrar_LogLetrasDescargadasResponse" message="tns:ILetrasEmitidasWCF_Registrar_LogLetrasDescargadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanjeAutomaticoLetras_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_Listar" message="tns:ILetrasEmitidasWCF_CanjeAutomaticoLetras_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_ListarResponse" message="tns:ILetrasEmitidasWCF_CanjeAutomaticoLetras_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanjeAutomaticoLetras_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_Registrar" message="tns:ILetrasEmitidasWCF_CanjeAutomaticoLetras_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_RegistrarResponse" message="tns:ILetrasEmitidasWCF_CanjeAutomaticoLetras_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Financiamiento_CA_Letras_General">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Financiamiento_CA_Letras_General" message="tns:ILetrasEmitidasWCF_Financiamiento_CA_Letras_General_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Financiamiento_CA_Letras_GeneralResponse" message="tns:ILetrasEmitidasWCF_Financiamiento_CA_Letras_General_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Letras_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Estado_Letras_Listar" message="tns:ILetrasEmitidasWCF_Estado_Letras_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Estado_Letras_ListarResponse" message="tns:ILetrasEmitidasWCF_Estado_Letras_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Porcentaje_Avance_Letras_Lista">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_Lista" message="tns:ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_ListaResponse" message="tns:ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Porcentaje_Avance_Letras_Lista_x_Zonas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_Lista_x_Zonas" message="tns:ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_x_Zonas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_Lista_x_ZonasResponse" message="tns:ILetrasEmitidasWCF_Porcentaje_Avance_Letras_Lista_x_Zonas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILetrasEmitidasWCF" type="tns:ILetrasEmitidasWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LetrasEmitidas_Listar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Cabecera">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Cabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Documentos">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Documentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetrasEmitidas_Letras">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasEmitidas_Letras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumerosUnicos_RegistrarBulkCopy">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_RegistrarBulkCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos_Insertar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumerosUnicos_Registrar_Proceso">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/NumerosUnicos_Registrar_Proceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesoLetras_NumerosUnicos_Listar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/ProcesoLetras_NumerosUnicos_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetrasElectronicas_Individual">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_Individual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetrasElectronicas_Listar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/LetrasElectronicas_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_LogLetrasDescargadas">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/Registrar_LogLetrasDescargadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanjeAutomaticoLetras_Listar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanjeAutomaticoLetras_Registrar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/CanjeAutomaticoLetras_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Financiamiento_CA_Letras_General">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/Financiamiento_CA_Letras_General" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_Letras_Listar">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/Estado_Letras_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Porcentaje_Avance_Letras_Lista">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_Lista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Porcentaje_Avance_Letras_Lista_x_Zonas">
+      <soap:operation soapAction="http://tempuri.org/ILetrasEmitidasWCF/Porcentaje_Avance_Letras_Lista_x_Zonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LetrasEmitidasWCF">
+    <wsdl:port name="BasicHttpBinding_ILetrasEmitidasWCF" binding="tns:BasicHttpBinding_ILetrasEmitidasWCF">
+      <soap:address location="http://localhost:49648/LetrasEmitidasWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PedidoWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/PedidoWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/PedidoWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/PedidoWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://localhost:49648/PedidoWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPedidoWCF_Pedido_ListarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_ListarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_ListarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_ListarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_BuscarCabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_BuscarCabecera" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_BuscarCabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_BuscarCabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_BuscarDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_BuscarDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_BuscarDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_BuscarDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Aprobar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_Aprobar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_Aprobar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_AprobarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_DesAprobar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_DesAprobar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_Pedido_DesAprobar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pedido_DesAprobarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_gsDocVentaAprobacion_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsDocVentaAprobacion_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_gsDocVentaAprobacion_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsDocVentaAprobacion_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_VerificarExisteDocVenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarExisteDocVenta" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_VerificarExisteDocVenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarExisteDocVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_PedidoLetras_Detalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:PedidoLetras_Detalle" />
+  </wsdl:message>
+  <wsdl:message name="IPedidoWCF_PedidoLetras_Detalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PedidoLetras_DetalleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPedidoWCF">
+    <wsdl:operation name="Pedido_ListarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_ListarTipo" message="tns:IPedidoWCF_Pedido_ListarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_ListarTipoResponse" message="tns:IPedidoWCF_Pedido_ListarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_Listar" message="tns:IPedidoWCF_Pedido_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_ListarResponse" message="tns:IPedidoWCF_Pedido_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_Registrar" message="tns:IPedidoWCF_Pedido_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_RegistrarResponse" message="tns:IPedidoWCF_Pedido_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_BuscarCabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_BuscarCabecera" message="tns:IPedidoWCF_Pedido_BuscarCabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_BuscarCabeceraResponse" message="tns:IPedidoWCF_Pedido_BuscarCabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_BuscarDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_BuscarDetalle" message="tns:IPedidoWCF_Pedido_BuscarDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_BuscarDetalleResponse" message="tns:IPedidoWCF_Pedido_BuscarDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_Eliminar" message="tns:IPedidoWCF_Pedido_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_EliminarResponse" message="tns:IPedidoWCF_Pedido_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Aprobar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_Aprobar" message="tns:IPedidoWCF_Pedido_Aprobar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_AprobarResponse" message="tns:IPedidoWCF_Pedido_Aprobar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_DesAprobar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_DesAprobar" message="tns:IPedidoWCF_Pedido_DesAprobar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/Pedido_DesAprobarResponse" message="tns:IPedidoWCF_Pedido_DesAprobar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsDocVentaAprobacion_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/gsDocVentaAprobacion_Registrar" message="tns:IPedidoWCF_gsDocVentaAprobacion_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/gsDocVentaAprobacion_RegistrarResponse" message="tns:IPedidoWCF_gsDocVentaAprobacion_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarExisteDocVenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/VerificarExisteDocVenta" message="tns:IPedidoWCF_VerificarExisteDocVenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/VerificarExisteDocVentaResponse" message="tns:IPedidoWCF_VerificarExisteDocVenta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PedidoLetras_Detalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPedidoWCF/PedidoLetras_Detalle" message="tns:IPedidoWCF_PedidoLetras_Detalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPedidoWCF/PedidoLetras_DetalleResponse" message="tns:IPedidoWCF_PedidoLetras_Detalle_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPedidoWCF" type="tns:IPedidoWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Pedido_ListarTipo">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_ListarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Listar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_BuscarCabecera">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_BuscarCabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_BuscarDetalle">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_BuscarDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_Aprobar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_Aprobar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pedido_DesAprobar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/Pedido_DesAprobar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsDocVentaAprobacion_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/gsDocVentaAprobacion_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarExisteDocVenta">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/VerificarExisteDocVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PedidoLetras_Detalle">
+      <soap:operation soapAction="http://tempuri.org/IPedidoWCF/PedidoLetras_Detalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PedidoWCF">
+    <wsdl:port name="BasicHttpBinding_IPedidoWCF" binding="tns:BasicHttpBinding_IPedidoWCF">
+      <soap:address location="http://localhost:49648/PedidoWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

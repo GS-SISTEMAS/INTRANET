@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="488a9222-8bc4-4d8a-ba60-87a64e183a0d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MonedaWCF3.xsd" MetadataType="Schema" ID="9f73cfe4-4f41-46bc-b5c5-18917579b6dc" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MonedaWCF4.xsd" MetadataType="Schema" ID="5dd443d2-4d9b-42f9-b1c2-41d573e3f7b5" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MonedaWCF5.xsd" MetadataType="Schema" ID="d03709e3-e86a-4c14-aa08-745543624406" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MonedaWCF1.wsdl" MetadataType="Wsdl" ID="887d8c7d-40f7-4c77-af65-f422ed082682" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc?wsdl" />
+    <MetadataFile FileName="MonedaWCF1.disco" MetadataType="Disco" ID="68e4c194-1e50-483a-b848-26550573f398" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/MonedaWCF.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

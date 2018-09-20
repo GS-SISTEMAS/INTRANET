@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.BE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVendedorTop5BE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VendedorTop5BE" nillable="true" type="tns:VendedorTop5BE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVendedorTop5BE" nillable="true" type="tns:ArrayOfVendedorTop5BE" />
+  <xs:complexType name="VendedorTop5BE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ranking" type="xs:int" />
+      <xs:element minOccurs="0" name="Rentabilidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Updown" type="xs:int" />
+      <xs:element minOccurs="0" name="Valorventa" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Vendedor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendedorTop5BE" nillable="true" type="tns:VendedorTop5BE" />
+  <xs:complexType name="ArrayOfNotaCreditoKPIBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NotaCreditoKPIBE" nillable="true" type="tns:NotaCreditoKPIBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotaCreditoKPIBE" nillable="true" type="tns:ArrayOfNotaCreditoKPIBE" />
+  <xs:complexType name="NotaCreditoKPIBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Periodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalMes" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotaCreditoKPIBE" nillable="true" type="tns:NotaCreditoKPIBE" />
+  <xs:complexType name="ArrayOfDocVentaDev_KPIMotivoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocVentaDev_KPIMotivoBE" nillable="true" type="tns:DocVentaDev_KPIMotivoBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocVentaDev_KPIMotivoBE" nillable="true" type="tns:ArrayOfDocVentaDev_KPIMotivoBE" />
+  <xs:complexType name="DocVentaDev_KPIMotivoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Porcentaje" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocVentaDev_KPIMotivoBE" nillable="true" type="tns:DocVentaDev_KPIMotivoBE" />
+</xs:schema>

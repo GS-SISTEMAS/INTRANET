@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dc6586dc-6148-482a-b433-cf6144af9cc6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/MateriaContratoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MateriaContratoWCF.xsd" MetadataType="Schema" ID="19956be1-04d1-4764-9eeb-8fcb3d40143f" SourceId="1" SourceUrl="http://localhost:49648/MateriaContratoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="MateriaContratoWCF.disco" MetadataType="Disco" ID="50d5df8b-5eec-403c-821b-14f9fba7d2f7" SourceId="1" SourceUrl="http://localhost:49648/MateriaContratoWCF.svc?disco" />
+    <MetadataFile FileName="MateriaContratoWCF1.xsd" MetadataType="Schema" ID="e2754f65-497a-4f24-b46f-f41b84cdbdcc" SourceId="1" SourceUrl="http://localhost:49648/MateriaContratoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MateriaContratoWCF.wsdl" MetadataType="Wsdl" ID="9fe8a97c-8d1b-4c77-9dab-cd70273b0ade" SourceId="1" SourceUrl="http://localhost:49648/MateriaContratoWCF.svc?wsdl" />
+    <MetadataFile FileName="MateriaContratoWCF2.xsd" MetadataType="Schema" ID="3da6254a-52b9-4a47-bb66-cc498ea4c638" SourceId="1" SourceUrl="http://localhost:49648/MateriaContratoWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

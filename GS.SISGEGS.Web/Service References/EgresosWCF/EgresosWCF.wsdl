@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EgresosWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/EgresosWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/EgresosWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/EgresosWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_ListarCajaChica_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_ListarCajaChica" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_ListarCajaChica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_ListarCajaChicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosUsuario_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosUsuario_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosUsuario_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosUsuario_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosAprobar_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosAprobar_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosAprobar_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosAprobar_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Aprobar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_Aprobar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_Aprobar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_AprobarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_NaturalezaGasto_ListarImputables_InputMessage">
+    <wsdl:part name="parameters" element="tns:NaturalezaGasto_ListarImputables" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_NaturalezaGasto_ListarImputables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NaturalezaGasto_ListarImputablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_UnidadGestion_ListarImputables_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadGestion_ListarImputables" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_UnidadGestion_ListarImputables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadGestion_ListarImputablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_UnidadProyecto_ListarImputables_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadProyecto_ListarImputables" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_UnidadProyecto_ListarImputables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnidadProyecto_ListarImputablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_CentroCosto_ListarImputables_InputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCosto_ListarImputables" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_CentroCosto_ListarImputables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CentroCosto_ListarImputablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_Documento_ListarDocCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocCompra" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_Documento_ListarDocCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarDocCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_Documento_ListarEgresosVarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarEgresosVarios" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_Documento_ListarEgresosVarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Documento_ListarEgresosVariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_RegistrarEgresosVarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEgresosVarios" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_RegistrarEgresosVarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarEgresosVariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_ListarCajaChica_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_ListarCajaChica" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_ListarCajaChica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_ListarCajaChicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_FlujoPermisoEditar_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlujoPermisoEditar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_FlujoPermisoEditar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlujoPermisoEditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_AprobarEgresoVariosFlujo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarEgresoVariosFlujo" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_AprobarEgresoVariosFlujo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AprobarEgresoVariosFlujoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresoCajaFlujo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresoCajaFlujo" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresoCajaFlujo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresoCajaFlujoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosInt_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosInt_EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_IndicadorEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:IndicadorEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_IndicadorEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IndicadorEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_RegistrarGenesys_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_RegistrarGenesys" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVarios_RegistrarGenesys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVarios_RegistrarGenesysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosFechaInicio_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosFechaInicio_Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_EgresosVariosFechaInicio_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EgresosVariosFechaInicio_ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarObservaciones_Usuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarObservaciones_Usuario" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarObservaciones_Usuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarObservaciones_UsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarDetalleObservaciones_Usuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleObservaciones_Usuario" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarDetalleObservaciones_Usuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDetalleObservaciones_UsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarIndicadorNoEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarIndicadorNoEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IEgresosWCF_ListarIndicadorNoEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarIndicadorNoEnvioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEgresosWCF">
+    <wsdl:operation name="EgresosVarios_ListarCajaChica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_ListarCajaChica" message="tns:IEgresosWCF_EgresosVarios_ListarCajaChica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_ListarCajaChicaResponse" message="tns:IEgresosWCF_EgresosVarios_ListarCajaChica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_Buscar" message="tns:IEgresosWCF_EgresosVarios_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_BuscarResponse" message="tns:IEgresosWCF_EgresosVarios_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_Registrar" message="tns:IEgresosWCF_EgresosVarios_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_RegistrarResponse" message="tns:IEgresosWCF_EgresosVarios_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_Eliminar" message="tns:IEgresosWCF_EgresosVarios_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_EliminarResponse" message="tns:IEgresosWCF_EgresosVarios_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosUsuario_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosUsuario_Buscar" message="tns:IEgresosWCF_EgresosVariosUsuario_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosUsuario_BuscarResponse" message="tns:IEgresosWCF_EgresosVariosUsuario_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosAprobar_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosAprobar_Registrar" message="tns:IEgresosWCF_EgresosVariosAprobar_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosAprobar_RegistrarResponse" message="tns:IEgresosWCF_EgresosVariosAprobar_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Aprobar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_Aprobar" message="tns:IEgresosWCF_EgresosVarios_Aprobar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_AprobarResponse" message="tns:IEgresosWCF_EgresosVarios_Aprobar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NaturalezaGasto_ListarImputables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/NaturalezaGasto_ListarImputables" message="tns:IEgresosWCF_NaturalezaGasto_ListarImputables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/NaturalezaGasto_ListarImputablesResponse" message="tns:IEgresosWCF_NaturalezaGasto_ListarImputables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnidadGestion_ListarImputables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/UnidadGestion_ListarImputables" message="tns:IEgresosWCF_UnidadGestion_ListarImputables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/UnidadGestion_ListarImputablesResponse" message="tns:IEgresosWCF_UnidadGestion_ListarImputables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnidadProyecto_ListarImputables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/UnidadProyecto_ListarImputables" message="tns:IEgresosWCF_UnidadProyecto_ListarImputables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/UnidadProyecto_ListarImputablesResponse" message="tns:IEgresosWCF_UnidadProyecto_ListarImputables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CentroCosto_ListarImputables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/CentroCosto_ListarImputables" message="tns:IEgresosWCF_CentroCosto_ListarImputables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/CentroCosto_ListarImputablesResponse" message="tns:IEgresosWCF_CentroCosto_ListarImputables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarDocCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/Documento_ListarDocCompra" message="tns:IEgresosWCF_Documento_ListarDocCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/Documento_ListarDocCompraResponse" message="tns:IEgresosWCF_Documento_ListarDocCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarEgresosVarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/Documento_ListarEgresosVarios" message="tns:IEgresosWCF_Documento_ListarEgresosVarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/Documento_ListarEgresosVariosResponse" message="tns:IEgresosWCF_Documento_ListarEgresosVarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEgresosVarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/RegistrarEgresosVarios" message="tns:IEgresosWCF_RegistrarEgresosVarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/RegistrarEgresosVariosResponse" message="tns:IEgresosWCF_RegistrarEgresosVarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_ListarCajaChica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_ListarCajaChica" message="tns:IEgresosWCF_EgresosVariosInt_ListarCajaChica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_ListarCajaChicaResponse" message="tns:IEgresosWCF_EgresosVariosInt_ListarCajaChica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_Buscar" message="tns:IEgresosWCF_EgresosVariosInt_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_BuscarResponse" message="tns:IEgresosWCF_EgresosVariosInt_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FlujoPermisoEditar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/FlujoPermisoEditar" message="tns:IEgresosWCF_FlujoPermisoEditar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/FlujoPermisoEditarResponse" message="tns:IEgresosWCF_FlujoPermisoEditar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AprobarEgresoVariosFlujo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/AprobarEgresoVariosFlujo" message="tns:IEgresosWCF_AprobarEgresoVariosFlujo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/AprobarEgresoVariosFlujoResponse" message="tns:IEgresosWCF_AprobarEgresoVariosFlujo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresoCajaFlujo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresoCajaFlujo" message="tns:IEgresosWCF_EgresoCajaFlujo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresoCajaFlujoResponse" message="tns:IEgresosWCF_EgresoCajaFlujo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_Eliminar" message="tns:IEgresosWCF_EgresosVariosInt_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosInt_EliminarResponse" message="tns:IEgresosWCF_EgresosVariosInt_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IndicadorEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/IndicadorEnvio" message="tns:IEgresosWCF_IndicadorEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/IndicadorEnvioResponse" message="tns:IEgresosWCF_IndicadorEnvio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_RegistrarGenesys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_RegistrarGenesys" message="tns:IEgresosWCF_EgresosVarios_RegistrarGenesys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVarios_RegistrarGenesysResponse" message="tns:IEgresosWCF_EgresosVarios_RegistrarGenesys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosFechaInicio_Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosFechaInicio_Obtener" message="tns:IEgresosWCF_EgresosVariosFechaInicio_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/EgresosVariosFechaInicio_ObtenerResponse" message="tns:IEgresosWCF_EgresosVariosFechaInicio_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarObservaciones_Usuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/ListarObservaciones_Usuario" message="tns:IEgresosWCF_ListarObservaciones_Usuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/ListarObservaciones_UsuarioResponse" message="tns:IEgresosWCF_ListarObservaciones_Usuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleObservaciones_Usuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/ListarDetalleObservaciones_Usuario" message="tns:IEgresosWCF_ListarDetalleObservaciones_Usuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/ListarDetalleObservaciones_UsuarioResponse" message="tns:IEgresosWCF_ListarDetalleObservaciones_Usuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarIndicadorNoEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEgresosWCF/ListarIndicadorNoEnvio" message="tns:IEgresosWCF_ListarIndicadorNoEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEgresosWCF/ListarIndicadorNoEnvioResponse" message="tns:IEgresosWCF_ListarIndicadorNoEnvio_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEgresosWCF" type="tns:IEgresosWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EgresosVarios_ListarCajaChica">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_ListarCajaChica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Buscar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosUsuario_Buscar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosUsuario_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosAprobar_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosAprobar_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_Aprobar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_Aprobar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NaturalezaGasto_ListarImputables">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/NaturalezaGasto_ListarImputables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnidadGestion_ListarImputables">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/UnidadGestion_ListarImputables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnidadProyecto_ListarImputables">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/UnidadProyecto_ListarImputables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CentroCosto_ListarImputables">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/CentroCosto_ListarImputables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarDocCompra">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/Documento_ListarDocCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Documento_ListarEgresosVarios">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/Documento_ListarEgresosVarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEgresosVarios">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/RegistrarEgresosVarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_ListarCajaChica">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosInt_ListarCajaChica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_Buscar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosInt_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlujoPermisoEditar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/FlujoPermisoEditar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AprobarEgresoVariosFlujo">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/AprobarEgresoVariosFlujo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresoCajaFlujo">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresoCajaFlujo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosInt_Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosInt_Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IndicadorEnvio">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/IndicadorEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVarios_RegistrarGenesys">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVarios_RegistrarGenesys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EgresosVariosFechaInicio_Obtener">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/EgresosVariosFechaInicio_Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarObservaciones_Usuario">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/ListarObservaciones_Usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDetalleObservaciones_Usuario">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/ListarDetalleObservaciones_Usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarIndicadorNoEnvio">
+      <soap:operation soapAction="http://tempuri.org/IEgresosWCF/ListarIndicadorNoEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EgresosWCF">
+    <wsdl:port name="BasicHttpBinding_IEgresosWCF" binding="tns:BasicHttpBinding_IEgresosWCF">
+      <soap:address location="http://localhost:49648/EgresosWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

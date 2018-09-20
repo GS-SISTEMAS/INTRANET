@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ComisionWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/ComisionWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/ComisionWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/ComisionWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IComisionWCF_Reporte_Cancelaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_Cancelaciones" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Reporte_Cancelaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reporte_CancelacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_ListarTotal_InputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_ListarTotal" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_ListarTotal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_ListarTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_Buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_Buscar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_Buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Personal_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Personal_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonaPersonal_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonaPersonal_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonaPersonal_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonaPersonal_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Zonas_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Zonas_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Zona_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zona_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Zona_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zona_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonasComision_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasComision_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonasComision_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasComision_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonasComision_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasComision_Insert" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_ZonasComision_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasComision_InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_CargoRH_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargoRH_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_CargoRH_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargoRH_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Vendedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_Vendedores" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Vendedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_VendedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Jefaturas_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_Jefaturas" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Jefaturas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_JefaturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_combo_Reporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:combo_Reporte" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_combo_Reporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:combo_ReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Reportes_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reportes_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Reportes_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Reportes_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Promotores_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Promotores_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_Promotores_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Promotores_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsAgenda_UpdateZona_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsAgenda_UpdateZona" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsAgenda_UpdateZona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsAgenda_UpdateZonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Promotores_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_Promotores" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Promotores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_PromotoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Semillas_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_Semillas" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_gsComisiones_Semillas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsComisiones_SemillasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_PeriodoComision_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PeriodoComision_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IComisionWCF_PeriodoComision_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PeriodoComision_ListarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IComisionWCF">
+    <wsdl:operation name="Reporte_Cancelaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Reporte_Cancelaciones" message="tns:IComisionWCF_Reporte_Cancelaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Reporte_CancelacionesResponse" message="tns:IComisionWCF_Reporte_Cancelaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Personal_ListarTotal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Personal_ListarTotal" message="tns:IComisionWCF_Personal_ListarTotal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Personal_ListarTotalResponse" message="tns:IComisionWCF_Personal_ListarTotal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Personal_Buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Personal_Buscar" message="tns:IComisionWCF_Personal_Buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Personal_BuscarResponse" message="tns:IComisionWCF_Personal_Buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Personal_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Personal_Registrar" message="tns:IComisionWCF_Personal_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Personal_RegistrarResponse" message="tns:IComisionWCF_Personal_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonaPersonal_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/ZonaPersonal_Listar" message="tns:IComisionWCF_ZonaPersonal_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/ZonaPersonal_ListarResponse" message="tns:IComisionWCF_ZonaPersonal_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Zonas_Listar" message="tns:IComisionWCF_Zonas_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Zonas_ListarResponse" message="tns:IComisionWCF_Zonas_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zona_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Zona_Registrar" message="tns:IComisionWCF_Zona_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Zona_RegistrarResponse" message="tns:IComisionWCF_Zona_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonasComision_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/ZonasComision_Listar" message="tns:IComisionWCF_ZonasComision_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/ZonasComision_ListarResponse" message="tns:IComisionWCF_ZonasComision_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonasComision_Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/ZonasComision_Insert" message="tns:IComisionWCF_ZonasComision_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/ZonasComision_InsertResponse" message="tns:IComisionWCF_ZonasComision_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargoRH_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/CargoRH_Listar" message="tns:IComisionWCF_CargoRH_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/CargoRH_ListarResponse" message="tns:IComisionWCF_CargoRH_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Vendedores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_Vendedores" message="tns:IComisionWCF_gsComisiones_Vendedores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_VendedoresResponse" message="tns:IComisionWCF_gsComisiones_Vendedores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Jefaturas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_Jefaturas" message="tns:IComisionWCF_gsComisiones_Jefaturas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_JefaturasResponse" message="tns:IComisionWCF_gsComisiones_Jefaturas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="combo_Reporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/combo_Reporte" message="tns:IComisionWCF_combo_Reporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/combo_ReporteResponse" message="tns:IComisionWCF_combo_Reporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reportes_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Reportes_Listar" message="tns:IComisionWCF_Reportes_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Reportes_ListarResponse" message="tns:IComisionWCF_Reportes_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Promotores_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/Promotores_Listar" message="tns:IComisionWCF_Promotores_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/Promotores_ListarResponse" message="tns:IComisionWCF_Promotores_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsAgenda_UpdateZona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/gsAgenda_UpdateZona" message="tns:IComisionWCF_gsAgenda_UpdateZona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/gsAgenda_UpdateZonaResponse" message="tns:IComisionWCF_gsAgenda_UpdateZona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Promotores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_Promotores" message="tns:IComisionWCF_gsComisiones_Promotores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_PromotoresResponse" message="tns:IComisionWCF_gsComisiones_Promotores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Semillas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_Semillas" message="tns:IComisionWCF_gsComisiones_Semillas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/gsComisiones_SemillasResponse" message="tns:IComisionWCF_gsComisiones_Semillas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PeriodoComision_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComisionWCF/PeriodoComision_Listar" message="tns:IComisionWCF_PeriodoComision_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComisionWCF/PeriodoComision_ListarResponse" message="tns:IComisionWCF_PeriodoComision_Listar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IComisionWCF" type="tns:IComisionWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Reporte_Cancelaciones">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Reporte_Cancelaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Personal_ListarTotal">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Personal_ListarTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Personal_Buscar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Personal_Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Personal_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Personal_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonaPersonal_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/ZonaPersonal_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Zonas_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zona_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Zona_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonasComision_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/ZonasComision_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonasComision_Insert">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/ZonasComision_Insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargoRH_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/CargoRH_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Vendedores">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/gsComisiones_Vendedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Jefaturas">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/gsComisiones_Jefaturas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="combo_Reporte">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/combo_Reporte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reportes_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Reportes_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promotores_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/Promotores_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsAgenda_UpdateZona">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/gsAgenda_UpdateZona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Promotores">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/gsComisiones_Promotores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsComisiones_Semillas">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/gsComisiones_Semillas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PeriodoComision_Listar">
+      <soap:operation soapAction="http://tempuri.org/IComisionWCF/PeriodoComision_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ComisionWCF">
+    <wsdl:port name="BasicHttpBinding_IComisionWCF" binding="tns:BasicHttpBinding_IComisionWCF">
+      <soap:address location="http://localhost:49648/ComisionWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

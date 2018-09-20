@@ -1,0 +1,150 @@
+﻿body {
+    height:660px;
+}
+
+.mensajeError {
+    color:red;
+    font-size:12px;
+}
+
+.mensajeExito {
+    color:green;
+    font-size:12px;
+}
+
+.containerSubTitulo {
+    background-color:#458B00;
+}
+
+.containerMensaje {
+    float:left;
+    width:100%;
+    height:20px;
+    background-color:#E0E0E0;
+}
+
+.containerBody {
+    height:580px;
+    float:left;
+    width:100%;
+}
+
+.popUpSmall {
+    height:250px;
+    width:250px;
+}
+
+.popUpMedium {
+    height:560px;
+    width:560px;
+}
+
+.popUpLarge {
+    height:560px;
+    width:560px;
+}
+
+.titulo {
+    font-size:20px;
+    color:#458B00;
+}
+
+.subTitulo {
+    font-size:14px;
+    color:white;
+    font-weight:bold;
+}
+
+.colum1 {
+    width:9%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum2 {
+    width:19%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum3 {
+    width:29%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum4 {
+    width:39%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum5 {
+    width:49%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum6 {
+    width:59%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum7 {
+    width:69%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum8 {
+    width:79%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum9 {
+    width:89%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.colum10 {
+    width:99%;
+    float:left;
+    margin:0px 0.5% 0px 0.5%;
+}
+
+.fila {
+    width:90%;
+    float:left;
+    margin:2px 5% 2px 5%;
+}
+
+.etiqueta {
+    color:#000000;
+    font-family:Arial;
+    font-size:11.5px;
+    font-weight:bold;
+}
+
+.etiquetaSubTitulo {
+    color:white;
+    font-family:Arial;
+    font-size:11.5px;
+    font-weight:bold;
+}
+
+.multicontainer {
+    width:100%;
+    float:left;
+    margin:0px 0px 5px 0px;
+}
+
+.tabcontainer {
+    width:100%;
+    height:100%;
+    border:solid;
+    border-width:1px;
+    border-color:#E0E0E0;
+}

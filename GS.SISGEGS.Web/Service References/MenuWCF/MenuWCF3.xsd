@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfMenuPerfil_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuPerfil_ListarResult" nillable="true" type="tns:MenuPerfil_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuPerfil_ListarResult" nillable="true" type="tns:ArrayOfMenuPerfil_ListarResult" />
+  <xs:complexType name="MenuPerfil_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPerfil" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuPerfil_ListarResult" nillable="true" type="tns:MenuPerfil_ListarResult" />
+  <xs:complexType name="ArrayOfMenu_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menu_ListarResult" nillable="true" type="tns:Menu_ListarResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenu_ListarResult" nillable="true" type="tns:ArrayOfMenu_ListarResult" />
+  <xs:complexType name="Menu_ListarResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPadre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="defecto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idMenu" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu_ListarResult" nillable="true" type="tns:Menu_ListarResult" />
+  <xs:complexType name="Menu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoPadre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="defecto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaModifico" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idMenu" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioModifico" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreMenu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu" nillable="true" type="tns:Menu" />
+</xs:schema>

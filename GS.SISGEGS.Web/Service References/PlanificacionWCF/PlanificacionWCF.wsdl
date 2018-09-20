@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PlanificacionWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/PlanificacionWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPlanificacionWCF_Perfil_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Perfil_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Modulos_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modulos_Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Modulos_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Modulos_ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanificacionByPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanificacionByPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanificacionByPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanificacionByPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanificacionDetalleByIdPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanificacionDetalleByIdPlan" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanificacionDetalleByIdPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanificacionDetalleByIdPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanDetalleToInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanDetalleToInsert" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanDetalleToInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanDetalleToInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanDetalleToEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanDetalleToEdit" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetPlanDetalleToEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanDetalleToEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionCabecera_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionCabecera_Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionCabecera_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionCabecera_InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionCabecera_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionCabecera_Update" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionCabecera_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionCabecera_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionDetalle_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionDetalle_Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionDetalle_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionDetalle_InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetAgendaLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgendaLista" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetAgendaLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgendaListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionHistorial_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionHistorial_Insertar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionHistorial_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionHistorial_InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionDetalle_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionDetalle_Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_PlanificacionDetalle_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlanificacionDetalle_ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetHistorialCambios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistorialCambios" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_GetHistorialCambios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistorialCambiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuesto" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Registrar_MetaPresupuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MetaPresupuesto" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Registrar_MetaPresupuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MetaPresupuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuestoCabDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuestoCabDet" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuestoCabDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuestoCabDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Eliminar_MetaPresupuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MetaPresupuesto" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Eliminar_MetaPresupuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MetaPresupuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Aprobar_MetaPresupuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Aprobar_MetaPresupuesto" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Aprobar_MetaPresupuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Aprobar_MetaPresupuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_TipoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_TipoCliente" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_TipoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_TipoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Registrar_MetaPresupuestoPromotor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MetaPresupuestoPromotor" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Registrar_MetaPresupuestoPromotor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Registrar_MetaPresupuestoPromotorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuestoPromotor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuestoPromotor" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_MetaPresupuestoPromotor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_MetaPresupuestoPromotorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PresupuestoPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PresupuestoPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PresupuestoPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PresupuestoPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PromotoresxVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PromotoresxVendedor" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PromotoresxVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PromotoresxVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Eliminar_MetaPresupuestoPromotor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MetaPresupuestoPromotor" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Eliminar_MetaPresupuestoPromotor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_MetaPresupuestoPromotorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PresupuestoResumen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PresupuestoResumen" />
+  </wsdl:message>
+  <wsdl:message name="IPlanificacionWCF_Obtener_PresupuestoResumen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_PresupuestoResumenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPlanificacionWCF">
+    <wsdl:operation name="Perfil_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Perfil_Listar" message="tns:IPlanificacionWCF_Perfil_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Perfil_ListarResponse" message="tns:IPlanificacionWCF_Perfil_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modulos_Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Modulos_Actualizar" message="tns:IPlanificacionWCF_Modulos_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Modulos_ActualizarResponse" message="tns:IPlanificacionWCF_Modulos_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanificacionByPeriodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanificacionByPeriodo" message="tns:IPlanificacionWCF_GetPlanificacionByPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanificacionByPeriodoResponse" message="tns:IPlanificacionWCF_GetPlanificacionByPeriodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanificacionDetalleByIdPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanificacionDetalleByIdPlan" message="tns:IPlanificacionWCF_GetPlanificacionDetalleByIdPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanificacionDetalleByIdPlanResponse" message="tns:IPlanificacionWCF_GetPlanificacionDetalleByIdPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanDetalleToInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToInsert" message="tns:IPlanificacionWCF_GetPlanDetalleToInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToInsertResponse" message="tns:IPlanificacionWCF_GetPlanDetalleToInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanDetalleToEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToEdit" message="tns:IPlanificacionWCF_GetPlanDetalleToEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToEditResponse" message="tns:IPlanificacionWCF_GetPlanDetalleToEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionCabecera_Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_Insertar" message="tns:IPlanificacionWCF_PlanificacionCabecera_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_InsertarResponse" message="tns:IPlanificacionWCF_PlanificacionCabecera_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionCabecera_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_Update" message="tns:IPlanificacionWCF_PlanificacionCabecera_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_UpdateResponse" message="tns:IPlanificacionWCF_PlanificacionCabecera_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionDetalle_Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_Insertar" message="tns:IPlanificacionWCF_PlanificacionDetalle_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_InsertarResponse" message="tns:IPlanificacionWCF_PlanificacionDetalle_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgendaLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetAgendaLista" message="tns:IPlanificacionWCF_GetAgendaLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetAgendaListaResponse" message="tns:IPlanificacionWCF_GetAgendaLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionHistorial_Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionHistorial_Insertar" message="tns:IPlanificacionWCF_PlanificacionHistorial_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionHistorial_InsertarResponse" message="tns:IPlanificacionWCF_PlanificacionHistorial_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionDetalle_Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_Actualizar" message="tns:IPlanificacionWCF_PlanificacionDetalle_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_ActualizarResponse" message="tns:IPlanificacionWCF_PlanificacionDetalle_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistorialCambios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetHistorialCambios" message="tns:IPlanificacionWCF_GetHistorialCambios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/GetHistorialCambiosResponse" message="tns:IPlanificacionWCF_GetHistorialCambios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuesto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuesto" message="tns:IPlanificacionWCF_Obtener_MetaPresupuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoResponse" message="tns:IPlanificacionWCF_Obtener_MetaPresupuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MetaPresupuesto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuesto" message="tns:IPlanificacionWCF_Registrar_MetaPresupuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuestoResponse" message="tns:IPlanificacionWCF_Registrar_MetaPresupuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuestoCabDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoCabDet" message="tns:IPlanificacionWCF_Obtener_MetaPresupuestoCabDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoCabDetResponse" message="tns:IPlanificacionWCF_Obtener_MetaPresupuestoCabDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MetaPresupuesto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuesto" message="tns:IPlanificacionWCF_Eliminar_MetaPresupuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuestoResponse" message="tns:IPlanificacionWCF_Eliminar_MetaPresupuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Aprobar_MetaPresupuesto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Aprobar_MetaPresupuesto" message="tns:IPlanificacionWCF_Aprobar_MetaPresupuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Aprobar_MetaPresupuestoResponse" message="tns:IPlanificacionWCF_Aprobar_MetaPresupuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TipoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_TipoCliente" message="tns:IPlanificacionWCF_Obtener_TipoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_TipoClienteResponse" message="tns:IPlanificacionWCF_Obtener_TipoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MetaPresupuestoPromotor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuestoPromotor" message="tns:IPlanificacionWCF_Registrar_MetaPresupuestoPromotor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuestoPromotorResponse" message="tns:IPlanificacionWCF_Registrar_MetaPresupuestoPromotor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuestoPromotor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoPromotor" message="tns:IPlanificacionWCF_Obtener_MetaPresupuestoPromotor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoPromotorResponse" message="tns:IPlanificacionWCF_Obtener_MetaPresupuestoPromotor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PresupuestoPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoPendiente" message="tns:IPlanificacionWCF_Obtener_PresupuestoPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoPendienteResponse" message="tns:IPlanificacionWCF_Obtener_PresupuestoPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PromotoresxVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PromotoresxVendedor" message="tns:IPlanificacionWCF_Obtener_PromotoresxVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PromotoresxVendedorResponse" message="tns:IPlanificacionWCF_Obtener_PromotoresxVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MetaPresupuestoPromotor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuestoPromotor" message="tns:IPlanificacionWCF_Eliminar_MetaPresupuestoPromotor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuestoPromotorResponse" message="tns:IPlanificacionWCF_Eliminar_MetaPresupuestoPromotor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PresupuestoResumen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoResumen" message="tns:IPlanificacionWCF_Obtener_PresupuestoResumen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoResumenResponse" message="tns:IPlanificacionWCF_Obtener_PresupuestoResumen_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPlanificacionWCF" type="tns:IPlanificacionWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Perfil_Listar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Perfil_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modulos_Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Modulos_Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanificacionByPeriodo">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetPlanificacionByPeriodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanificacionDetalleByIdPlan">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetPlanificacionDetalleByIdPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanDetalleToInsert">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanDetalleToEdit">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetPlanDetalleToEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionCabecera_Insertar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionCabecera_Update">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/PlanificacionCabecera_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionDetalle_Insertar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgendaLista">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetAgendaLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionHistorial_Insertar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/PlanificacionHistorial_Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlanificacionDetalle_Actualizar">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/PlanificacionDetalle_Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistorialCambios">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/GetHistorialCambios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuesto">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MetaPresupuesto">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuestoCabDet">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoCabDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MetaPresupuesto">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Aprobar_MetaPresupuesto">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Aprobar_MetaPresupuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_TipoCliente">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_TipoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_MetaPresupuestoPromotor">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Registrar_MetaPresupuestoPromotor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_MetaPresupuestoPromotor">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_MetaPresupuestoPromotor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PresupuestoPendiente">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PromotoresxVendedor">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_PromotoresxVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_MetaPresupuestoPromotor">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Eliminar_MetaPresupuestoPromotor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_PresupuestoResumen">
+      <soap:operation soapAction="http://tempuri.org/IPlanificacionWCF/Obtener_PresupuestoResumen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlanificacionWCF">
+    <wsdl:port name="BasicHttpBinding_IPlanificacionWCF" binding="tns:BasicHttpBinding_IPlanificacionWCF">
+      <soap:address location="http://localhost:49648/PlanificacionWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

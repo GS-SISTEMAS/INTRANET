@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FacturaElectronica2WCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/FacturaElectronica2WCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/FacturaElectronica2WCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/FacturaElectronica2WCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFacturaElectronica2WCF_FacturaElectronica_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:FacturaElectronica_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_FacturaElectronica_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FacturaElectronica_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoFactura_Cabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoFactura_Cabecera" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoFactura_Cabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoFactura_CabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoFactura_Detalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoFactura_Detalle" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoFactura_Detalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoFactura_DetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaCredito_Cabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaCredito_Cabecera" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaCredito_Cabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaCredito_CabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaCredito_Detalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaCredito_Detalle" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaCredito_Detalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaCredito_DetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaDebito_Cabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaDebito_Cabecera" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaDebito_Cabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaDebito_CabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaDebito_Detalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaDebito_Detalle" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoNotaDebito_Detalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoNotaDebito_DetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoBoletas_Cabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoBoletas_Cabecera" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoBoletas_Cabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoBoletas_CabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoBoletas_Detalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoBoletas_Detalle" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentoBoletas_Detalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentoBoletas_DetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentosElectronicos_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosElectronicos_Update" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_DocumentosElectronicos_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosElectronicos_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_ComboDocElectronico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComboDocElectronico" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_ComboDocElectronico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComboDocElectronicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Retenciones_Electronicas_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Retenciones_Electronicas_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Retenciones_Electronicas_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Retenciones_Electronicas_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Retenciones_Cabecera_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Retenciones_Cabecera_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Retenciones_Cabecera_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Retenciones_Cabecera_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_RetencionElectronica_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetencionElectronica_Update" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_RetencionElectronica_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetencionElectronica_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Detranccion_Item_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detranccion_Item" />
+  </wsdl:message>
+  <wsdl:message name="IFacturaElectronica2WCF_Detranccion_Item_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detranccion_ItemResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFacturaElectronica2WCF">
+    <wsdl:operation name="FacturaElectronica_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/FacturaElectronica_Listar" message="tns:IFacturaElectronica2WCF_FacturaElectronica_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/FacturaElectronica_ListarResponse" message="tns:IFacturaElectronica2WCF_FacturaElectronica_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoFactura_Cabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_Cabecera" message="tns:IFacturaElectronica2WCF_DocumentoFactura_Cabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_CabeceraResponse" message="tns:IFacturaElectronica2WCF_DocumentoFactura_Cabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoFactura_Detalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_Detalle" message="tns:IFacturaElectronica2WCF_DocumentoFactura_Detalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_DetalleResponse" message="tns:IFacturaElectronica2WCF_DocumentoFactura_Detalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaCredito_Cabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_Cabecera" message="tns:IFacturaElectronica2WCF_DocumentoNotaCredito_Cabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_CabeceraResponse" message="tns:IFacturaElectronica2WCF_DocumentoNotaCredito_Cabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaCredito_Detalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_Detalle" message="tns:IFacturaElectronica2WCF_DocumentoNotaCredito_Detalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_DetalleResponse" message="tns:IFacturaElectronica2WCF_DocumentoNotaCredito_Detalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaDebito_Cabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_Cabecera" message="tns:IFacturaElectronica2WCF_DocumentoNotaDebito_Cabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_CabeceraResponse" message="tns:IFacturaElectronica2WCF_DocumentoNotaDebito_Cabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaDebito_Detalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_Detalle" message="tns:IFacturaElectronica2WCF_DocumentoNotaDebito_Detalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_DetalleResponse" message="tns:IFacturaElectronica2WCF_DocumentoNotaDebito_Detalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoBoletas_Cabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_Cabecera" message="tns:IFacturaElectronica2WCF_DocumentoBoletas_Cabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_CabeceraResponse" message="tns:IFacturaElectronica2WCF_DocumentoBoletas_Cabecera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoBoletas_Detalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_Detalle" message="tns:IFacturaElectronica2WCF_DocumentoBoletas_Detalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_DetalleResponse" message="tns:IFacturaElectronica2WCF_DocumentoBoletas_Detalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosElectronicos_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentosElectronicos_Update" message="tns:IFacturaElectronica2WCF_DocumentosElectronicos_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/DocumentosElectronicos_UpdateResponse" message="tns:IFacturaElectronica2WCF_DocumentosElectronicos_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComboDocElectronico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/ComboDocElectronico" message="tns:IFacturaElectronica2WCF_ComboDocElectronico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/ComboDocElectronicoResponse" message="tns:IFacturaElectronica2WCF_ComboDocElectronico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Retenciones_Electronicas_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Electronicas_Listar" message="tns:IFacturaElectronica2WCF_Retenciones_Electronicas_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Electronicas_ListarResponse" message="tns:IFacturaElectronica2WCF_Retenciones_Electronicas_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Retenciones_Cabecera_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Cabecera_Listar" message="tns:IFacturaElectronica2WCF_Retenciones_Cabecera_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Cabecera_ListarResponse" message="tns:IFacturaElectronica2WCF_Retenciones_Cabecera_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetencionElectronica_Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/RetencionElectronica_Update" message="tns:IFacturaElectronica2WCF_RetencionElectronica_Update_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/RetencionElectronica_UpdateResponse" message="tns:IFacturaElectronica2WCF_RetencionElectronica_Update_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detranccion_Item">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Detranccion_Item" message="tns:IFacturaElectronica2WCF_Detranccion_Item_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFacturaElectronica2WCF/Detranccion_ItemResponse" message="tns:IFacturaElectronica2WCF_Detranccion_Item_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFacturaElectronica2WCF" type="tns:IFacturaElectronica2WCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FacturaElectronica_Listar">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/FacturaElectronica_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoFactura_Cabecera">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_Cabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoFactura_Detalle">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoFactura_Detalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaCredito_Cabecera">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_Cabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaCredito_Detalle">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaCredito_Detalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaDebito_Cabecera">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_Cabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoNotaDebito_Detalle">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoNotaDebito_Detalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoBoletas_Cabecera">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_Cabecera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentoBoletas_Detalle">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentoBoletas_Detalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosElectronicos_Update">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/DocumentosElectronicos_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComboDocElectronico">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/ComboDocElectronico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retenciones_Electronicas_Listar">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Electronicas_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Retenciones_Cabecera_Listar">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/Retenciones_Cabecera_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetencionElectronica_Update">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/RetencionElectronica_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detranccion_Item">
+      <soap:operation soapAction="http://tempuri.org/IFacturaElectronica2WCF/Detranccion_Item" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FacturaElectronica2WCF">
+    <wsdl:port name="BasicHttpBinding_IFacturaElectronica2WCF" binding="tns:BasicHttpBinding_IFacturaElectronica2WCF">
+      <soap:address location="http://localhost:49648/FacturaElectronica2WCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

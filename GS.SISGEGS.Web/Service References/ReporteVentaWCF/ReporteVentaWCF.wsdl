@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReporteVentaWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" />
+      <xsd:import schemaLocation="http://localhost:49648/ReporteVentaWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_VendedorZona_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_VendedorZona" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_VendedorZona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_VendedorZonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Vendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_Vendedor" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Vendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_VendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Producto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_Producto" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Producto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_ProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Fecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_Fecha" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Fecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_FechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Marca_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_Marca" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_Marca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaProducto" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ConsultarVentaMarca_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ConsultarVentaMarca" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ConsultarVentaMarca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ConsultarVentaMarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaCliente" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaVendedor" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaVendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ConsultarVentaProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ConsultarVentaProducto" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ConsultarVentaProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ConsultarVentaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_ProyeccionVentasPareto_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_ProyeccionVentasPareto" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_ProyeccionVentasPareto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_ProyeccionVentasParetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ProyectadoVentas_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoVentas_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ProyectadoVentas_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoVentas_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_PronosticoVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_PronosticoVentas" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_PronosticoVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_PronosticoVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Reporte_Marca_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Reporte_Marca" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Reporte_Marca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Reporte_MarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Reporte_Vendedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Reporte_Vendedor" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Reporte_Vendedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Reporte_VendedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ProyectadoVentas_RegistrarBulkCopy_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoVentas_RegistrarBulkCopy" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ProyectadoVentas_RegistrarBulkCopy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProyectadoVentas_RegistrarBulkCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Planeamiento_Marca_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Planeamiento_Marca" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Pronostico_Planeamiento_Marca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Pronostico_Planeamiento_MarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_PresupuestoVentasPareto_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_PresupuestoVentasPareto" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporte_PresupuestoVentasPareto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporte_PresupuestoVentasParetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporteVentaPresupuesto_Producto2017_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporteVentaPresupuesto_Producto2017" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsReporteVentaPresupuesto_Producto2017_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsReporteVentaPresupuesto_Producto2017Response" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PresupuestadoVentas_RegistrarBulkCopy_InputMessage">
+    <wsdl:part name="parameters" element="tns:PresupuestadoVentas_RegistrarBulkCopy" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PresupuestadoVentas_RegistrarBulkCopy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PresupuestadoVentas_RegistrarBulkCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsPronostico_vs_Real_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsPronostico_vs_Real" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsPronostico_vs_Real_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsPronostico_vs_RealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaInatec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaInatec" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaInatec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaInatecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProductoInatec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaProductoInatec" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProductoInatec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaProductoInatecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Presupuesto_Zona_InputMessage">
+    <wsdl:part name="parameters" element="tns:Presupuesto_Zona" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Presupuesto_Zona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Presupuesto_ZonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaClienteInatec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaClienteInatec" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaClienteInatec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaClienteInatecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedorInatec_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaVendedorInatec" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedorInatec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocVenta_ReporteVenta_MarcaVendedorInatecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Presupuesto_Reporte_Marca_InputMessage">
+    <wsdl:part name="parameters" element="tns:Presupuesto_Reporte_Marca" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Presupuesto_Reporte_Marca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Presupuesto_Reporte_MarcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsVentaPronostico_vs_Real_InputMessage">
+    <wsdl:part name="parameters" element="tns:gsVentaPronostico_vs_Real" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_gsVentaPronostico_vs_Real_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gsVentaPronostico_vs_RealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Familia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_Familia" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Familia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_FamiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Items_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_Items" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Items_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_ItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Zonas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_Zonas" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Zonas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_ZonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReportesIntranet_Lista_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportesIntranet_Lista" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReportesIntranet_Lista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportesIntranet_ListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PermisosUsuarios_ListarResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosUsuarios_ListarResult" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PermisosUsuarios_ListarResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosUsuarios_ListarResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ZonaPersonal_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonaPersonal_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ZonaPersonal_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonaPersonal_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Zona_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zona_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Zona_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zona_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Zonas_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Zonas_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Zonas_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_UsuarioReporte_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioReporte_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_UsuarioReporte_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioReporte_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ZonasReporte_Listar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasReporte_Listar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ZonasReporte_Listar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZonasReporte_ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PermisosReportes_Registrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosReportes_Registrar" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_PermisosReportes_Registrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PermisosReportes_RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_R3_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_R3_1" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_R3_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_R3_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Resultados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_Resultados" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_ReporteVentas_Resultados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReporteVentas_ResultadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Listar_Zona_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Zona_BI" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Listar_Zona_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Zona_BIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Listar_Unidad_BI_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Unidad_BI" />
+  </wsdl:message>
+  <wsdl:message name="IReporteVentaWCF_Listar_Unidad_BI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listar_Unidad_BIResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReporteVentaWCF">
+    <wsdl:operation name="DocVenta_ReporteVenta_VendedorZona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_VendedorZona" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_VendedorZona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_VendedorZonaResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_VendedorZona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Vendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Vendedor" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Vendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_VendedorResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Vendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Cliente" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_ClienteResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Producto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Producto" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Producto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_ProductoResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Producto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Fecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Fecha" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Fecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_FechaResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Fecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Marca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Marca" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Marca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_Marca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProducto" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProductoResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ConsultarVentaMarca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaMarca" message="tns:IReporteVentaWCF_DocVenta_ConsultarVentaMarca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaMarcaResponse" message="tns:IReporteVentaWCF_DocVenta_ConsultarVentaMarca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaCliente" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaClienteResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaVendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedor" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedorResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ConsultarVentaProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaProducto" message="tns:IReporteVentaWCF_DocVenta_ConsultarVentaProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaProductoResponse" message="tns:IReporteVentaWCF_DocVenta_ConsultarVentaProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_ProyeccionVentasPareto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_ProyeccionVentasPareto" message="tns:IReporteVentaWCF_gsReporte_ProyeccionVentasPareto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_ProyeccionVentasParetoResponse" message="tns:IReporteVentaWCF_gsReporte_ProyeccionVentasPareto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoVentas_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_Registrar" message="tns:IReporteVentaWCF_ProyectadoVentas_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_RegistrarResponse" message="tns:IReporteVentaWCF_ProyectadoVentas_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_PronosticoVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_PronosticoVentas" message="tns:IReporteVentaWCF_gsReporte_PronosticoVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_PronosticoVentasResponse" message="tns:IReporteVentaWCF_gsReporte_PronosticoVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Reporte_Marca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_Marca" message="tns:IReporteVentaWCF_Pronostico_Reporte_Marca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_MarcaResponse" message="tns:IReporteVentaWCF_Pronostico_Reporte_Marca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Reporte_Vendedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_Vendedor" message="tns:IReporteVentaWCF_Pronostico_Reporte_Vendedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_VendedorResponse" message="tns:IReporteVentaWCF_Pronostico_Reporte_Vendedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoVentas_RegistrarBulkCopy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_RegistrarBulkCopy" message="tns:IReporteVentaWCF_ProyectadoVentas_RegistrarBulkCopy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_RegistrarBulkCopyResponse" message="tns:IReporteVentaWCF_ProyectadoVentas_RegistrarBulkCopy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Planeamiento_Marca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Planeamiento_Marca" message="tns:IReporteVentaWCF_Pronostico_Planeamiento_Marca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Pronostico_Planeamiento_MarcaResponse" message="tns:IReporteVentaWCF_Pronostico_Planeamiento_Marca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_PresupuestoVentasPareto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_PresupuestoVentasPareto" message="tns:IReporteVentaWCF_gsReporte_PresupuestoVentasPareto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporte_PresupuestoVentasParetoResponse" message="tns:IReporteVentaWCF_gsReporte_PresupuestoVentasPareto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsReporteVentaPresupuesto_Producto2017">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporteVentaPresupuesto_Producto2017" message="tns:IReporteVentaWCF_gsReporteVentaPresupuesto_Producto2017_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsReporteVentaPresupuesto_Producto2017Response" message="tns:IReporteVentaWCF_gsReporteVentaPresupuesto_Producto2017_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PresupuestadoVentas_RegistrarBulkCopy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/PresupuestadoVentas_RegistrarBulkCopy" message="tns:IReporteVentaWCF_PresupuestadoVentas_RegistrarBulkCopy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/PresupuestadoVentas_RegistrarBulkCopyResponse" message="tns:IReporteVentaWCF_PresupuestadoVentas_RegistrarBulkCopy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsPronostico_vs_Real">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsPronostico_vs_Real" message="tns:IReporteVentaWCF_gsPronostico_vs_Real_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsPronostico_vs_RealResponse" message="tns:IReporteVentaWCF_gsPronostico_vs_Real_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaInatec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaInatec" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaInatec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaInatecResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaInatec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaProductoInatec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProductoInatec" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProductoInatec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProductoInatecResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaProductoInatec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Presupuesto_Zona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Presupuesto_Zona" message="tns:IReporteVentaWCF_Presupuesto_Zona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Presupuesto_ZonaResponse" message="tns:IReporteVentaWCF_Presupuesto_Zona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaClienteInatec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaClienteInatec" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaClienteInatec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaClienteInatecResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaClienteInatec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaVendedorInatec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedorInatec" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedorInatec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedorInatecResponse" message="tns:IReporteVentaWCF_DocVenta_ReporteVenta_MarcaVendedorInatec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Presupuesto_Reporte_Marca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Presupuesto_Reporte_Marca" message="tns:IReporteVentaWCF_Presupuesto_Reporte_Marca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Presupuesto_Reporte_MarcaResponse" message="tns:IReporteVentaWCF_Presupuesto_Reporte_Marca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gsVentaPronostico_vs_Real">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsVentaPronostico_vs_Real" message="tns:IReporteVentaWCF_gsVentaPronostico_vs_Real_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/gsVentaPronostico_vs_RealResponse" message="tns:IReporteVentaWCF_gsVentaPronostico_vs_Real_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Familia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Familia" message="tns:IReporteVentaWCF_ReporteVentas_Familia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_FamiliaResponse" message="tns:IReporteVentaWCF_ReporteVentas_Familia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Items">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Items" message="tns:IReporteVentaWCF_ReporteVentas_Items_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_ItemsResponse" message="tns:IReporteVentaWCF_ReporteVentas_Items_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Zonas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Zonas" message="tns:IReporteVentaWCF_ReporteVentas_Zonas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_ZonasResponse" message="tns:IReporteVentaWCF_ReporteVentas_Zonas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportesIntranet_Lista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReportesIntranet_Lista" message="tns:IReporteVentaWCF_ReportesIntranet_Lista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReportesIntranet_ListaResponse" message="tns:IReporteVentaWCF_ReportesIntranet_Lista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermisosUsuarios_ListarResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/PermisosUsuarios_ListarResult" message="tns:IReporteVentaWCF_PermisosUsuarios_ListarResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/PermisosUsuarios_ListarResultResponse" message="tns:IReporteVentaWCF_PermisosUsuarios_ListarResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonaPersonal_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ZonaPersonal_Listar" message="tns:IReporteVentaWCF_ZonaPersonal_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ZonaPersonal_ListarResponse" message="tns:IReporteVentaWCF_ZonaPersonal_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zona_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Zona_Registrar" message="tns:IReporteVentaWCF_Zona_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Zona_RegistrarResponse" message="tns:IReporteVentaWCF_Zona_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Zonas_Listar" message="tns:IReporteVentaWCF_Zonas_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Zonas_ListarResponse" message="tns:IReporteVentaWCF_Zonas_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioReporte_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/UsuarioReporte_Listar" message="tns:IReporteVentaWCF_UsuarioReporte_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/UsuarioReporte_ListarResponse" message="tns:IReporteVentaWCF_UsuarioReporte_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZonasReporte_Listar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ZonasReporte_Listar" message="tns:IReporteVentaWCF_ZonasReporte_Listar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ZonasReporte_ListarResponse" message="tns:IReporteVentaWCF_ZonasReporte_Listar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PermisosReportes_Registrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/PermisosReportes_Registrar" message="tns:IReporteVentaWCF_PermisosReportes_Registrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/PermisosReportes_RegistrarResponse" message="tns:IReporteVentaWCF_PermisosReportes_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_R3_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_R3_1" message="tns:IReporteVentaWCF_ReporteVentas_R3_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_R3_1Response" message="tns:IReporteVentaWCF_ReporteVentas_R3_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Resultados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Resultados" message="tns:IReporteVentaWCF_ReporteVentas_Resultados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/ReporteVentas_ResultadosResponse" message="tns:IReporteVentaWCF_ReporteVentas_Resultados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Zona_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Listar_Zona_BI" message="tns:IReporteVentaWCF_Listar_Zona_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Listar_Zona_BIResponse" message="tns:IReporteVentaWCF_Listar_Zona_BI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Unidad_BI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReporteVentaWCF/Listar_Unidad_BI" message="tns:IReporteVentaWCF_Listar_Unidad_BI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReporteVentaWCF/Listar_Unidad_BIResponse" message="tns:IReporteVentaWCF_Listar_Unidad_BI_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReporteVentaWCF" type="tns:IReporteVentaWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocVenta_ReporteVenta_VendedorZona">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_VendedorZona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Vendedor">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Vendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Cliente">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Producto">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Producto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Fecha">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Fecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_Marca">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_Marca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaProducto">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ConsultarVentaMarca">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaMarca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaCliente">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaVendedor">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ConsultarVentaProducto">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ConsultarVentaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_ProyeccionVentasPareto">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsReporte_ProyeccionVentasPareto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoVentas_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_PronosticoVentas">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsReporte_PronosticoVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Reporte_Marca">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_Marca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Reporte_Vendedor">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Pronostico_Reporte_Vendedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProyectadoVentas_RegistrarBulkCopy">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ProyectadoVentas_RegistrarBulkCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Pronostico_Planeamiento_Marca">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Pronostico_Planeamiento_Marca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsReporte_PresupuestoVentasPareto">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsReporte_PresupuestoVentasPareto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsReporteVentaPresupuesto_Producto2017">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsReporteVentaPresupuesto_Producto2017" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PresupuestadoVentas_RegistrarBulkCopy">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/PresupuestadoVentas_RegistrarBulkCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsPronostico_vs_Real">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsPronostico_vs_Real" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaInatec">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaInatec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaProductoInatec">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaProductoInatec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Presupuesto_Zona">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Presupuesto_Zona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaClienteInatec">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaClienteInatec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocVenta_ReporteVenta_MarcaVendedorInatec">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/DocVenta_ReporteVenta_MarcaVendedorInatec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Presupuesto_Reporte_Marca">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Presupuesto_Reporte_Marca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gsVentaPronostico_vs_Real">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/gsVentaPronostico_vs_Real" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Familia">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Familia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Items">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Items" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Zonas">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Zonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportesIntranet_Lista">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReportesIntranet_Lista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PermisosUsuarios_ListarResult">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/PermisosUsuarios_ListarResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonaPersonal_Listar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ZonaPersonal_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zona_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Zona_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Zonas_Listar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Zonas_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioReporte_Listar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/UsuarioReporte_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZonasReporte_Listar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ZonasReporte_Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PermisosReportes_Registrar">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/PermisosReportes_Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_R3_1">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReporteVentas_R3_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReporteVentas_Resultados">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/ReporteVentas_Resultados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Zona_BI">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Listar_Zona_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Unidad_BI">
+      <soap:operation soapAction="http://tempuri.org/IReporteVentaWCF/Listar_Unidad_BI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReporteVentaWCF">
+    <wsdl:port name="BasicHttpBinding_IReporteVentaWCF" binding="tns:BasicHttpBinding_IReporteVentaWCF">
+      <soap:address location="http://localhost:49648/ReporteVentaWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

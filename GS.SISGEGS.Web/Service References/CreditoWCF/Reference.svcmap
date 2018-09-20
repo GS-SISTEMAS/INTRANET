@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cb47ef1f-c7e2-4320-a437-ed98dd4b781e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/CreditoWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CreditoWCF3.xsd" MetadataType="Schema" ID="728c3f4d-ef4c-4517-842a-502eb5c6caf0" SourceId="1" SourceUrl="http://localhost:49648/CreditoWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CreditoWCF31.xsd" MetadataType="Schema" ID="51eca0a3-e432-42de-8c18-715db4a2c284" SourceId="1" SourceUrl="http://localhost:49648/CreditoWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="CreditoWCF1.disco" MetadataType="Disco" ID="e878bf6e-6f54-49fa-bc48-ae268da61343" SourceId="1" SourceUrl="http://localhost:49648/CreditoWCF.svc?disco" />
+    <MetadataFile FileName="CreditoWCF32.xsd" MetadataType="Schema" ID="787a8f7e-0638-4494-bbea-f2326371097c" SourceId="1" SourceUrl="http://localhost:49648/CreditoWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="CreditoWCF1.wsdl" MetadataType="Wsdl" ID="036059f7-96fd-4ff6-85ca-5d740c104c6c" SourceId="1" SourceUrl="http://localhost:49648/CreditoWCF.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

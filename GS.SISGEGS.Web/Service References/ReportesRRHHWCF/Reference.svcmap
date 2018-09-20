@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4d97ccbb-3fe4-452e-83ea-f7849c008526" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/ReportesRRHH.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReportesRRHH.xsd" MetadataType="Schema" ID="8c4d860b-c7cf-4537-9cc8-8e8beca255a2" SourceId="1" SourceUrl="http://localhost:49648/ReportesRRHH.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReportesRRHH1.xsd" MetadataType="Schema" ID="d3eb31a7-36b3-4a48-8d16-be1e5ade7108" SourceId="1" SourceUrl="http://localhost:49648/ReportesRRHH.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReportesRRHH.disco" MetadataType="Disco" ID="cbc4055a-1535-4491-89ae-f71d075e8fee" SourceId="1" SourceUrl="http://localhost:49648/ReportesRRHH.svc?disco" />
+    <MetadataFile FileName="ReportesRRHH.wsdl" MetadataType="Wsdl" ID="72c4c14e-a9a8-4d06-bcaa-99827b817c2d" SourceId="1" SourceUrl="http://localhost:49648/ReportesRRHH.svc?wsdl" />
+    <MetadataFile FileName="ReportesRRHH2.xsd" MetadataType="Schema" ID="4f905ea5-e599-4aea-88ce-efa381feb6b7" SourceId="1" SourceUrl="http://localhost:49648/ReportesRRHH.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

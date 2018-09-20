@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GS.SISGEGS.DM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVBG00786Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VBG00786Result" nillable="true" type="tns:VBG00786Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVBG00786Result" nillable="true" type="tns:ArrayOfVBG00786Result" />
+  <xs:complexType name="VBG00786Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentroCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID_CentroCostos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Imputable" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VBG00786Result" nillable="true" type="tns:VBG00786Result" />
+</xs:schema>

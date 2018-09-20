@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="30ce35cb-d38a-483e-8a20-fcd3c80d4af1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AgendaWCF.xsd" MetadataType="Schema" ID="610055b8-6593-474a-8292-20c57b38d087" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="AgendaWCF1.xsd" MetadataType="Schema" ID="e050e8fa-32b6-43a1-9c72-8470d47679f2" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="AgendaWCF.disco" MetadataType="Disco" ID="768bdf51-d949-4a1b-b18a-a1685dbc2eef" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?disco" />
+    <MetadataFile FileName="AgendaWCF2.xsd" MetadataType="Schema" ID="ec99d297-0de8-4aeb-8eb1-2aec84d0a78f" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="AgendaWCF.wsdl" MetadataType="Wsdl" ID="1068ae03-7bbd-4aec-8f0e-408e64ab60d9" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?wsdl" />
+    <MetadataFile FileName="AgendaWCF3.xsd" MetadataType="Schema" ID="7943d1da-3cf5-4315-84cc-f627d43f844d" SourceId="1" SourceUrl="http://intranet.gruposilvestre.com.pe/WCFServices/AgendaWCF.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

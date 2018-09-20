@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tci.net.pe/WS_eCica/Retencion/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tci.net.pe/WS_eCica/Retencion/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="soap12_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tci.net.pe/WS_eCica/Retencion/Imports">
+      <xsd:import schemaLocation="http://200.106.52.10/WS_eCica/Retencion/ServicioRetencion.svc?xsd=xsd0" namespace="http://tci.net.pe/WS_eCica/Retencion/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioRetencion_RegistrarComprobanteRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarComprobanteRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_RegistrarComprobanteRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarComprobanteRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarEstadoRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarEstadoRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEstadoRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConfirmarEstadoRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarEstadoRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConfirmarEstadoRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarEstadoRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarRespuestaRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarRespuestaRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRespuestaRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConfirmarRespuestaRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarRespuestaRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConfirmarRespuestaRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarRespuestaRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarXMLRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarXMLRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarXMLRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarXMLRetencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_OtorgarComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:OtorgarComprobante" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_OtorgarComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OtorgarComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarComprobanteIndividual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComprobanteIndividual" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarComprobanteIndividual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarComprobanteIndividualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarRepresentacionImpresaRetencion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRepresentacionImpresaRetencion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioRetencion_ConsultarRepresentacionImpresaRetencion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRepresentacionImpresaRetencionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioRetencion">
+    <wsdl:operation name="RegistrarComprobanteRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/RegistrarComprobanteRetencion" message="tns:IServicioRetencion_RegistrarComprobanteRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/RegistrarComprobanteRetencionResponse" message="tns:IServicioRetencion_RegistrarComprobanteRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarEstadoRetencion" message="tns:IServicioRetencion_ConsultarEstadoRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarEstadoRetencionResponse" message="tns:IServicioRetencion_ConsultarEstadoRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarEstadoRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarEstadoRetencion" message="tns:IServicioRetencion_ConfirmarEstadoRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarEstadoRetencionResponse" message="tns:IServicioRetencion_ConfirmarEstadoRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRespuestaRetencion" message="tns:IServicioRetencion_ConsultarRespuestaRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRespuestaRetencionResponse" message="tns:IServicioRetencion_ConsultarRespuestaRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarRespuestaRetencion" message="tns:IServicioRetencion_ConfirmarRespuestaRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarRespuestaRetencionResponse" message="tns:IServicioRetencion_ConfirmarRespuestaRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarXMLRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarXMLRetencion" message="tns:IServicioRetencion_ConsultarXMLRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarXMLRetencionResponse" message="tns:IServicioRetencion_ConsultarXMLRetencion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OtorgarComprobante">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/OtorgarComprobante" message="tns:IServicioRetencion_OtorgarComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/OtorgarComprobanteResponse" message="tns:IServicioRetencion_OtorgarComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobanteIndividual">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarComprobanteIndividual" message="tns:IServicioRetencion_ConsultarComprobanteIndividual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarComprobanteIndividualResponse" message="tns:IServicioRetencion_ConsultarComprobanteIndividual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRepresentacionImpresaRetencion">
+      <wsdl:input wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRepresentacionImpresaRetencion" message="tns:IServicioRetencion_ConsultarRepresentacionImpresaRetencion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRepresentacionImpresaRetencionResponse" message="tns:IServicioRetencion_ConsultarRepresentacionImpresaRetencion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soap11" type="tns:IServicioRetencion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarComprobanteRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/RegistrarComprobanteRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarEstadoRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarEstadoRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarEstadoRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRespuestaRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarRespuestaRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarXMLRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarXMLRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtorgarComprobante">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/OtorgarComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobanteIndividual">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarComprobanteIndividual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRepresentacionImpresaRetencion">
+      <soap:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRepresentacionImpresaRetencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="soap12" type="tns:IServicioRetencion">
+    <wsp:PolicyReference URI="#soap12_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarComprobanteRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/RegistrarComprobanteRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEstadoRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarEstadoRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarEstadoRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarEstadoRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRespuestaRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRespuestaRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarRespuestaRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConfirmarRespuestaRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarXMLRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarXMLRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtorgarComprobante">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/OtorgarComprobante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarComprobanteIndividual">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarComprobanteIndividual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRepresentacionImpresaRetencion">
+      <soap12:operation soapAction="http://tci.net.pe/WS_eCica/Retencion/IServicioRetencion/ConsultarRepresentacionImpresaRetencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

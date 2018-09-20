@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72A4AE4C-7D0C-4B75-B092-EA1141703B4E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.SISGEGS.WINStock</RootNamespace>
+    <AssemblyName>GS.SISGEGS.WINStock</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AgendaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImpuestoWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ItemWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrdenVentaWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF.wsdl" />
+    <None Include="Service References\AgendaWCF\AgendaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\AgendaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_BucarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_BuscarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_BuscarCliente_ContadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_BuscarEmpresaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_LimiteCreditoBE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_RegistrarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.Agenda_ValidarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_BucarProveedorResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_BuscarClienteDetalleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ContactoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarClienteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarContactoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarGarantiaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarProveedorResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarTransportistaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsAgenda_ListarVendedorResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsChofer_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsClientesCorreo_EnvioResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsClientesXVendedor_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsListarLogLineaCreditoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsListarObservacionesAgendaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsPlaca_DespachoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsPlaca_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsUsuario_SectoristaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsVendedores_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsVendedor_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsZonaSectorista_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.gsZona_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.GS_RecuperaCorreoAgendaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.RPT00015Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG00167Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG00746Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG01134Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG01134_validarCorreoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG02699Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AgendaWCF\GS.SISGEGS.WINStock.AgendaWCF.VBG03678Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImpuestoWCF\GS.SISGEGS.WINStock.ImpuestoWCF.gsImpuesto_BuscarPorPedidoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImpuestoWCF\GS.SISGEGS.WINStock.ImpuestoWCF.gsImpuesto_ListarPorItemResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.wsdl" />
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_BuscarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarPrecioClienteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarProductoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarProducto_StockResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarStockResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarStock_ComercialResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.gsItem_ListarTipoGastoCCResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.Item_BuscarPrecioClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.Item_BuscarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.Item_RegistrarPrecioClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.spAlmacenesFlete_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.sp_GestionStock_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.VBG00321Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.VBG01124Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.VBG01134Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\GS.SISGEGS.WINStock.ItemWCF.VBG04054Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF.wsdl" />
+    <None Include="Service References\ItemWCF\ItemWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ItemWCF\ItemWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsOV_BuscarCabeceraResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsOV_BuscarDetalleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsOV_BuscarImpuestoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsOV_ListarResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsOV_Listar_SectoristaResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsPedidos_FechasLetrasSelectResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.gsPedido_EliminarOP_WMSResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.OrdenVenta_BuscarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.OrdenVenta_Buscar_GuiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.OV_TransGratuitas_AprobarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\GS.SISGEGS.WINStock.OrdenVentaWCF.VBG03630Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF.wsdl" />
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AgendaWCF\" />
+    <WCFMetadataStorage Include="Service References\ImpuestoWCF\" />
+    <WCFMetadataStorage Include="Service References\ItemWCF\" />
+    <WCFMetadataStorage Include="Service References\OrdenVentaWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenVentaWCF\OrdenVentaWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenVentaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenVentaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrdenVentaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\AgendaWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AgendaWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImpuestoWCF\ImpuestoWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImpuestoWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImpuestoWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImpuestoWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ItemWCF\ItemWCF.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ItemWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ItemWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ItemWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

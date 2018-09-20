@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="715f90c0-6023-4357-8ba3-0188daeebd18" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49648/OrdenCompraWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrdenCompraWCF.xsd" MetadataType="Schema" ID="4108b4a2-0454-4c92-b650-2c015b5f494b" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="OrdenCompraWCF1.xsd" MetadataType="Schema" ID="b2c5dd77-e344-4276-93d6-f674b43b4189" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="OrdenCompraWCF2.xsd" MetadataType="Schema" ID="c1c8c8d7-8c81-4c18-9468-4610562bd76b" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="OrdenCompraWCF.wsdl" MetadataType="Wsdl" ID="4848e9a4-be18-49e4-af32-e51bcd11a538" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?wsdl" />
+    <MetadataFile FileName="OrdenCompraWCF.disco" MetadataType="Disco" ID="9b8725db-48aa-4ae2-878a-89105d3cda4f" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?disco" />
+    <MetadataFile FileName="OrdenCompraWCF3.xsd" MetadataType="Schema" ID="984c701c-50c3-4694-9d55-ba92837ad750" SourceId="1" SourceUrl="http://localhost:49648/OrdenCompraWCF.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
